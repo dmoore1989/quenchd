@@ -1,26 +1,42 @@
 # View Wireframes
 
+##Landing
+![landing]
+
 ## New User
 ![new-user]
 
 ## New Session
 ![new-session]
 
-## NotesIndex / NoteIndexItem / NoteForm
-![notes]
+## Index/The Pub
+![index]
 
-## NotebooksIndex / NotebookIndexItem
-![notebooks]
+## User/Brewery/Bar
+![main-show]
 
-## NoteBookForm
-![notebook-form]
+## Beer
+![beer-show]
+
+### Check In
+![check-in]
+
+## Search
+![search]
+
+### Create Beer
+![new-beer]
 
 ## Component Heirarchy
 ![component-heirarchy]
 
-[new-user]: ./wireframes/new_user.png
-[new-session]: ./wireframes/new_session.png
-[notes]: ./wireframes/root_notes.png
-[notebooks]: ./wireframes/root_notebooks.png
-[notebook-form]: ./wireframes/notebook_form.png
+[landing]: ./wireframes/landing.png
+[new-user]: ./wireframes/new-user.png
+[new-session]: ./wireframes/login.png
+[index]: ./wireframes/index.png
+[main-show]: ./wireframes/main-show-page.png
+[beer-show]: ./wireframes/beer-page.png
+[check-in]: ./wireframes/checkin-form.png
+[search]: ./wireframes/search.png
+[new-beer]: ./wireframes/newbeerform.png
 [component-heirarchy]: ./wireframes/component_heirarchy.png

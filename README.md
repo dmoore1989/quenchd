@@ -1,24 +1,26 @@
 # FresherNote
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Heroku link]Coming soon!!!
 
 [heroku]: http://www.herokuapp.com
 
 ## Minimum Viable Product
 
-FresherNote is a web application inspired by Evernote built using Ruby on Rails
-and React.js. FresherNote allows users to:
+Quenchd is a web application inspired by Untappd built using Ruby on Rails and React.js.  Quenchd allows users to:
+
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
 - [ ] Create an account
 - [ ] Log in / Log out
-- [ ] Create, read, edit, and delete notes
-- [ ] Organize notes within Notebooks
-- [ ] Tag notes with multiple tags and search notes by tag
-- [ ] Search through notes for blocks of text
-- [ ] Apply complex styling to notes while editing
-- [ ] Set reminders on notes
+- [ ] "Check into," rate, and review beers they have drank noting where beer was drank.
+- [ ] Add beers to app.
+- [ ] Friend fellow users and comment on their checkins.
+- [ ] View beers they and other users have drank in the past
+- [ ] View brewery and bar pages that contain check ins
+- [ ] Like checkins, breweries, beers, and bars.
+
+
 
 ## Design Docs
 * [View Wireframes][view]
@@ -64,7 +66,7 @@ extend this to a fuzzy search through every Note's content.
 
 ### Phase 4: Allow Complex Styling in Notes (1 day)
 
-Using quill.js, allow for complex styling of notes. 
+Using quill.js, allow for complex styling of notes.
 
 [Details][phase-four]
 
@@ -85,8 +87,8 @@ Phase 6 I will add styling flourishes and make modals out of some elements (like
 the NotebookForm).
 
 ### Bonus Features (TBD)
-- [ ] Prettify transitions
-- [ ] Use javascript library for cleaner tag selection
+- [ ] Check In Badges
+- [ ] Calculate and display trending
 - [ ] Changelogs for Notes
 - [ ] Pagination / infinite scroll for Notes Index
 - [ ] Multiple sessions

@@ -27,8 +27,8 @@
 ### Create Beer
 ![new-beer]
 
-## Component Heirarchy
-![component-heirarchy]
+## Component Hierarchy
+![component-hierarchy]
 
 [landing]: ./wireframes/landing.png
 [new-user]: ./wireframes/new-user.png
@@ -39,4 +39,4 @@
 [check-in]: ./wireframes/checkin-form.png
 [search]: ./wireframes/search.png
 [new-beer]: ./wireframes/newbeerform.png
-[component-heirarchy]: ./wireframes/component_heirarchy.png
+[component-hierarchy]: ./wireframes/component_hierarchy.png

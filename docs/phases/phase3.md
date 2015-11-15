@@ -1,4 +1,4 @@
-# Phase 3: Notebooks and Tags (2 days)
+# Phase 3: Breweries, Venues, and Likes
 
 ## Rails
 ### Models
@@ -24,7 +24,7 @@ using jbuilder)
 ## Flux
 ### Views (React Components)
 * ShowPageIndex
-  - NotebookIndexItem
+  -CheckInIndexItem
 * DetailSnapShot
 * LikeButton
 

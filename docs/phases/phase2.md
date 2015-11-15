@@ -1,5 +1,4 @@
-# Phase 2: Flux Architecture and CheckIn/Comment CRUD (2 days)
-
+# Phase 2: Flux Architecture and CheckIn/Comment CRUD
 ## Rails
 ### Models
 

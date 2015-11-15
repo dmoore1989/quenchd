@@ -46,9 +46,11 @@ Comments.
 Phase 2 is focused on setting up Flux, the React Router, and the React view
 structure for the main application. After the basic Flux architecture has been
 set up, a Beer store will be implemented and a set of actions corresponding to
-the need CRUD functionality created.  Once this is done, I will create react
+the needed CRUD functionality created.  Once this is done, I will create react
 views for the Index, `Index`, `IndexItem` and `CheckInForm`.  At the end of
-phase 2, CheckIns can be created, read, edited, and destroyed and comments added and destroyed to these in the browser. Finally, while constructing these views, I will start my styling using CSS.
+phase 2, CheckIns can be created, read, edited, and destroyed and comments added
+and destroyed on CheckIns in the browser. Finally, while constructing these
+views, I will start my styling using CSS.
 
 [Details][phase-two]
 
@@ -57,24 +59,27 @@ phase 2, CheckIns can be created, read, edited, and destroyed and comments added
 Phase 3 adds organization to the Beers. Beers belong to a Brewer and Check Ins
 belong to a Venue. Create JSON API for Brewers and Venues. For creating, and
 updating breweries and venues, I will make these items via the standard rails
-HTTP request as only owner and brewers can make these changes.   All of these
-items in addition to checkins can be liked.
+HTTP request as only owner and brewers can make these changes (not normal
+  users). All of these items in addition to checkins can be liked.
 
 [Details][phase-three]
 
 ### Phase 4: Search functionality (1 day)
 
-Phase 4 will implement my sites search functionality.  Users can search for Beers, Breweries, and Venues by toggling between the three.  There will be a react component search bar which will organize all three on the header bar.
+Phase 4 will implement my site's search functionality.  Users can search for
+Beers, Breweries, and Venues by toggling between the three.  There will be a
+react component search bar which will organize all three on the header bar in
+addition to the individual search page.
 
 [Details][phase-four]
 
 ### Phase 5: Friends and Images (1.5 days)
 
-Phase 5 introduces two new features. First, can add friends to their profiles.
-These friends must be approved and once that occurs they will be able to see
-each others check ins.  I will add a friends page to search for  In addition, I
-will add image functionality to my users and checkins so users can share photos
-of their drinks.
+Phase 5 introduces two new features. First, userscan add friends to their
+profiles. These friends must be approved and once that occurs they will be able
+to see each others check ins.  I will add a friends page to search for new
+friends to be added. In addition, I will add image functionality to my users and
+checkins so users can share photos of their drinks.
 
 [Details][phase-five]
 

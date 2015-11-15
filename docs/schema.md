@@ -1,51 +1,70 @@
 # Schema Information
 
-## notes
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-title       | string    | not null
-body        | text      | not null
-author_id   | integer   | not null, foreign key (references users), indexed
-notebook_id | integer   | not null, foreign key (references notebooks), indexed
-archived    | boolean   | not null, default: false
+NB: Beers, Breweries, Venues, Users, Checkins will accept images but I'm not 100% sure how to implement this in my schema.  This will be a question I will be asking on Monday
 
-## notebooks
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users), indexed
-title       | string    | not null
-description | string    | 
-
-## reminders
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (references users), indexed
-note_id     | string    | not null, foreign key (references notes), indexed
-date        | datetime  | not null
-type        | string    | not null
-prev_id     | integer   | foreign key (references reminders), indexed
-
-## tags
+## beers
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
+abv         | integer   |
+ibu         | integer   |
+style       | string    | not null
+description | text      |
+brewery_id  | integer   | not null, foreign key (references breweries), indexed
 
-## taggings
+## breweries
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+name        | string    | not null, foreign key (references users), indexed
+location    | string    | not null
+
+## venues
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
-note_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
-tag_id      | integer   | not null, foreign key (references tags), indexed
+address     | string    | not null
+
+## likes
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+likeable_id   | integer   | not null, polymorphic key, indexed
+likeable_type | string    | not null, polymorphic type
+
+## checkins
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+user_id       | integer   | not null, foreign key (references users), indexed
+beer_id       | integer   | not null, foreign key (references beers), indexed
+venue_id      | integer   | foreign key (references venues), index
+rating        | float     | not null, between 0 and 5
+review        | string    | not null, less than: 140 chars
+
+## comments
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+checkin_id    | integer   | not null, foreign key (references checkins), indexed
+comment       | string    | not null, less than: 140 chars
 
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-username        | string    | not null, indexed, unique
+username        | string    | not null, unique
+email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
+location        | string    |
+website         | string    |
+about           | string    |    
+
+## friends
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+friend_id   | string    | not null, foreign key(references users), indexed

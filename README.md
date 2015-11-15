@@ -91,7 +91,7 @@ the NotebookForm).
 - [ ] Notification (Not a current feature of the Untappd app (mobile push notifications only) but should be)
 - [ ] Display trending
 - [ ] Similar Beers
-- [ ] Multiple Sign In Auth/Cookies
+- [ ] Multiple Sign In Auth/Cookie
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

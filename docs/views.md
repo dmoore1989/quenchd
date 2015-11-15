@@ -27,6 +27,9 @@
 ### Create Beer
 ![new-beer]
 
+##Friends
+![friend]
+
 ## Component Hierarchy
 ![component-hierarchy]
 
@@ -39,4 +42,5 @@
 [check-in]: ./wireframes/checkin-form.png
 [search]: ./wireframes/search.png
 [new-beer]: ./wireframes/newbeerform.png
+[friend]: ./wireframes/friends.png
 [component-hierarchy]: ./wireframes/component_hierarchy.png

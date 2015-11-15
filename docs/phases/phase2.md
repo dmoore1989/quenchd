@@ -1,4 +1,4 @@
-# Phase 2: Flux Architecture and Note CRUD (2 days)
+# Phase 2: Flux Architecture and CheckIn/Comment CRUD (2 days)
 
 ## Rails
 ### Models
@@ -9,25 +9,32 @@
 
 ## Flux
 ### Views (React Components)
-* NotesIndex
-  - NotesIndexItem
-* NoteForm
+* CheckInIndex
+  - CheckInIndexItem
+* ShowMoreCheckins
+* CheckInForms
+  - WordCount
+* CommentForm
+* CreateBeerForm
+* ToggleActivity
 
 ### Stores
-* Note
+* Beer
+* Comment
 
 ### Actions
-* ApiActions.receiveAllNotes
-* ApiActions.receiveSingleNote
-* ApiActions.deleteNote
+* ApiActions.receiveAllCheckins
+* ApiActions.receiveSingleCheckin
+* ApiActions.deleteCheckIn
 
 ### ApiUtil
-* ApiUtil.fetchAllNotes
-* ApiUtil.fetchSingleNote
-* ApiUtil.createNote
-* ApiUtil.editNote
-* ApiUtil.destroyNote
+* ApiUtil.fetchAllCheckins
+* ApiUtil.fetchSingleCheckin
+* ApiUtil.createCheckIn
+* ApiUtil.editCheckIn
+* ApiUtil.destroyCheckIn
+* ApiUtil.createComment
+* ApiUtil.destroyComment
 
 ## Gems/Libraries
 * Flux Dispatcher
-* Twitter Bootstrap

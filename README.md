@@ -1,4 +1,4 @@
-# FresherNote
+# Quenchd
 
 [Heroku link]Coming soon!!!
 
@@ -31,60 +31,56 @@ Quenchd is a web application inspired by Untappd built using Ruby on Rails and R
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Note Model and JSON API (1.5 days)
+### Phase 1: User Authentication, Beer Model, Checkin/Comment Model and JSON API (1.5 days)
 
 In Phase 1, I will begin by implementing user signup and authentication (using
 BCrypt). There will be a basic landing page after signup that will contain the
 container for the application's root React component. Before building out the
-front end, I will begin by setting up a full JSON API for Notes.
+front end, I will begin by setting up a full JSON API for Beers, CheckIns, and
+Comments.
 
 [Details][phase-one]
 
-### Phase 2: Flux Architecture and Note CRUD (2.5 days)
+### Phase 2: Flux Architecture and Checkin/Comment CRUD (2.5 days)
 
 Phase 2 is focused on setting up Flux, the React Router, and the React view
 structure for the main application. After the basic Flux architecture has been
-set up, a Note store will be implemented and a set of actions corresponding to
-the needed CRUD functionality created. Once this is done, I will create React
-views for the Notes `Index`, `IndexItem` and `Form`. At the end of Phase 2,
-Notes can be created, read, edited and destroyed in the browser. Notes should
-save to the database when the form loses focus or is left idle after editing.
-Lastly, while constructing the views I will start using basic bootstrap for
-styling.
+set up, a Beer store will be implemented and a set of actions corresponding to
+the need CRUD functionality created.  Once this is done, I will create react
+views for the Index, `Index`, `IndexItem` and `CheckInForm`.  At the end of
+phase 2, CheckIns can be created, read, edited, and destroyed and comments added and destroyed to these in the browser. Finally, while constructing these views, I will start my styling using CSS.
 
 [Details][phase-two]
 
-### Phase 3: Notebooks and Tags (2 days)
+### Phase 3: Breweries, Venues, and Likes (1.5 days)
 
-Phase 3 adds organization to the Notes. Notes belong to a Notebook, which has
-its own `Index` view. Create JSON API for Notebooks. Notes can also now be
-tagged with multiple tags. Users can bring up notes in a separate `SearchIndex`
-view by searching for their tags. Once the tag search is implemented, I will
-extend this to a fuzzy search through every Note's content.
+Phase 3 adds organization to the Beers. Beers belong to a Brewer and Check Ins
+belong to a Venue. Create JSON API for Brewers and Venues. For creating, and
+updating breweries and venues, I will make these items via the standard rails
+HTTP request as only owner and brewers can make these changes.   All of these
+items in addition to checkins can be liked.
 
 [Details][phase-three]
 
-### Phase 4: Allow Complex Styling in Notes (1 day)
+### Phase 4: Search functionality (1 day)
 
-Using quill.js, allow for complex styling of notes.
+Phase 4 will implement my sites search functionality.  Users can search for Beers, Breweries, and Venues by toggling between the three.  There will be a react component search bar which will organize all three on the header bar.
 
 [Details][phase-four]
 
-### Phase 5: Reminders and Garbage Collection (1 day)
+### Phase 5: Friends and Images (1.5 days)
 
-Phase 5 introduces two new features. First, users can set reminders on notes
-which will at the time they are set for prompt the user to review and edit the
-given note. In addition, I will implement a feature that asks users to review
-notes once they reach a certain age and ask whether they should be kept,
-archived, or deleted.
+Phase 5 introduces two new features. First, can add friends to their profiles.
+These friends must be approved and once that occurs they will be able to see
+each others check ins.  I will add a friends page to search for  In addition, I
+will add image functionality to my users and checkins so users can share photos
+of their drinks.
 
 [Details][phase-five]
 
 ### Phase 6: Styling Cleanup and Seeding (1 day)
 
-Bootstrap will have been used to keep things organized up until now, but in
-Phase 6 I will add styling flourishes and make modals out of some elements (like
-the NotebookForm).
+Phase 6 will be a day of general CSS styling clean up and preparing my seed data.  I will be using BreweryDB api to retrieve a large list of brewers, and beers, the NYS SLA license api to retrieve venues (on premise bars), and will be seeding my own users list.
 
 ### Bonus Features (TBD)
 - [ ] Check In Badges

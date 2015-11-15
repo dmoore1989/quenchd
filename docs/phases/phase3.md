@@ -2,38 +2,43 @@
 
 ## Rails
 ### Models
-* Notebook
-* Tag
-* Tagging
+* Brewers
+* Venues
+* Likes
 
 ### Controllers
-* Api::NotebooksController (create, destroy, index, show, update)
+* Api::BreweriesController (create, destroy, search, show, update)
+* Api::VenuesController (create, destroy, search, show, update)
+* Api::LikesController (create, destroy) (Will be fetched with relevent item
+using jbuilder)
 
 ### Views
-* notebooks/index.json.jbuilder
-* notebooks/show.json.jbuilder
-* tags/show.json.jbuilder
+* breweries/show.json.jbuilder
+* venues/show.json.jbuilder
+* breweries/new.html.erb
+* venues/new.html.erb
+* breweries/edit.html.erb
+* venues/edit.html.erb
+* form.html.erb (partial to be shared between breweries and venues)
 
 ## Flux
 ### Views (React Components)
-* NotebooksIndex
+* ShowPageIndex
   - NotebookIndexItem
-* NotebookForm
-* SearchIndex
+* DetailSnapShot
+* LikeButton
 
 ### Stores
-* Notebook
+* Brewers
+* Venues
 
 ### Actions
-* ApiActions.receiveAllNotebooks
-* ApiActions.receiveSingleNotebook
-* ApiActions.deleteNotebook
+* ApiActions.receiveSingleVenue
+* ApiActions.receiveSingleBrewer
+* ApiAction.CreateLike
 
 ### ApiUtil
-* ApiUtil.fetchAllNotebooks
-* ApiUtil.fetchSingleNotebook
-* ApiUtil.createNotebook
-* ApiUtil.editNotebook
-* ApiUtil.destroyNotebook
+* ApiUtil.fetchBrewer
+* ApiUtil.fetchVenue
 
 ## Gems/Libraries

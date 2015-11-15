@@ -2,34 +2,37 @@
 
 ## Rails
 ### Models
-* Reminder
+* Friend
+* Image
 
 ### Controllers
-* Api::RemindersController (create, destroy, index, show, update)
+* Api::FriendsController (create, destroy, update)
+* Api::ImageController (create, destroy)
 
 ### Views
-* reminders/index.json.jbuilder
 
 ## Flux
 ### Views (React Components)
-* RemindersIndex
-  - ReminderIndexItem
-* ReminderShow
-* ReminderForm
+  * PendingFriendRequestIndex
+  * PendingFriendRequestItem
+  * FriendIndex
+  * FriendSearchBar
+  * RenderImages
 
 ### Stores
-* Reminder
+  * Friend
+  * Image
 
 ### Actions
-* ApiActions.receiveAllReminders
-* ApiActions.receiveSingleReminder
-* ApiActions.deleteReminder
+  * ApiActions.receiveAllFriends
+  * ApiActions.createFriend
+  * ApiActions.updateFriendRequest
+  * ApiActions.receiveAllImages
+  * ApiActions.createImages
+  * ApiActions.destroyImages
 
 ### ApiUtil
-* ApiUtil.fetchAllReminders
-* ApiUtil.fetchSingleReminder
-* ApiUtil.createReminder
-* ApiUtil.updateReminder
-* ApiUtil.destroyReminder
+  * ApiUtil.fetchAllFriends
+  * ApiUtil.fetchImages
 
 ## Gems/Libraries

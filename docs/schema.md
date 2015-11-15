@@ -1,7 +1,5 @@
 # Schema Information
 
-NB: Beers, Breweries, Venues, Users, Checkins will accept images but I'm not 100% sure how to implement this in my schema.  This will be a question I will be asking on Monday
-
 ## beers
 column name | data type | details
 ------------|-----------|-----------------------
@@ -17,7 +15,8 @@ brewery_id  | integer   | not null, foreign key (references breweries), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | string    | not null, foreign key (references users), indexed
+name        | string    | not null
+brewer_id   | integer   | not null, foreign key (references users), indexed
 location    | string    | not null
 
 ## venues
@@ -25,14 +24,22 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
+owner_id    | integer   | not null, foreign key (references users), indexed
 address     | string    | not null
 
 ## likes
 column name   | data type | details
 --------------|-----------|-----------------------
 id            | integer   | not null, primary key
-likeable_id   | integer   | not null, polymorphic key, indexed
+likeable_id   | integer   | not null, polymorphic key (for checkins, beers, breweries, and venues), indexed
 likeable_type | string    | not null, polymorphic type
+
+## images
+column name   | data type | details
+--------------|-----------|-----------------------
+id            | integer   | not null, primary key
+imagable_id   | integer   | not null, polymorphic key (for users, and checkins), indexed
+imagable_type | string    | not null, polymorphic type
 
 ## checkins
 column name   | data type | details
@@ -68,3 +75,4 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 friend_id   | string    | not null, foreign key(references users), indexed
+approved    | boolean   | default false, must be approved by associated friend

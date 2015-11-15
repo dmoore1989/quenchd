@@ -9,10 +9,23 @@
 
 ## Flux
 ### Views (React Components)
+* SearchBar
+* SearchPage
+  - ToggleSearchType
+  - SearchItemsIndex
+    - SearchItems
+
 
 ### Stores
 
-### Actions
+## Actions
+* ApiActions.receiveSearchedBeers
+* ApiActions.receiveSearchedBreweries
+* ApiActions.receiveSearchedVenues
+
+### ApiUtil
+* ApiUtil.fetchSearchedBeers
+* ApiUtil.fetchSearchedBreweries
+* ApiUtil.fetchSearchedVenues
 
 ## Gems/Libraries
-* Quill.js

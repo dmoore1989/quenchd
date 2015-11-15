@@ -18,6 +18,7 @@
   * FriendIndex
   * FriendSearchBar
   * RenderImages
+    - ShowImage
 
 ### Stores
   * Friend

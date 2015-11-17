@@ -1,5 +1,6 @@
 <h2>Sign Up</h2>
 <form action="<%= users_url %>" method="post">
+  <%= auth_token %>
   <label>Username
     <input type="text" name="user[username]" value="<%= @user.username %>">
   </label>
@@ -14,6 +15,10 @@
 
   <label>Confirm password
     <input type="password" name="user[password_confirmation]" value="<%= @user.password %>"
+  </label>
+
+  <label>Location
+    <input type="text" name="user[location]" value="<%= @user.location %>">
   </label>
 
   <label>Date of Birth (must be of legal drinking age in your home country)

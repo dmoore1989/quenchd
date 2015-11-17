@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
 
   def ensure_login
     unless logged_in?
-      redirect to static_pages_landing_url,
+      redirect_to static_pages_landing_url
     end
   end
 

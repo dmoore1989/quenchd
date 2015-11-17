@@ -1,4 +1,5 @@
 json.array! comments do |comment|
-  comment.user comment.commenter
-  comment.body comment.body
+  json.user comment.commenter
+  json.body comment.body
+  json.created comment.created_at
 end

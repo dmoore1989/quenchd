@@ -4,7 +4,6 @@ json.beer do
   json.ibu  @beer.ibu
   json.style @beer.style
   json.description @beer.description
-  json.brewery @beer.brewery
 end
 
-json.partial! 'check_ins/check_ins', @beer.check_ins
+json.partial! 'api/check_ins/check_ins', check_ins: @beer.check_ins

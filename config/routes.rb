@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :beers, except: [:new, :edit]
-    resources :checkins, except: [:new, :edit]
+    resources :check_ins, except: [:new, :edit]
     resources :comments, except: [:new, :edit, :show]
   end
 

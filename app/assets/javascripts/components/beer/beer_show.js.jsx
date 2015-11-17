@@ -19,7 +19,15 @@ window.BeerShow = React.createClass({
 
   render: function () {
     if (this.state.beer){
-      return(<div>{this.state.beer}</div>);
+      return(
+        <div>
+          <h1>{this.state.beer.name}</h1>
+          <h3>{this.state.beer.style}</h3>
+          <colgroup>
+            <col>{this.state.beer.abv}</col>
+            <col>{this.state.beer.ibu}</col>
+          </colgroup>
+        </div>);
     }
     else {
       return (<div>hey</div>);

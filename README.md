@@ -35,9 +35,7 @@ Quenchd is a web application inspired by Untappd built using Ruby on Rails and R
 
 In Phase 1, I will begin by implementing user signup and authentication (using
 BCrypt). There will be a basic landing page after signup that will contain the
-container for the application's root React component. Before building out the
-front end, I will begin by setting up a full JSON API for Beers, CheckIns, and
-Comments.
+container for the application's root React component. I will begin building out the beer react components to get the front end of the project underway. I will create `Index`, and `IndexItem` in react.
 
 [Details][phase-one]
 
@@ -46,11 +44,7 @@ Comments.
 Phase 2 is focused on setting up Flux, the React Router, and the React view
 structure for the main application. After the basic Flux architecture has been
 set up, a Beer store will be implemented and a set of actions corresponding to
-the needed CRUD functionality created.  Once this is done, I will create react
-views for the Index, `Index`, `IndexItem` and `CheckInForm`.  At the end of
-phase 2, CheckIns can be created, read, edited, and destroyed and comments added
-and destroyed on CheckIns in the browser. Finally, while constructing these
-views, I will start my styling using CSS.
+the needed CRUD functionality created. I will create `CheckInForm` and `Comment Related Components`.  At the end of phase 2, CheckIns can be created, read, edited, and destroyed and comments added and destroyed on CheckIns in the browser. Finally, while constructing these views, I will start my styling using CSS.
 
 [Details][phase-two]
 

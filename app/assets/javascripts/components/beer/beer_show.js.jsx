@@ -18,6 +18,7 @@ window.BeerShow = React.createClass({
 
 
   render: function () {
+    console.log("hello")
     if (this.state.beer){
       return(
         <div>

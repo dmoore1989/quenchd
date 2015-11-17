@@ -8,5 +8,19 @@ window.BeerApiUtil = {
         BeerApiAction.receiveBeer(data);
       })
     });
+  },
+
+  createBeer: function(beer) {
+    $.ajax({
+      url: "/api/beers",
+      type: "POST",
+      data: beer,
+      dataType: "json",
+      success: (function(data) {
+        BeerApiAction.receiveBeer(data);
+
+      })
+    });
   }
+
 };

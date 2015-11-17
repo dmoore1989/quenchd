@@ -2,9 +2,10 @@ Index = React.createClass({
 
 
   render: function (){
+    debugger
     return (
       <div>
-        <BeerForm>Create New Beer</BeerForm>
+        <ReactRouter.Link to="/beers/new">Create a New Beer</ReactRouter.Link>
       </div>
     );
   }

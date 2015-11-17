@@ -13,18 +13,41 @@ window.BeerForm = React.createClass({
   },
 
   createBeer: function() {
-    console.log("Beer Created, NOT!")
+    beer= {
+      beer:{
+        name: this.state.name,
+        abv: this.state.abv,
+        ibu: this.state.ibu,
+        style: this.state.style,
+        description: this.state.description,
+        brewery_id: this.state.brewerId
+      }
+    };
+    BeerApiUtil.createBeer(beer);
+    this.props.history.pushState(null, "/");
   },
 
   render: function() {
     return(
       <form>
-        <input type="text" valueLink={this.linkState('name')}/>
-        <input type="text" valueLink={this.linkState('abv')}/>
-        <input type="text" valueLink={this.linkState('ibu')}/>
-        <input type="text" valueLink={this.linkState('style')}/>
-        <input type="text" valueLink={this.linkState('description')}/>
-        <input type="text" valueLink={this.linkState('brewerId')}/>
+        <label>Beer
+          <input type="text" valueLink={this.linkState('name')}/>
+        </label>
+        <label>Alcohol By Volume
+          <input type="text" valueLink={this.linkState('abv')}/>
+        </label>
+        <label>International Bittering Units
+          <input type="text" valueLink={this.linkState('ibu')}/>
+        </label>
+        <label>Style
+          <input type="text" valueLink={this.linkState('style')}/>
+        </label>
+        <label>Description
+          <input type="text" valueLink={this.linkState('description')}/>
+        </label>
+        <label>Brewer Id
+          <input type="text" valueLink={this.linkState('brewerId')}/>
+        </label>
 
         <button onClick={this.createBeer}>Create!</button>
       </form>

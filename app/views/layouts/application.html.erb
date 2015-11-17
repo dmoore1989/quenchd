@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<% if flash %>
+  <% flash.each do |key, values| %>
+    <% values.each do |message|%>
+      <h5><%= message %></h5>
+    <% end %>
+  <% end %>
+<% end %>
+
 <%= yield %>
 <% if logged_in? %>
   <form action="<%= session_url %>" method="post">

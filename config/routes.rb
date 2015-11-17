@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   get 'static_pages/landing'
 
+  namespace :api, defaults: {format: :json} do
+    resources :beers
+  end
+
 
 end

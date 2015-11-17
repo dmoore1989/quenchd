@@ -11,8 +11,7 @@
 * SessionsController (create, new, destroy)
 * Api::BeersController (create, destroy, search, index, show, update)
 * Api::CheckInsController (create, destroy, index, show, update)
-* Api::CommentsController (create, destroy) (will be fetched with checkins
-  using jbuilder)
+* Api::CommentsController (create, destroy) 
 
 ### Views
 * users/new.html.erb

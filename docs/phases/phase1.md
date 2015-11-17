@@ -7,7 +7,7 @@
 * CheckIns
 
 ### Controllers
-* UsersController (create, new)
+* UsersController (create, new, edit, destroy, update, show)
 * SessionsController (create, new, destroy)
 * Api::BeersController (create, destroy, search, index, show, update)
 * Api::CheckInsController (create, destroy, index, show, update)

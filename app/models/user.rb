@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :check_ins
-  has_many :comments
+  has_many(
+    :comments,
+    foreign_key: :commenter_id,
+    class_name: "Comment"
+    )
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

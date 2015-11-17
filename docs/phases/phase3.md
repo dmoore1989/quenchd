@@ -9,8 +9,7 @@
 ### Controllers
 * Api::BreweriesController (create, destroy, search, show, update)
 * Api::VenuesController (create, destroy, search, show, update)
-* Api::LikesController (create, destroy) (Will be fetched with relevent item
-using jbuilder)
+* Api::LikesController (create, destroy)
 
 ### Views
 * breweries/show.json.jbuilder
@@ -19,7 +18,7 @@ using jbuilder)
 * venues/new.html.erb
 * breweries/edit.html.erb
 * venues/edit.html.erb
-* form.html.erb (partial to be shared between breweries and venues)
+
 
 ## Flux
 ### Views (React Components)

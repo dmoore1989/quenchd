@@ -31,6 +31,7 @@ address     | string    | not null
 column name   | data type | details
 --------------|-----------|-----------------------
 id            | integer   | not null, primary key
+liker_id      | integer   | not null, foreign key(references users)
 likeable_id   | integer   | not null, polymorphic key (for checkins, beers, breweries, and venues), indexed
 likeable_type | string    | not null, polymorphic type
 
@@ -56,7 +57,8 @@ column name   | data type | details
 --------------|-----------|-----------------------
 id            | integer   | not null, primary key
 checkin_id    | integer   | not null, foreign key (references checkins), indexed
-comment       | string    | not null, less than: 140 chars
+commenter_id  | integer   | not null, foreign key (references users), indexed
+body          | string    | not null, less than: 140 chars
 
 ## users
 column name     | data type | details

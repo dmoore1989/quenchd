@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      redirect_to root
+      redirect_to static_pages_home_url
     else
       flash.now[:error] = @user.errors.full_messages
       render :new
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find_by(params[:id]).destroy
-    redirect_to landing
+    redirect_to static_pages_landing_url
   end
 
   def show

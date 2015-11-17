@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if @user
       login(@user)
-      redirect_to root
+      redirect_to static_pages_home_url
     else
       flash[:errors] = ["Incorrect Username or Password"]
       render new
@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to landing
+    redirect_to static_pages_landing_url
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117154110) do
+ActiveRecord::Schema.define(version: 20151117155735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20151117154110) do
 
   add_index "beers", ["brewery_id"], name: "index_beers_on_brewery_id", using: :btree
 
-  create_table "checkins", force: :cascade do |t|
+  create_table "check_ins", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "beer_id",    null: false
     t.integer  "venue_id"
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20151117154110) do
     t.datetime "updated_at"
   end
 
-  add_index "checkins", ["beer_id"], name: "index_checkins_on_beer_id", using: :btree
-  add_index "checkins", ["user_id"], name: "index_checkins_on_user_id", using: :btree
-  add_index "checkins", ["venue_id"], name: "index_checkins_on_venue_id", using: :btree
+  add_index "check_ins", ["beer_id"], name: "index_check_ins_on_beer_id", using: :btree
+  add_index "check_ins", ["user_id"], name: "index_check_ins_on_user_id", using: :btree
+  add_index "check_ins", ["venue_id"], name: "index_check_ins_on_venue_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
     t.integer  "checkin_id",   null: false

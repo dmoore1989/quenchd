@@ -30,7 +30,7 @@ window.BeerShow = React.createClass({
         </div>);
     }
     else {
-      return (<div>hey</div>);
+      return (<div></div>);
     }
   }
 });

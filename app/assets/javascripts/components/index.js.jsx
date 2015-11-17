@@ -1,6 +1,11 @@
 Index = React.createClass({
 
+
   render: function (){
-    return (<p> Hello beer </p>);
+    return (
+      <div>
+        <BeerForm>Create New Beer</BeerForm>
+      </div>
+    );
   }
-})
+});

@@ -3,7 +3,7 @@ $(function () {
   var RouteHandler = ReactRouter.RouteHandler;
   var Router = ReactRouter.Router;
   var Route = ReactRouter.Route;
-  var IndexRoute = ReactRoute.IndexRoute;
+  var IndexRoute = ReactRouter.IndexRoute;
 
   var App = React.createClass({
     render: function () {
@@ -16,10 +16,11 @@ $(function () {
   });
 
   var routes =  (
-    <Route path="/" component={App}?
-      < IndexRoute component={Index} >
+    <Route path="/" component={App}>
+      < IndexRoute component={Index} / >
+      < Route path="beers/:beerId" component={BeerShow} />
     </Route>
   );
 
-  React.render(<Router>{routes}</Router, root);
+  React.render(<Router>{routes}</Router>, root);
 });

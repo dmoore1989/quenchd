@@ -1,4 +1,4 @@
-window.BeerForm = React.CreateClass({
+window.BeerForm = React.createClass({
   mixins: [React.addons.LinkedStateMixin],
 
   getInitialState: function () {

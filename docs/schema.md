@@ -74,5 +74,6 @@ about           | string    |
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key(references users), indexed
 friend_id   | string    | not null, foreign key(references users), indexed
 approved    | boolean   | default false, must be approved by associated friend

@@ -66,6 +66,7 @@ username        | string    | not null, unique
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
+DOB             | datetime  | not null
 location        | string    |
 website         | string    |
 about           | string    |    

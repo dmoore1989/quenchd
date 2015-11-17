@@ -49,7 +49,7 @@ user_id       | integer   | not null, foreign key (references users), indexed
 beer_id       | integer   | not null, foreign key (references beers), indexed
 venue_id      | integer   | foreign key (references venues), index
 rating        | float     | not null, between 0 and 5
-review        | string    | not null, less than: 140 chars
+review        | string    | less than: 140 chars
 
 ## comments
 column name   | data type | details

@@ -5,13 +5,14 @@
 * User
 * Beer
 * CheckIns
+* Comments
 
 ### Controllers
 * UsersController (create, new, edit, destroy, update, show)
 * SessionsController (create, new, destroy)
 * Api::BeersController (create, destroy, search, index, show, update)
 * Api::CheckInsController (create, destroy, index, show, update)
-* Api::CommentsController (create, destroy) 
+* Api::CommentsController (create, destroy)
 
 ### Views
 * users/new.html.erb
@@ -19,6 +20,7 @@
 * beers/show.json.jbuilder
 * checkins/index.json.jbuilder
 * checkins/show.json.jbuilder
+* comments/index.json.jbuilder
 
 
 ## Flux

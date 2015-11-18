@@ -22,7 +22,6 @@
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case BeerConstants.CHECKIN_RECEIVED:
-          
           _checkIns.push(payload.checkIn);
           CheckInStore.emit(CHANGE_EVENT);
           break;

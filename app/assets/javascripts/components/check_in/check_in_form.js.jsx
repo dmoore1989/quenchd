@@ -9,7 +9,6 @@ window.CheckInForm = React.createClass({
   },
 
   createCheckIn: function () {
-    debugger
     checkIn = {
       check_in:{
         beer_id: this.props.beer.id,

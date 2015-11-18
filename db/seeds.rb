@@ -35,7 +35,7 @@ end
 
 40.times do |x|
   Comment.create(
-    checkin_id: (x % 20 + 1),
+    check_in_id: (x % 20 + 1),
     commenter_id: (x % 10 + 1),
     body: Faker::Lorem.sentence(5)
   )

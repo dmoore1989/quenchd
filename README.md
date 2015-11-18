@@ -1,6 +1,6 @@
 # Quenchd
 
-[Heroku link]Coming soon!!!
+[Heroku link][heroku]
 
 [heroku]: http://www.herokuapp.com
 

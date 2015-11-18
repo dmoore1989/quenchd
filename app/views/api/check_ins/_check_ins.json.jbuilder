@@ -4,6 +4,7 @@ json.array! check_ins do |check_in|
   json.rating check_in.rating
   json.review check_in.review
 
-  json.partial! 'api/comments/comments', comments: check_in.comments
-
+  json.comments do
+    json.partial! 'api/comments/comments', comments: check_in.comments
+  end
 end

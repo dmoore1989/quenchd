@@ -12,13 +12,13 @@ window.BeerShow = React.createClass({
     BeerStore.removeChangeHandler(this.setBeer);
   },
 
+
   setBeer: function() {
     this.setState({beer: BeerStore.beer()});
   },
 
 
   render: function () {
-    console.log("hello")
     if (this.state.beer){
       return(
         <div>
@@ -28,6 +28,7 @@ window.BeerShow = React.createClass({
             <col>{this.state.beer.abv}</col>
             <col>{this.state.beer.ibu}</col>
           </colgroup>
+          <CheckInIndex checkIns={this.state.beer.check_ins} beer={this.state.beer.name} />
         </div>);
     }
     else {

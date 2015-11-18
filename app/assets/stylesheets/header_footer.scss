@@ -4,6 +4,18 @@ header {
   background-color: #ffcc00;
   height: 55px;
   width: 100%;
-  top: 0px
+  top: 0px;
+  color: #ffffff;
+}
 
+header nav.header-nav {
+  display: block;
+  width: 1025px;
+  margin: auto;
+}
+
+section.header-title > a {
+  display: block;
+  float: left;
+  text-align: center;
 }

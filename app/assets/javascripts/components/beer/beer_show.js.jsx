@@ -29,8 +29,7 @@ window.BeerShow = React.createClass({
             <col>{this.state.beer.ibu}</col>
           </colgroup>
           <CheckInIndex
-            checkIns={BeerConstants.ASSOCIATION}
-            beer={this.state.beer.name} />
+            checkInData={BeerConstants.ASSOCIATION}/>
         </div>);
     }
     else {

@@ -5,7 +5,7 @@ window.CheckInApiUtil = {
       type: "GET",
       dataType:"json",
       success: (function (data){
-        CheckInApiAction.receiveCheckIns(data.check_ins);
+        CheckInApiAction.receiveCheckIns(data);
       })
     });
   }

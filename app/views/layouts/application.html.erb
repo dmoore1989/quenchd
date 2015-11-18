@@ -16,7 +16,10 @@
   <% end %>
 <% end %>
 
+
+
 <%= yield %>
+
 <% if logged_in? %>
   <form action="<%= session_url %>" method="post">
     <%= auth_token %>

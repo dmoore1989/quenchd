@@ -80,6 +80,7 @@ Phase 6 will be a day of general CSS styling clean up and preparing my seed data
 
 ### Bonus Features (TBD)
 - [ ] Check In Badges
+- [ ] Mobile Optimization of Views
 - [ ] Notification (Not a current feature of the Untappd app (mobile push notifications only) but should be)
 - [ ] Display trending
 - [ ] Similar Beers

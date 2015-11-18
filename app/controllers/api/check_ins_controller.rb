@@ -8,6 +8,14 @@ class Api::CheckInsController < ApplicationController
   end
 
   def create
+    @check_in = CheckIn.new(check_in_params)
+    @check_in.user_id = current_user.id
+
+    if @check_in.save
+      render json: @check_in
+    else
+      raise "YOU SUCK"
+    end
   end
 
   def update

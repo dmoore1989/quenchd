@@ -9,6 +9,15 @@ window.CheckInForm = React.createClass({
   },
 
   createCheckIn: function () {
+    checkIn = {
+      check_in:{
+        beer_id: this.props.beer.id,
+        rating: this.state.rating,
+        review: this.state.review
+      }
+    };
+
+    CheckInApiUtil.createCheckIn(checkIn);
   },
 
   render: function () {

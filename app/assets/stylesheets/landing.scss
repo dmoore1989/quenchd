@@ -1,8 +1,8 @@
 
 
 content {
-  display: block;
   position: relative;
+  display: block;
   min-height: 600px;
   background-image: image-url("obamagetsschwifty.jpg");
   background-size: cover;
@@ -10,18 +10,64 @@ content {
   font-family: Helvetica;
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: 700;
+section {
+  display: block;
+  position: absolute;
   text-align: center;
+  // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.landing-title {
+  left: 30px;
+  top: 20px;
+}
+
+.landing-descriptions {
+  left: 45px;
+  top: 225px;
+}
+
+.landing-action {
+  left: 50px;
+  bottom: 50px;
+}
+
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+
 }
 
 h2 {
   font-size: 36px;
-  text-align: center
+  font-weight: 500;
+
 }
 
 h4 {
   font-size: 24px;
-  text-align: center
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h5 > a {
+  text-decoration: underline;
+}
+
+.landing-signup {
+  padding: 10px;
+  margin: 5px auto;
+  display: block;
+  background-color: blue;
+  font-size: 20px;
+  border-radius: 5px
+}
+
+.landing-signup > a {
+  padding: 10px;
 }

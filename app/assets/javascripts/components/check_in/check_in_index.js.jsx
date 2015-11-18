@@ -22,9 +22,10 @@ window.CheckInIndex = React.createClass({
     if (this.state.checkIns) {
       return (
         <div>
-          {this.state.checkIns.map(function(checkIn){
+          {this.state.checkIns.map(function(checkIn, idx){
             var beer = checkIn.beer;
             return (<CheckInItem
+                      key={idx}
                       checkIn={checkIn}
                       beer={beer}/>);
           }, this)}

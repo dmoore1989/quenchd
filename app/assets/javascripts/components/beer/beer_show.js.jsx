@@ -17,9 +17,14 @@ window.BeerShow = React.createClass({
     this.setState({beer: BeerStore.beer()});
   },
 
+  renderCheckInModal: function () {
+    console.log("This will create a modal soon");
+  },
+
 
   render: function () {
     if (this.state.beer){
+
       return(
         <div>
           <h1>{this.state.beer.name}</h1>
@@ -28,6 +33,10 @@ window.BeerShow = React.createClass({
             <col>{this.state.beer.abv}</col>
             <col>{this.state.beer.ibu}</col>
           </colgroup>
+          <button onClick={this.renderCheckInModal}>
+              Check In to This Beer
+          </button>
+          <CheckInForm beer={this.state.beer} />
           <CheckInIndex
             checkInData={BeerConstants.ASSOCIATION}/>
         </div>);

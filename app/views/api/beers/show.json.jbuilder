@@ -1,9 +1,4 @@
-
-json.name @beer.name
-json.abv @beer.abv
-json.ibu  @beer.ibu
-json.style @beer.style
-json.description @beer.description
+json.extract! @beer, :id, :name, :abv, :ibu, :style, :description
 
 json.check_ins do
   json.partial! 'api/check_ins/check_ins', check_ins: @beer.check_ins

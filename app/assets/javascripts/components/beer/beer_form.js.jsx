@@ -12,7 +12,8 @@ window.BeerForm = React.createClass({
     });
   },
 
-  createBeer: function() {
+  createBeer: function(e) {
+    e.preventDefault();
     beer= {
       beer:{
         name: this.state.name,

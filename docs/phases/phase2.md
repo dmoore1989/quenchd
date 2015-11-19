@@ -8,26 +8,26 @@
 
 ## Flux
 ### Views (React Components)
-* CheckInIndex
-  - CheckInIndexItem
+* CheckInIndex x
+  - CheckInIndexItem x
 * ShowMoreCheckins
-* CheckInForms
+* CheckInForms x
   - WordCount
 * CommentForm
-* CreateBeerForm
-* ToggleActivity
+* CreateBeerForm x
+
 
 ### Stores
 * Beer
 * Comment
 
 ### Actions
-* ApiActions.receiveAllCheckins
-* ApiActions.receiveSingleCheckin
+* ApiActions.receiveAllCheckins x
+* ApiActions.receiveSingleCheckin x
 * ApiActions.deleteCheckIn
 
 ### ApiUtil
-* ApiUtil.fetchAllCheckins
+* ApiUtil.fetchAllCheckins x
 * ApiUtil.fetchSingleCheckin
 * ApiUtil.createCheckIn
 * ApiUtil.editCheckIn

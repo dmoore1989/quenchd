@@ -2,25 +2,26 @@
 
 ## Rails
 ### Models
-* User
-* Beer
-* CheckIns
-* Comments
+* User x
+* Beer x
+* CheckIns x
+* Comments x
 
 ### Controllers
-* UsersController (create, new, edit, destroy, update, show)
-* SessionsController (create, new, destroy)
-* Api::BeersController (create, destroy, search, index, show, update)
-* Api::CheckInsController (create, destroy, index, show, update)
+* UsersController (create, new, edit, destroy, update, show) x
+* SessionsController (create, new, destroy) x
+* Api::BeersController (create, destroy, search, index, show, update) x
+* Api::CheckInsController (create, destroy, index, show, update) x
 * Api::CommentsController (create, destroy)
 
 ### Views
-* users/new.html.erb
-* session/new.html.erb
-* beers/show.json.jbuilder
-* checkins/index.json.jbuilder
-* checkins/show.json.jbuilder
-* comments/index.json.jbuilder
+* users/new.html.erb x
+* session/new.html.erb x
+* beers/show.json.jbuilder x
+* checkins/index.json.jbuilder x
+* checkins/show.json.jbuilder x
+* user/show.json.jbuilder x
+* comments/index.json.jbuilder x
 
 
 ## Flux

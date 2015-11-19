@@ -18,6 +18,8 @@ window.CheckInItem = React.createClass({
                {this.props.beer.name}
           </ReactRouter.Link>
           <button onClick={this.deleteCheckIn}>Delete This Check-In</button>
+          <p>{this.props.checkIn.review}</p>
+          <figure>{this.props.checkIn.rating}</figure>
           <CommentsIndex comments={this.props.checkIn.comments} />
       </h6>
     );

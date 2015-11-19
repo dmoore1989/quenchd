@@ -13,7 +13,7 @@ window.CommentsIndex = React.createClass({
         </ul>
       );
     } else {
-      return (<div>/</div>);
+      return (<div></div>);
     }
   }
 

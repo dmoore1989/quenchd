@@ -1,10 +1,10 @@
 (function(root){
-  var _checkIns = [];
+  var _checkIns = {};
   var CHANGE_EVENT = "CHANGE_EVENT";
 
   root.CheckInStore = $.extend({}, EventEmitter.prototype, {
     all: function () {
-      return _checkIns.slice();
+      return _checkIns;
     },
 
     addChangeHandler: function (callback) {

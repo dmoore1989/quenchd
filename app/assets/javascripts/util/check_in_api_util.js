@@ -9,6 +9,7 @@ window.CheckInApiUtil = {
         stop: QuenchdConstants.STARTING_REQUESTS
       },
       success: (function (data) {
+        debugger
         CheckInApiAction.receiveCheckIns(data);
         data.forEach(function (checkIn){
           CommentApiAction.receiveComments(checkIn.comments);

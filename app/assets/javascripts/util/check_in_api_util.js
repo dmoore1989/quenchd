@@ -4,8 +4,27 @@ window.CheckInApiUtil = {
       url: "/api/check_ins",
       type: "GET",
       dataType:"json",
+      data: {
+        start: 0,
+        stop: BeerConstants.STARTING_REQUESTS
+      },
       success: (function (data){
         CheckInApiAction.receiveCheckIns(data);
+      })
+    });
+  },
+
+  fetchMoreCheckIns: function (start, stop) {
+    $.ajax({
+      url: "/api/check_ins",
+      type: "GET",
+      dataType:"json",
+      data: {
+        start: start,
+        stop: stop
+      },
+      success: (function (data){
+        CheckInApiAction.receiveMoreCheckIns(data);
       })
     });
   },

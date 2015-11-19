@@ -3,6 +3,12 @@ window.ShowMoreCheckins = React.createClass({
     return ({checkInCount: BeerConstants.STARTING_REQUESTS});
   },
 
+  fetchMoreCheckIns: function () {
+    start = this.state.checkInCount + 1;
+    finish = this.state.checkInCount + 10;
+    CheckInApi.fetchCheckins(start, stop);
+  },
+
   render: function () {
     return (
       <div onClick={this.fetchMoreCheckIns}>

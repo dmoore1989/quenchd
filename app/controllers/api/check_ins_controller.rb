@@ -1,6 +1,6 @@
 class Api::CheckInsController < ApplicationController
   def index
-    @check_ins = CheckIn.all.order(created_at: :desc).limit(params[:check_in_amt])
+    @check_ins = CheckIn.all.order(created_at: :desc)[params[:start].to_i..params[:stop].to_i]
     render :index
   end
 
@@ -13,8 +13,6 @@ class Api::CheckInsController < ApplicationController
 
     if @check_in.save
       render :show
-    else
-      raise "YOU SUCK"
     end
   end
 

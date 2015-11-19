@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "static_pages#home"
-  resources :users, except: [:index]
+  resources :users, except: [:index, :show]
   resource :session, only: [:new, :create, :destroy]
   get 'static_pages/home'
   get 'static_pages/landing'
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :beers, except: [:new, :edit]
     resources :check_ins, except: [:new, :edit]
     resources :comments, except: [:new, :edit, :show]
+    resources :users, only: [:show]
   end
 
 

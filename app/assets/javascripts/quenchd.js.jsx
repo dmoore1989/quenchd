@@ -20,6 +20,7 @@ $(function () {
       <IndexRoute component={Index} />
       <Route path="beers/new" component={BeerForm} />
       <Route path="beers/:beerId" component={BeerShow} />
+      <Route path="users/"
     </Route>
   );
 

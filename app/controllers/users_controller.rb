@@ -39,10 +39,6 @@ class UsersController < ApplicationController
     redirect_to static_pages_landing_url
   end
 
-  def show
-    @user = User.find_by(params[:id])
-    render :show
-  end
 
   def user_params
     params.require(:user).permit(:email, :username, :password, :dob, :location, :website, :about)

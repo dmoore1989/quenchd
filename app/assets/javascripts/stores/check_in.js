@@ -15,14 +15,6 @@
       CheckInStore.removeListener(CHANGE_EVENT, callback);
     },
 
-    delete: function(id) {
-      for (var i = 0; i < _checkIns.length; i++) {
-        if (_checkIns[i].id === id) {
-          _checkIns.splice(i, 1);
-          return;
-        }
-      }
-    },
 
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
@@ -31,15 +23,14 @@
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_RECEIVED:
-          _checkIns.unshift(payload.checkIn);
+          _checkIns[payload.checkIn.id] = (payload.checkIn);
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKINS_ADDED:
-          _checkIns = _checkIns.concat(payload.checkIns);
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_DELETED:
-          CheckInStore.delete(payload.checkIn.id);
+          _checkIns[payload.checkIn.id] = null;
           CheckInStore.emit(CHANGE_EVENT);
           break;
       }

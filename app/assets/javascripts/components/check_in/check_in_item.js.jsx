@@ -1,13 +1,10 @@
 window.CheckInItem = React.createClass({
-  deleteCheckIn: function () {
-    CheckInApiUtil.deleteCheckIn(this.props.checkIn.id);
-  },
+
 
   render: function () {
     var user = this.props.checkIn.user.username;
     var linkBeer = "/beers/" + this.props.beer.id;
     var linkUser = "/users/" + this.props.checkIn.user.id;
-    debugger
     return (
       <h6 className="page-feed" key={this.props.checkIn.id}>
         <ReactRouter.Link
@@ -18,7 +15,6 @@ window.CheckInItem = React.createClass({
             to={linkBeer} className="link">
                {this.props.beer.name}
           </ReactRouter.Link>
-          <button onClick={this.deleteCheckIn}>Delete This Check-In</button>
           <p>{this.props.checkIn.review}</p>
           <figure>{this.props.checkIn.rating}</figure>
           <CommentsIndex comments={this.props.checkIn.comments} />

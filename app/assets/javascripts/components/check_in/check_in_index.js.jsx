@@ -25,15 +25,23 @@ window.CheckInIndex = React.createClass({
     CheckInApiUtil.fetchMoreCheckIns(start, stop);
   },
 
+  deleteCheckIn: function () {
+    CheckInApiUtil.deleteCheckIn(this.props.checkIn.id);
+  },
+
   checkInItems: function () {
     var checkInItems = [];
     for (var id in this.state.checkIns) {
       var checkIn = this.state.checkIns[id];
       var beer = this.state.checkIns[id].beer;
-       checkInItems.push(<CheckInItem
-          key={id}
-          checkIn={checkIn}
-          beer={beer}/>
+       checkInItems.push(
+         <div>
+            <CheckInItem
+              key={id}
+              checkIn={checkIn}
+              beer={beer}/>
+            <button onClick={this.deleteCheckIn}>Delete This Check-In</button>
+          </div>
         );
     }
     return checkInItems;

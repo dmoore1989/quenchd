@@ -11,6 +11,10 @@ window.CommentsIndex = React.createClass({
     CommentStore.removeChangeHandler(this.updateComments);
   },
 
+  updateComments: function () {
+    this.setState({comments: CommentStore.all()});
+  },
+
   render: function () {
     if (this.state.comments){
       return (

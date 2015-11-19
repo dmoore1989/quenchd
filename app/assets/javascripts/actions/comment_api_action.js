@@ -1,5 +1,5 @@
 window.CommentApiAction={
-  receiveComments: function () {
+  receiveComments: function (comments) {
     AppDispatcher.dispatch({
       actionType: BeerConstants.COMMENTS_RECEIVED,
       comments: comments

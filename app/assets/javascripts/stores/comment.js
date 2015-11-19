@@ -2,7 +2,10 @@
   var _comments = [];
   var CHANGE_EVENT = "CHANGE_EVENT";
 
+
   root.CommentStore = $.extend({}, EventEmitter.prototype, {
+
+
     all: function () {
       return _comments.slice();
     },
@@ -23,5 +26,7 @@
           break;
       }
     })
-  })
+  });
+
+  root.CommentStore.setMaxListeners(100);
 })(this);

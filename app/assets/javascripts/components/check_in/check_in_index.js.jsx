@@ -26,7 +26,7 @@ window.CheckInIndex = React.createClass({
   },
 
   deleteCheckIn: function () {
-    CheckInApiUtil.deleteCheckIn(this.props.checkIn.id);
+    CheckInApiUtil.deleteCheckIn(this.props.checkid);
   },
 
   checkInItems: function () {

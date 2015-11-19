@@ -5,8 +5,8 @@ window.CheckInIndex = React.createClass({
 
   componentDidMount: function () {
     CheckInStore.addChangeHandler(this.updateCheckIns);
-    if (this.props.checkInData === BeerConstants.FETCH) {
-      CheckInApiUtil.fetchCheckins(0, BeerConstants.STARTING_REQUESTS);
+    if (this.props.checkInData === QuenchdConstants.FETCH) {
+      CheckInApiUtil.fetchCheckins(0, QuenchdConstants.STARTING_REQUESTS);
     }
   },
 

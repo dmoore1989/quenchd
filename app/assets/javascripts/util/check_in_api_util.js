@@ -6,11 +6,13 @@ window.CheckInApiUtil = {
       dataType:"json",
       data: {
         start: 0,
-        stop: BeerConstants.STARTING_REQUESTS
+        stop: QuenchdConstants.STARTING_REQUESTS
       },
-      success: (function (data){
+      success: (function (data) {
         CheckInApiAction.receiveCheckIns(data);
-        CommentApiAction.receiveComments(data.comments);
+        data.forEach(function (checkIn){
+          CommentApiAction.receiveComments(checkIn.comments);
+        });
       })
     });
   },
@@ -24,13 +26,13 @@ window.CheckInApiUtil = {
         start: start,
         stop: stop
       },
-      success: (function (data){
+      success: (function (data) {
         CheckInApiAction.receiveMoreCheckIns(data);
       })
     });
   },
 
-  createCheckIn: function(checkIn) {
+  createCheckIn: function (checkIn) {
     $.ajax({
       url: "api/check_ins",
       type: "POST",
@@ -38,6 +40,17 @@ window.CheckInApiUtil = {
       dataType: "json",
       success: (function (data) {
         CheckInApiAction.receiveCheckIn(data);
+      })
+    });
+  },
+
+  deleteCheckIn: function (checkInId) {
+    $.ajax({
+      url: "api/check_ins/" + checkInId,
+      type: "DELETE",
+      dataType:"json",
+      success: (function (data) {
+        CheckInApiAction.deleteCheckIn(data);
       })
     });
   }

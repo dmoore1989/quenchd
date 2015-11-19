@@ -38,7 +38,7 @@ window.BeerShow = React.createClass({
           </button>
           <CheckInForm beer={this.state.beer} />
           <CheckInIndex
-            checkInData={BeerConstants.ASSOCIATION}/>
+            checkInData={QuenchdConstants.ASSOCIATION}/>
         </div>);
     }
     else {

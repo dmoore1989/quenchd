@@ -20,7 +20,7 @@
 
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
-        case BeerConstants.COMMENTS_RECEIVED:
+        case QuenchdConstants.COMMENTS_RECEIVED:
           _comments = payload.comments;
           CommentStore.emit(CHANGE_EVENT);
           break;

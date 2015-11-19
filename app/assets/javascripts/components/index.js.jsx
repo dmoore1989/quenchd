@@ -5,7 +5,7 @@ Index = React.createClass({
     return (
       <div>
         <h4 className="page-title">Recent Activity</h4>
-        <CheckInIndex checkInData={BeerConstants.FETCH} />
+        <CheckInIndex checkInData={QuenchdConstants.FETCH} />
         <ReactRouter.Link to="/beers/new">Create a New Beer</ReactRouter.Link>
       </div>
     );

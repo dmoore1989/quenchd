@@ -20,6 +20,8 @@ class Api::CheckInsController < ApplicationController
   end
 
   def destroy
+    @check_in = CheckIn.find(params[:id]).destroy
+    render :show
   end
 
   def check_in_params

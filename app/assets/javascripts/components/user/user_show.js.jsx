@@ -27,7 +27,7 @@ window.UserShow = React.createClass({
             <col>{this.state.user.website}</col>
           </colgroup>
           <CheckInIndex
-            checkInData={BeerConstants.ASSOCIATION}/>
+            checkInData={QuenchdConstants.ASSOCIATION}/>
         </div>);
     }
     else {

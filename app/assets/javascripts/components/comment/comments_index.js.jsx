@@ -1,7 +1,4 @@
 window.CommentsIndex = React.createClass({
-  getInitialState: function () {
-    return ({comments: CommentStore.all()});
-  },
 
   componentDidMount: function () {
     CommentStore.addChangeHandler(this.updateComments);
@@ -16,16 +13,16 @@ window.CommentsIndex = React.createClass({
   },
 
   render: function () {
-    if (this.state.comments){
+    if (this.props.comments){
       return (
-        <div>
-        {this.state.comments.map(function(comment, idx){
+        <ul>
+        {this.props.comments.map(function(comment, idx){
           return (<CommentItem
                     key={idx}
-                    Comment={checkIn}/>
+                    comment={comment}/>
                   );
         }, this)}
-        </div>
+        </ul>
       );
     } else {
       return (<div>/</div>);

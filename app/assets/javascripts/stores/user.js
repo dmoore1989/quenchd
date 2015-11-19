@@ -17,7 +17,7 @@
 
     dispatchId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
-        case BeerConstants.USER_RECEIVED:
+        case QuenchdConstants.USER_RECEIVED:
           _user = payload.user;
           UserStore.emit(CHANGE_EVENT);
           break;

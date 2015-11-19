@@ -15,7 +15,14 @@ window.CheckInIndex = React.createClass({
   },
 
   updateCheckIns: function () {
+    this.checkInAmount = CheckInStore.all().count;
     this.setState({checkIns: CheckInStore.all()});
+  },
+
+  fetchMoreCheckIns: function () {
+    var start = this.checkInAmount + 1;
+    var stop = this.checkInAmount + 10;
+    CheckInApiUtil.fetchMoreCheckIns(start, stop);
   },
 
   render: function () {
@@ -30,7 +37,7 @@ window.CheckInIndex = React.createClass({
                       beer={beer}/>
                     );
           }, this)}
-          <ShowMoreCheckins />
+          <ShowMoreCheckins onClick={fetchMoreCheckIns} />
         </div>
       );
     } else {

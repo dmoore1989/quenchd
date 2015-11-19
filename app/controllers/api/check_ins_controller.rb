@@ -1,6 +1,6 @@
 class Api::CheckInsController < ApplicationController
   def index
-    @check_ins = CheckIn.all.order(created_at: :desc)[params[:start].to_i..params[:stop].to_i]
+    @check_ins = CheckIn.all.order(created_at: :desc)
     render :index
   end
 

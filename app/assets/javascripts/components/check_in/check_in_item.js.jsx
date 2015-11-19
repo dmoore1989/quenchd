@@ -7,6 +7,7 @@ window.CheckInItem = React.createClass({
     var user = this.props.checkIn.user.username;
     var linkBeer = "/beers/" + this.props.beer.id;
     var linkUser = "/users/" + this.props.checkIn.user.id;
+    debugger
     return (
       <h6 className="page-feed" key={this.props.checkIn.id}>
         <ReactRouter.Link

@@ -26,21 +26,26 @@ window.CheckInIndex = React.createClass({
   },
 
   checkInItems: function () {
+    var checkInItems = [];
     for (var id in this.state.checkIns) {
+      var checkIn = this.state.checkIns[id];
       var beer = this.state.checkIns[id].beer;
-       (<CheckInItem
-                key={id}
-                checkIn={this.state.checkIns[checkInId]}
-                beer={beer}/>
-              );
+       checkInItems.push(<CheckInItem
+          key={id}
+          checkIn={checkIn}
+          beer={beer}/>
+        );
     }
+    return checkInItems;
   },
 
   render: function () {
     if (this.state.checkIns) {
       return (
         <div>
-          {this.checkInItems()}
+          {this.checkInItems().map(function (checkInItem) {
+            return checkInItem;
+          })}
           <ShowMoreCheckins onClick={this.fetchMoreCheckIns} />
         </div>
       );

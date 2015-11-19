@@ -13,6 +13,7 @@ window.CheckInItem = React.createClass({
             to={linkBeer} className="link">
                {this.props.beer.name}
           </ReactRouter.Link>
+          <CommentsIndex comments={this.props.checkIn.comments} />
       </h6>
     );
   }

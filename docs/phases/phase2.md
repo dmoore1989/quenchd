@@ -10,7 +10,7 @@
 ### Views (React Components)
 * CheckInIndex x
   - CheckInIndexItem x
-* ShowMoreCheckins
+* ShowMoreCheckins (tabled for now)
 * CheckInForms x
   - WordCount
 * CommentForm
@@ -18,7 +18,7 @@
 
 
 ### Stores
-* Beer
+* Beer x
 * Comment
 
 ### Actions

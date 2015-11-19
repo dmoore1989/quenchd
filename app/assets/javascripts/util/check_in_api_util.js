@@ -10,6 +10,7 @@ window.CheckInApiUtil = {
       },
       success: (function (data){
         CheckInApiAction.receiveCheckIns(data);
+        CommentApiAction.receiveComments(data.comments);
       })
     });
   },

@@ -3,5 +3,5 @@ json.user do
 end
 
 json.check_ins do
-  json.partial! 'api/check_ins/check_ins', check_ins: @user.check_ins
+  json.partial! 'api/check_ins/check_ins', check_ins: @user.check_ins.order(created_at: :desc)
 end

@@ -37,7 +37,7 @@ window.CheckInIndex = React.createClass({
                       beer={beer}/>
                     );
           }, this)}
-          <ShowMoreCheckins onClick={fetchMoreCheckIns} />
+          <ShowMoreCheckins onClick={this.fetchMoreCheckIns} />
         </div>
       );
     } else {

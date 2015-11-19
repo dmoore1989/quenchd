@@ -5,8 +5,6 @@ class Api::CheckInsController < ApplicationController
   end
 
   def show
-    @check_in = CheckIn.find(params[:id])
-    :show
   end
 
   def create

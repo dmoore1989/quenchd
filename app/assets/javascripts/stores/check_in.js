@@ -1,10 +1,10 @@
 (function(root){
-  var _checkIns = {};
+  var _checkIns = [];
   var CHANGE_EVENT = "CHANGE_EVENT";
 
   root.CheckInStore = $.extend({}, EventEmitter.prototype, {
     all: function () {
-      return _checkIns;
+      return _checkIns.slice();
     },
 
     addChangeHandler: function (callback) {
@@ -15,6 +15,14 @@
       CheckInStore.removeListener(CHANGE_EVENT, callback);
     },
 
+    delete: function(id) {
+      for (var i = 0; i < _checkIns.length; i++) {
+        if (_checkIns[i].id === id) {
+          _checkIns.splice(i, 1);
+          return;
+        }
+      }
+    },
 
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
@@ -23,14 +31,15 @@
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_RECEIVED:
-          _checkIns[payload.checkIn.id] = (payload.checkIn);
+          _checkIns.unshift(payload.checkIn);
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKINS_ADDED:
+          _checkIns = _checkIns.concat(payload.checkIns);
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_DELETED:
-          _checkIns[payload.checkIn.id] = null;
+          CheckInStore.delete(payload.checkIn.id);
           CheckInStore.emit(CHANGE_EVENT);
           break;
       }

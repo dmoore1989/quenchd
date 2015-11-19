@@ -10,6 +10,9 @@ window.CheckInApiUtil = {
       },
       success: (function (data) {
         CheckInApiAction.receiveCheckIns(data);
+        data.forEach(function (checkIn){
+          CommentApiAction.receiveComments(checkIn.comments);
+        });
       })
     });
   },

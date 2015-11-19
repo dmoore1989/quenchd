@@ -26,7 +26,7 @@
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case BeerConstants.CHECKINS_ADDED:
-          _checkIns.push(payload.checkIns);
+          _checkIns = _checkIns.concat(payload.checkIns);
           CheckInStore.emit(CHANGE_EVENT);
           break;
       }

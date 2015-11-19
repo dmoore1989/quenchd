@@ -8,7 +8,8 @@ window.CheckInApiAction = {
 
   receiveMoreCheckIns: function (checkIns) {
     AppDispatcher.dispatch({
-      actionType: BeerConstants.CHECKINS_ADDED
+      actionType: BeerConstants.CHECKINS_ADDED,
+      checkIns: checkIns
     });
   },
 

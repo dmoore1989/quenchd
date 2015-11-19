@@ -5,8 +5,9 @@ window.ShowMoreCheckins = React.createClass({
 
   fetchMoreCheckIns: function () {
     start = this.state.checkInCount + 1;
-    finish = this.state.checkInCount + 10;
-    CheckInApi.fetchCheckins(start, stop);
+    stop = this.state.checkInCount + 10;
+    CheckInApiUtil.fetchMoreCheckIns(start, stop);
+    this.setState({checkInCount: stop});
   },
 
   render: function () {

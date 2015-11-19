@@ -30,6 +30,7 @@ window.CheckInIndex = React.createClass({
                       beer={beer}/>
                     );
           }, this)}
+          <ShowMoreCheckins />
         </div>
       );
     } else {

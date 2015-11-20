@@ -1,6 +1,6 @@
 window.CommentsIndex = React.createClass({
   getInitialState: function () {
-    return ({commentForm: "hidden"})
+    return ({commentForm: "hidden"});
   },
 
   componentDidMount: function () {
@@ -21,11 +21,11 @@ window.CommentsIndex = React.createClass({
   },
 
   render: function () {
-    if (this.props.comments){
+    if (this.props.checkIn.comments){
       return (
         <div>
           <ul>
-            {this.props.comments.map(function(comment, idx){
+            {this.props.checkIn.comments.map(function(comment, idx){
               return (<CommentItem
                         key={idx}
                         comment={comment}/>

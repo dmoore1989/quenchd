@@ -42,10 +42,6 @@
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_RECEIVED:
-          _checkIns.unshift(payload.checkIn);
-          CheckInStore.emit(CHANGE_EVENT);
-          break;
-        case QuenchdConstants.CHECKINS_ADDED:
           CheckInStore.insertNewCheckIn(payload.checkIn);
           CheckInStore.emit(CHANGE_EVENT);
           break;

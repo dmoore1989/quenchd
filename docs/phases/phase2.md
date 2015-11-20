@@ -29,11 +29,10 @@
 * ApiUtil.fetchAllCheckins x
 * ApiUtil.fetchSingleCheckin x
 * ApiUtil.createCheckIn x
-* ApiUtil.editCheckIn
 * ApiUtil.destroyCheckIn x
 * ApiUtil.createComment x
 * ApiUtil.destroyComment x
-* ApiUtil.editComment
+* ApiUtil.editComment x
 
 ## Gems/Libraries
 * Flux Dispatcher x

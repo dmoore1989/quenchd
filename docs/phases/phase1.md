@@ -11,7 +11,7 @@
 * UsersController (create, new, edit, destroy, update, show) x
 * SessionsController (create, new, destroy) x
 * Api::BeersController (create, destroy, search, index, show, update) x
-* Api::CheckInsController (create, destroy, index, show, update) x
+* Api::CheckInsController (create, destroy, index, show) x
 * Api::CommentsController (create, destroy) x
 
 ### Views

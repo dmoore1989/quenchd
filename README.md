@@ -13,7 +13,7 @@ Quenchd is a web application inspired by Untappd built using Ruby on Rails and R
 
 - [x] Create an account
 - [x] Log in / Log out
-- [/] "Check into," rate, and review beers they have drank noting venue.
+- [x] "Check into," rate, and review beers they have drank noting venue.
 - [x] Add beers to app.
 - [ ] Friend fellow users and comment on their checkins.
 - [ ] View beers they and other users have drank in the past.

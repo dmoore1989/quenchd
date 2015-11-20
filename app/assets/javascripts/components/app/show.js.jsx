@@ -8,13 +8,15 @@ window.Show = React.createClass({
     this.fetchItem();
   },
 
-  fetchItem: function () {
-    switch (this.props.route.type) {
+  fetchItem: function (newType, newParams) {
+    var modelType = newType || this.props.route.type;
+    var modelParams = newParams || this.props.params;
+    switch (modelType) {
       case QuenchdConstants.USER:
-        UserApiUtil.fetchUser(this.props.params.userId);
+        UserApiUtil.fetchUser(modelParams.userId);
         break;
       case QuenchdConstants.BEER:
-        BeerApiUtil.fetchBeer(this.props.params.beerId);
+        BeerApiUtil.fetchBeer(modelParams.beerId);
         break;
 
     }
@@ -23,6 +25,10 @@ window.Show = React.createClass({
 
   componentWillUnmount: function () {
     ShowStore.removeChangeHandler(this.setShow);
+  },
+
+  componentWillReceiveProps: function (newProps) {
+    this.fetchItem(newProps.route.type, newProps.params);
   },
 
 
@@ -35,7 +41,7 @@ window.Show = React.createClass({
       case QuenchdConstants.USER:
         return (<UserHeader user={this.state.item} />);
       case QuenchdConstants.BEER:
-        return (<BeerHeader beer={this.state.item} />)
+        return (<BeerHeader beer={this.state.item} />);
     }
   },
 

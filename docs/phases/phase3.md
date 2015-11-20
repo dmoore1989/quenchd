@@ -22,8 +22,8 @@
 
 ## Flux
 ### Views (React Components)
-* ShowPageIndex
-  -CheckInIndexItem
+* ShowPageIndex x
+  -CheckInIndexItem x
 * DetailSnapShot
 * LikeButton
 

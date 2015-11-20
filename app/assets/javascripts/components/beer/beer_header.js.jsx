@@ -11,6 +11,7 @@ window.BeerHeader = React.createClass({
   },
 
   render: function () {
+    console.log(this.props.beer);
     return (
       <div>
         <h1>{this.props.beer.name}</h1>

@@ -5,10 +5,6 @@ window.CommentForm = React.createClass({
     });
   },
 
-  handleChange: function (e) {
-    this.setState({body: e.currentTarget.value});
-  },
-
   handleSubmit: function (e) {
     e.preventDefault();
     comment = {
@@ -20,13 +16,24 @@ window.CommentForm = React.createClass({
     CommentApiUtil.createComment(comment);
   },
 
+  handleChange: function (e) {
+    var body = e.currentTarget.value;
+    if (body.length > 140) {
+      body = body.slice(0, 140);
+    }
+    this.setState({body: body});
+  },
+
   render: function () {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <textarea onChange={this.handleChange} value={this.state.body}>
-        </textarea>
-        <button>Submit</button>
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <textarea onChange={this.handleChange} value={this.state.body}>
+          </textarea>
+          <button>Submit</button>
+        </form>
+        <WordCount count={this.state.body.length} />
+      </div>
     );
   }
 });

@@ -12,7 +12,7 @@
 * SessionsController (create, new, destroy) x
 * Api::BeersController (create, destroy, search, index, show, update) x
 * Api::CheckInsController (create, destroy, index, show, update) x
-* Api::CommentsController (create, destroy)
+* Api::CommentsController (create, destroy) x
 
 ### Views
 * users/new.html.erb x

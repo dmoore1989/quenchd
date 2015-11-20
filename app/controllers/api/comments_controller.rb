@@ -5,7 +5,7 @@ class Api::CommentsController < ApplicationController
     @comment.commenter_id = current_user.id
 
     if @comment.save
-      render :create
+      render :show
     end
   end
 
@@ -13,6 +13,8 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id]).destroy
+    render :show
   end
 
   def comment_params

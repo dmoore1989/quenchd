@@ -13,27 +13,27 @@
 * ShowMoreCheckins (tabled for now)
 * CheckInForms x
   - WordCount
-* CommentForm
+* CommentForm x
 * CreateBeerForm x
 
 
 ### Stores
 * Beer x
-* Comment
 
 ### Actions
 * ApiActions.receiveAllCheckins x
 * ApiActions.receiveSingleCheckin x
-* ApiActions.deleteCheckIn
+* ApiActions.deleteCheckIn x
 
 ### ApiUtil
 * ApiUtil.fetchAllCheckins x
-* ApiUtil.fetchSingleCheckin
-* ApiUtil.createCheckIn
+* ApiUtil.fetchSingleCheckin x
+* ApiUtil.createCheckIn x
 * ApiUtil.editCheckIn
-* ApiUtil.destroyCheckIn
-* ApiUtil.createComment
+* ApiUtil.destroyCheckIn x
+* ApiUtil.createComment x
 * ApiUtil.destroyComment
+* ApiUtil.editComment 
 
 ## Gems/Libraries
-* Flux Dispatcher
+* Flux Dispatcher x

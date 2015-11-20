@@ -9,6 +9,17 @@ window.CommentApiUtil = {
         CheckInApiAction.receiveCheckIn(data);
       })
     });
+  },
+
+  deleteComment: function (commentId) {
+    $.ajax({
+      url: "/api/comments/" + commentId,
+      type: "DELETE",
+      dataType: "json",
+      success: (function (data) {
+          CheckInApiAction.receiveCheckIn(data);
+      })
+    });
   }
 
 

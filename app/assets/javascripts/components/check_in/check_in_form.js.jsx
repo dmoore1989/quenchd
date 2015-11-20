@@ -17,7 +17,10 @@ window.CheckInForm = React.createClass({
         review: this.state.review
       }
     };
-
+    this.setState({
+      rating: 0,
+      review: ""
+    });
     CheckInApiUtil.createCheckIn(checkIn);
   },
 

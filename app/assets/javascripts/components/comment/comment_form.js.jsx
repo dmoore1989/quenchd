@@ -15,6 +15,7 @@ window.CommentForm = React.createClass({
       body: this.state.body,
       check_in_id: this.props.checkIn.id
     };
+    this.setState({body:""});
 
     CommentApiUtil.createComment(comment);
   },

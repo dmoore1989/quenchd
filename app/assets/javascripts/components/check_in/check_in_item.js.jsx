@@ -1,4 +1,13 @@
 window.CheckInItem = React.createClass({
+  getInitialState: function () {
+    debugger
+    var checkInUser= this.props.checkIn.user.id;
+    if (checkInUser === current_user_id){
+      return ({editable:"visible"});
+    } else
+      return ({editable:"hidden"});
+  },
+
   deleteCheckIn: function () {
     CheckInApiUtil.deleteCheckIn(this.props.checkIn.id);
   },
@@ -19,7 +28,9 @@ window.CheckInItem = React.createClass({
           </ReactRouter.Link>
           <p>{this.props.checkIn.rating}</p>
           <p>{this.props.checkIn.review}</p>
-          <button onClick={this.deleteCheckIn}>Delete</button>
+          <div className={this.state.editable}>
+            <button onClick={this.deleteCheckIn}>Delete</button>
+          </div>
           <CommentsIndex
             checkIn={this.props.checkIn} />
       </h6>

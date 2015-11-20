@@ -5,9 +5,7 @@ window.DisplayComment = React.createClass ({
     if (checkInUser === current_user_id || commentUser === current_user_id){
       return ({editable:"visible"});
     } else
-      return ({editable:"hidden"})
-
-
+      return ({editable:"hidden"});
   },
 
   toggleEdit: function () {

@@ -20,7 +20,9 @@ $(function () {
       <IndexRoute component={Index} />
       <Route path="beers/new" component={BeerForm} />
       <Route path="beers/:beerId" component={BeerShow} />
-      <Route path="users/:userId" component={UserShow} />
+      <Route
+        path="users/:userId" 
+        component={Show} type={QuenchdConstants.USER} />
     </Route>
   );
 

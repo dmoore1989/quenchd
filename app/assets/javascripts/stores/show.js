@@ -8,6 +8,10 @@
       return _show;
     },
 
+    type: function () {
+      return _showType;
+    },
+
     addChangeHandler: function (callback) {
       ShowStore.on(CHANGE_EVENT, callback);
     },
@@ -19,8 +23,8 @@
     dispatchId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
         case QuenchdConstants.ITEM_RECEIVED:
-          _show = payload.showItem;
-          _showType = payload.showType;
+          _show = payload.item;
+          _showType = payload.type;
           ShowStore.emit(CHANGE_EVENT);
           break;
       }

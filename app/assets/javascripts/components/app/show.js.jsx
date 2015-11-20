@@ -9,7 +9,7 @@ window.Show = React.createClass({
   },
 
   fetchItem: function () {
-    switch (this.prop.route.type){
+    switch (this.props.route.type) {
       case QuenchdConstants.USER:
         UserApiUtil.fetchUser(this.props.params.userId);
         break;
@@ -26,15 +26,18 @@ window.Show = React.createClass({
     this.setState({item: ShowStore.item()});
   },
 
+  renderHeader: function () {
+    switch (this.props.route.type) {
+      case QuenchdConstants.USER:
+        return (<UserHeader user={this.state.item} />);
+    }
+  },
+
   render: function () {
     if (this.state.item){
       return(
         <div>
-          <h1>{this.state.item.username}</h1>
-          <colgroup>
-            <col>{this.state.item.location}</col>
-            <col>{this.state.item.website}</col>
-          </colgroup>
+          {this.renderHeader()}
           <CheckInIndex
             checkInData={QuenchdConstants.ASSOCIATION}/>
         </div>);

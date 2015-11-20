@@ -1,8 +1,8 @@
 window.BeerApiAction = {
   receiveBeer: function (beer) {
     AppDispatcher.dispatch({
-      actionType: QuenchdConstants.BEER_RECEIVED,
-      beer: beer
+      actionType: QuenchdConstants.ITEM_RECEIVED,
+      item: beer
     });
   }
 };

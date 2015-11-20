@@ -13,6 +13,10 @@ window.Show = React.createClass({
       case QuenchdConstants.USER:
         UserApiUtil.fetchUser(this.props.params.userId);
         break;
+      case QuenchdConstants.BEER:
+        BeerApiUtil.fetchBeer(this.props.params.beerId);
+        break;
+
     }
   },
 
@@ -30,6 +34,8 @@ window.Show = React.createClass({
     switch (this.props.route.type) {
       case QuenchdConstants.USER:
         return (<UserHeader user={this.state.item} />);
+      case QuenchdConstants.BEER:
+        return (<BeerHeader beer={this.state.item} />)
     }
   },
 

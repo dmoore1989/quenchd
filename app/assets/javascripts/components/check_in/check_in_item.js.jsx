@@ -1,7 +1,6 @@
 window.CheckInItem = React.createClass({
   getInitialState: function () {
     var checkInUser= this.props.checkIn.user.id;
-    console.log(checkInUser, "getInitialState");
     if (checkInUser === current_user_id){
       return ({editable:"visible"});
     } else
@@ -16,9 +15,12 @@ window.CheckInItem = React.createClass({
     CheckInStore.removeChangeHandler(this.updateVisibility);
   },
 
+  componentWillReceiveProps: function () {
+    this.updateVisibility();
+  },
+
   updateVisibility: function () {
     var checkInUser= this.props.checkIn.user.id;
-    console.log(checkInUser, "updateVisibility");
     if (checkInUser === current_user_id){
       this.setState({editable: "visible"});
     }

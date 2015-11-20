@@ -12,7 +12,7 @@ class Api::CheckInsController < ApplicationController
     @check_in.user_id = current_user.id
 
     if @check_in.save
-      render :show
+      render :create
     end
   end
 

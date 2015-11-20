@@ -1,5 +1,1 @@
-json.id @check_in.id
-json.user @check_in.user
-json.beer @check_in.beer
-json.rating @check_in.rating
-json.review @check_in.review
+json.partial! 'api/check_ins/check_ins', check_in: @check_in

@@ -1,11 +1,19 @@
 window.Show = React.createClass({
   getInitialState: function () {
-    return ({item: null, type: this.props.routes[1].type});
+    return ({item: null});
   },
 
   componentDidMount: function () {
     ShowStore.addChangeHandler(this.setShow);
     this.fetchItem();
+  },
+
+  fetchItem: function () {
+    switch (this.prop.route.type){
+      case QuenchdConstants.USER:
+        UserApiUtil.fetchUser(this.props.params.userId);
+        break;
+    }
   },
 
 
@@ -15,7 +23,7 @@ window.Show = React.createClass({
 
 
   setShow: function() {
-    this.setState({item: ShowStore.item(), type: ShowStore.type()});
+    this.setState({item: ShowStore.item()});
   },
 
   render: function () {

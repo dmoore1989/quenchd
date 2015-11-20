@@ -15,7 +15,7 @@
       CheckInStore.removeListener(CHANGE_EVENT, callback);
     },
 
-    delete: function(id) {
+    delete: function (id) {
       for (var i = 0; i < _checkIns.length; i++) {
         if (_checkIns[i].id === id) {
           _checkIns.splice(i, 1);
@@ -23,6 +23,17 @@
         }
       }
     },
+
+    insertNewCheckIn: function (checkIn) {
+      for (var j = 0; j < _checkIns.length; j++) {
+        if (_checkIns[j].id === checkIn.id) {
+          _checkIns[j] = checkIn;
+          return;
+        }
+      }
+      _checkIns.push(checkIn);
+    },
+
 
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
@@ -35,7 +46,7 @@
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKINS_ADDED:
-          _checkIns = _checkIns.concat(payload.checkIns);
+          CheckInStore.insertNewCheckIn(payload.checkIn);
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_DELETED:

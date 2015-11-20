@@ -19,6 +19,7 @@ window.CheckInItem = React.createClass({
           </ReactRouter.Link>
           <button onClick={this.deleteCheckIn}>Delete This Check-In</button>
           <CommentsIndex comments={this.props.checkIn.comments} />
+          <CommentForm checkIn={this.props.checkIn} />
       </h6>
     );
   }

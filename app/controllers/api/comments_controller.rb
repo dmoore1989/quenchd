@@ -10,7 +10,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def update
-    @comment = current_user_comments.find(params[:id])
+    @comment = editable_comments.find(params[:id])
     if @comment.update(comment_params)
       render :show
     end
@@ -18,7 +18,7 @@ class Api::CommentsController < ApplicationController
 
   def destroy
 
-    @comment = current_user_comments.find(params[:id])
+    @comment = editable_comments.find(params[:id]).destroy
 
     render :show
 
@@ -28,6 +28,9 @@ class Api::CommentsController < ApplicationController
     params.require(:comment).permit(:check_in_id, :commenter_id, :body)
   end
 
-
-
+  def editable_comments
+    Comment
+      .joins("INNER JOIN check_ins ON comments.check_in_id = check_ins.id")
+      .where("check_ins.user_id = ? OR comments.commenter_id = ?", current_user.id, current_user.id)
+  end
 end

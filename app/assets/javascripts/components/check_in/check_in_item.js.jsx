@@ -1,11 +1,27 @@
 window.CheckInItem = React.createClass({
   getInitialState: function () {
-    debugger
     var checkInUser= this.props.checkIn.user.id;
+    console.log(checkInUser, "getInitialState");
     if (checkInUser === current_user_id){
       return ({editable:"visible"});
     } else
       return ({editable:"hidden"});
+  },
+
+  componentDidMount: function () {
+    CheckInStore.addChangeHandler(this.updateVisibility);
+  },
+
+  componentWillUnmount: function () {
+    CheckInStore.removeChangeHandler(this.updateVisibility);
+  },
+
+  updateVisibility: function () {
+    var checkInUser= this.props.checkIn.user.id;
+    console.log(checkInUser, "updateVisibility");
+    if (checkInUser === current_user_id){
+      this.setState({editable: "visible"});
+    }
   },
 
   deleteCheckIn: function () {

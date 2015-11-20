@@ -7,6 +7,8 @@ class Api::CheckInsController < ApplicationController
   def show
   end
 
+
+  
   def create
     @check_in = CheckIn.new(check_in_params)
     @check_in.user_id = current_user.id

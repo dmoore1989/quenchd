@@ -1,4 +1,7 @@
 window.CommentsIndex = React.createClass({
+  getInitialState: function () {
+    return ({commentForm: "hidden"})
+  },
 
   componentDidMount: function () {
     CommentStore.addChangeHandler(this.updateComments);
@@ -12,20 +15,41 @@ window.CommentsIndex = React.createClass({
     this.setState({comments: CommentStore.all()});
   },
 
+  toggleCommentForm: function () {
+    var klass = ((this.state.commentForm === "hidden") ? "visible" : "hidden");
+    this.setState({commentForm: klass});
+  },
+
   render: function () {
     if (this.props.comments){
       return (
-        <ul>
-        {this.props.comments.map(function(comment, idx){
-          return (<CommentItem
-                    key={idx}
-                    comment={comment}/>
-                  );
-        }, this)}
-        </ul>
+        <div>
+          <ul>
+            {this.props.comments.map(function(comment, idx){
+              return (<CommentItem
+                        key={idx}
+                        comment={comment}/>
+                      );
+            }, this)}
+          </ul>
+          <button onClick={this.toggleCommentForm} >
+            Add Comment
+          </button>
+          <div className={this.state.commentForm}>
+            <CommentForm checkIn={this.props.checkIn} />
+          </div>
+        </div>
       );
     } else {
-      return (<div></div>);
+      return (
+        <div>
+          <button onClick={this.toggleCommentForm} >
+            Add Comment
+          </button>
+          <div className={this.state.commentForm}>
+            <CommentForm checkIn={this.props.checkIn} />
+          </div>
+        </div>);
     }
   }
 

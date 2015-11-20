@@ -1,6 +1,8 @@
 window.CheckInIndex = React.createClass({
   getInitialState: function () {
-    return ({checkIns: CheckInStore.all()});
+    return ({
+      checkIns: CheckInStore.all(),
+    });
   },
 
   componentDidMount: function () {
@@ -25,6 +27,7 @@ window.CheckInIndex = React.createClass({
     CheckInApiUtil.fetchMoreCheckIns(start, stop);
   },
 
+
   render: function () {
     if (this.state.checkIns) {
       return (
@@ -41,7 +44,9 @@ window.CheckInIndex = React.createClass({
         </div>
       );
     } else {
-        return (<div></div>);
+        return (
+          <div>
+          </div>);
     }
 
   }

@@ -21,7 +21,7 @@ window.BeerShow = React.createClass({
   },
 
   renderCheckInModal: function () {
-    var klass = ((this.state.checkInForm === "hidden") ? "check-in" : "hidden");
+    var klass = ((this.state.checkInForm === "hidden") ? "visible" : "hidden");
     this.setState({checkInForm: klass});
   },
 

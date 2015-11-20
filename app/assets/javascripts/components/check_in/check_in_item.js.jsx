@@ -21,7 +21,6 @@ window.CheckInItem = React.createClass({
           <p>{this.props.checkIn.review}</p>
           <button onClick={this.deleteCheckIn}>Delete This Check-In</button>
           <CommentsIndex comments={this.props.checkIn.comments} />
-          <CommentForm checkIn={this.props.checkIn} />
       </h6>
     );
   }

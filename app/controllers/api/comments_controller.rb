@@ -10,6 +10,11 @@ class Api::CommentsController < ApplicationController
   end
 
   def update
+    @comment = Comment.find(params[:id])
+
+    if @comment.update(comment_params)
+      render :show
+    end
   end
 
   def destroy

@@ -12,10 +12,11 @@ window.EditCommentForm = React.createClass({
   handleSubmit: function (e) {
     e.preventDefault();
     comment = {
+      id: this.props.comment.id,
       body: this.state.body,
       check_in_id: this.props.checkIn.id
     };
-    this.setState({body:""});
+    this.props.toggleEdit();
 
     CommentApiUtil.editComment(comment);
   },

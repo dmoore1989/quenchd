@@ -1,4 +1,13 @@
 window.DisplayComment = React.createClass ({
+
+  toggleEdit: function () {
+    this.props.toggleEdit();
+  },
+
+  deleteComment: function () {
+    CommentApiUtil.deleteComment(this.props.comment.id);
+  },
+
   render: function () {
     var user = this.props.comment.user.username;
     var linkUser = "/user/" + this.props.comment.user.id;

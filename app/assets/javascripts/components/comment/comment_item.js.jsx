@@ -3,11 +3,11 @@ window.CommentItem = React.createClass ({
     return ({edit: false});
   },
 
-  deleteComment: function () {
-    CommentApiUtil.deleteComment(this.props.comment.id);
+
+  toggleEdit: function () {
+    var editComment = (this.state.edit ? false : true);
+    this.setState({edit: editComment});
   },
-
-
 
   displayOrEditComment: function () {
     if (this.state.edit) {
@@ -16,7 +16,9 @@ window.CommentItem = React.createClass ({
       );
     } else {
       return (
-        <DisplayComment comment={this.props.comment} />
+        <DisplayComment
+          comment={this.props.comment}
+          toggleEdit={this.toggleEdit}/>
       );
     }
   },

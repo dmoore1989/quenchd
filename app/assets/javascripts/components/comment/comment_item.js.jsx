@@ -12,7 +12,10 @@ window.CommentItem = React.createClass ({
   displayOrEditComment: function () {
     if (this.state.edit) {
       return (
-        <EditCommentForm comment={this.props.comment} />
+        <EditCommentForm
+          comment={this.props.comment}
+          checkIn={this.props.checkIn}
+          toggleEdit={this.toggleEdit}/>
       );
     } else {
       return (

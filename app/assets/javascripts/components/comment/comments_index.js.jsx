@@ -28,7 +28,8 @@ window.CommentsIndex = React.createClass({
             {this.props.checkIn.comments.map(function(comment, idx){
               return (<CommentItem
                         key={idx}
-                        comment={comment}/>
+                        comment={comment}
+                        checkIn={this.props.checkIn}/>
                       );
             }, this)}
           </ul>

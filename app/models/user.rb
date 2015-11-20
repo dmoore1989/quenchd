@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
     foreign_key: :commenter_id,
     class_name: "Comment"
     )
+  has_many :check_in_comments, through: :check_ins, source: :comments
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

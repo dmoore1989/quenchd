@@ -1,4 +1,14 @@
 window.DisplayComment = React.createClass ({
+  getInitialState: function () {
+    var checkInUser= this.props.checkIn.user.id;
+    var commentUser = this.props.comment.user.id;
+    if (checkInUser === current_user_id || commentUser === current_user_id){
+      return ({editable:"visible"});
+    } else
+      return ({editable:"hidden"})
+
+
+  },
 
   toggleEdit: function () {
     this.props.toggleEdit();
@@ -10,7 +20,7 @@ window.DisplayComment = React.createClass ({
 
   render: function () {
     var user = this.props.comment.user.username;
-    var linkUser = "/user/" + this.props.comment.user.id;
+    var linkUser = "/users/" + this.props.comment.user.id;
     return (
       <div>
         <ReactRouter.Link
@@ -19,8 +29,10 @@ window.DisplayComment = React.createClass ({
           {user}
         </ReactRouter.Link>: {this.props.comment.body}
         {this.props.comment.created}
-        <button onClick={this.toggleEdit}>Edit</button>
-        <button onClick={this.deleteComment}>Delete</button>
+        <div className={this.state.editable}>
+          <button onClick={this.toggleEdit}>Edit</button>
+          <button onClick={this.deleteComment}>Delete</button>
+        </div>
       </div>
     );
   }

@@ -10,19 +10,24 @@ class Api::CommentsController < ApplicationController
   end
 
   def update
-    @comment = Comment.find(params[:id])
-
+    @comment = current_user_comments.find(params[:id])
     if @comment.update(comment_params)
       render :show
     end
   end
 
   def destroy
-    @comment = Comment.find(params[:id]).destroy
+
+    @comment = current_user_comments.find(params[:id])
+
     render :show
+
   end
 
   def comment_params
     params.require(:comment).permit(:check_in_id, :commenter_id, :body)
   end
+
+
+
 end

@@ -21,6 +21,7 @@ window.CommentItem = React.createClass ({
       return (
         <DisplayComment
           comment={this.props.comment}
+          checkIn={this.props.checkIn}
           toggleEdit={this.toggleEdit}/>
       );
     }

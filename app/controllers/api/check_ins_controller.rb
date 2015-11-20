@@ -16,11 +16,8 @@ class Api::CheckInsController < ApplicationController
     end
   end
 
-  def update
-  end
-
   def destroy
-    @check_in = CheckIn.find(params[:id]).destroy
+    @check_in = current_user.check_ins.find(params[:id]).destroy
     render :show
   end
 

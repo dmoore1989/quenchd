@@ -12,7 +12,7 @@
   - CheckInIndexItem x
 * ShowMoreCheckins (tabled for now)
 * CheckInForms x
-  - WordCount
+  - WordCount x
 * CommentForm x
 * CreateBeerForm x
 
@@ -29,7 +29,7 @@
 * ApiUtil.fetchAllCheckins x
 * ApiUtil.fetchSingleCheckin x
 * ApiUtil.createCheckIn x
-* ApiUtil.editCheckIn 
+* ApiUtil.editCheckIn
 * ApiUtil.destroyCheckIn x
 * ApiUtil.createComment x
 * ApiUtil.destroyComment x

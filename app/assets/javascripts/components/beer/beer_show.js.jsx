@@ -1,6 +1,9 @@
 window.BeerShow = React.createClass({
   getInitialState: function () {
-    return ({beer: undefined});
+    return ({
+      beer: undefined,
+      checkInForm: "hidden"
+    });
   },
 
   componentDidMount: function () {
@@ -18,7 +21,8 @@ window.BeerShow = React.createClass({
   },
 
   renderCheckInModal: function () {
-    console.log("This will create a modal soon");
+    var klass = ((this.state.checkInForm === "hidden") ? "check-in" : "hidden");
+    this.setState({checkInForm: klass});
   },
 
 
@@ -36,7 +40,11 @@ window.BeerShow = React.createClass({
           <button onClick={this.renderCheckInModal}>
               Check In to This Beer
           </button>
-          <CheckInForm beer={this.state.beer} />
+          <div className={this.state.checkInForm} >
+            <CheckInForm
+              beer={this.state.beer} />
+          </div>
+
           <CheckInIndex
             checkInData={QuenchdConstants.ASSOCIATION}/>
         </div>);

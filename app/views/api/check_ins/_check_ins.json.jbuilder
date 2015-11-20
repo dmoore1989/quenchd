@@ -5,5 +5,5 @@ json.rating check_in.rating
 json.review check_in.review
 
 json.comments do
-  json.partial! 'api/comments/comments', comments: check_in.comments
+  json.partial! 'api/comments/comments', comments: check_in.comments.order(created_at: :asc)
 end

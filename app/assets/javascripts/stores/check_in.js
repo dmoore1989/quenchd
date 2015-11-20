@@ -31,7 +31,7 @@
           return;
         }
       }
-      _checkIns.push(checkIn);
+      _checkIns.unshift(checkIn);
     },
 
 

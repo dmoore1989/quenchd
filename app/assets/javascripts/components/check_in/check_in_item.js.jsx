@@ -17,6 +17,8 @@ window.CheckInItem = React.createClass({
             to={linkBeer} className="link">
                {this.props.beer.name}
           </ReactRouter.Link>
+          <p>{this.props.checkIn.rating}</p>
+          <p>{this.props.checkIn.review}</p>
           <button onClick={this.deleteCheckIn}>Delete This Check-In</button>
           <CommentsIndex comments={this.props.checkIn.comments} />
           <CommentForm checkIn={this.props.checkIn} />

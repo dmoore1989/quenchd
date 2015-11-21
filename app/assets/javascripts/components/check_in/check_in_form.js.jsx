@@ -22,6 +22,7 @@ window.CheckInForm = React.createClass({
       review: ""
     });
     CheckInApiUtil.createCheckIn(checkIn);
+    this.props.modalToggle();
   },
 
   handleReviewChange: function (e) {
@@ -35,7 +36,11 @@ window.CheckInForm = React.createClass({
   render: function () {
 
     return (
-      <div>
+      <div className="check-in-form">
+        <header className="check-in-header">
+          <h4>Check-In</h4>
+        </header>
+
         <form>
           <textarea
             onChange={this.handleReviewChange}

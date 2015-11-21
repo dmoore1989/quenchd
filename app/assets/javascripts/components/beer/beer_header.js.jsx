@@ -5,8 +5,8 @@ window.BeerHeader = React.createClass({
     });
   },
 
-  renderCheckInModal: function () {
-    var klass = ((this.state.checkInForm === "hidden") ? "visible" : "hidden");
+  modalToggle: function () {
+    var klass = ((this.state.checkInForm === "hidden") ? "modal" : "hidden");
     this.setState({checkInForm: klass});
   },
 
@@ -32,12 +32,13 @@ window.BeerHeader = React.createClass({
           </ul>
         <section className="header-bottom-bar group">
 
-          <button className="header-button" onClick={this.renderCheckInModal}>
+          <button className="header-button" onClick={this.modalToggle}>
             ✓
           </button>
           <div className={this.state.checkInForm} >
             <CheckInForm
-              beer={this.props.beer} />
+              beer={this.props.beer}
+              modalToggle={this.modalToggle} />
             </div>
         </section>
       </div>

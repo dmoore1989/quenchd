@@ -1,0 +1,27 @@
+.check-in-form {
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 270px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.check-in-header {
+  width: 100%;
+  height: auto;
+  position: relative;
+  color: #fff;
+  background-color: #000;
+  weight: 600;
+  padding: 10px;
+  margin-bottom: 10px
+
+}
+
+.check-in-form>form {
+  position: relative;
+  padding: 10px;
+}

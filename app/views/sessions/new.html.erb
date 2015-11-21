@@ -4,29 +4,33 @@
   <section class="landing-modal">
 
     <section class="landing-signin-title">
-      <h2>Quenchd</h2>
-      <h3>DRINK UP!</h3>
+      <a href="<%= root_url %>" >
+        <h1>Quenchd</h1>
+        <h2>DRINK UP!</h2>
+      </a>
     </section>
 
     <form class="landing-form" action="<%= session_url %>" method="post">
       <%= auth_token %>
-      <label>Username
-        <input class="landing-form-field"
-          type="text"
-          name="user[username]">
-      </label>
 
+      <input class="landing-form-field username"
+        type="text"
+        name="user[username]"
+        placeholder="Username">
 
-      <label>Password
-        <input
-          class="landing-form-field"
-          type="password"
-          name="user[password]">
-      </label>
+      <input
+        class="landing-form-field password"
+        type="password"
+        name="user[password]"
+        placeholder="Password">
+
 
 
       <input class="landing-form-button" type="submit" value="Sign In"></input>
     </form>
+    <footer class="loggin-signup">
+      New Around Here? <a class="link" href="<%= new_user_url %>"> Sign up!</a>
+    </footer>
   </section>
 
 </content>

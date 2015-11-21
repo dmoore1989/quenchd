@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def new
+    @disable_header = true
     @user = User.new
     render :new
   end

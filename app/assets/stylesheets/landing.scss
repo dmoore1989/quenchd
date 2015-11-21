@@ -6,6 +6,7 @@ content.landing {
   min-height: 600px;
   background-image: image-url("obamagetsschwifty.jpg");
   background-size: cover;
+  background-repeat: repeat-y;
   color: white;
   font-family: Helvetica;
 }
@@ -56,16 +57,17 @@ section.landing-modal {
   padding: 20px
 }
 
-section.landing-signin-title {
+section.landing-modal-title {
   color: #ffcc00;
 }
 
 .landing-form {
+  width: 650px;
   font-size: 20px;
   padding: 10px
 }
 
-.landing-form-field {
+.landing-form input {
   display: block;
   width: 300px;
   height: 32px;
@@ -76,21 +78,24 @@ section.landing-signin-title {
   margin: 10px 0
 }
 
-.username{
-
+.dob:before {
+  content: "Birthday:";
+  color: #aaa
 }
 
-.password:before {
-}
 
-.landing-form-button {
+input.landing-form-button {
+  height: auto;
   margin: 10px 0;
   display: block;
   background-color: #ffcc00;
   padding: 10px;
   width:300px;
+  margin: auto;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
+  text-align: center
 }
 
 
@@ -98,5 +103,26 @@ section.landing-signin-title {
   border-top: 1px solid lightgrey;
   padding: 10px;
   font-weight: 500;
-  color: grey
+  color: grey;
+}
+
+.sign-up {
+}
+
+.sign-up>input:nth-child(2n) {
+  float:right;
+  margin: 5px inherit;
+}
+
+.sign-up>input:nth-child(2n+1){
+  float:left;
+  margin: 5px inherit;
+}
+
+.disclaimer{
+  display: block;
+  width: 450px;
+  margin: 10px auto;
+  font-size: 10px;
+  color: grey;
 }

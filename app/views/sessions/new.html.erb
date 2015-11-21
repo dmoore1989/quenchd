@@ -3,7 +3,7 @@
 
   <section class="landing-modal">
 
-    <section class="landing-signin-title">
+    <section class="landing-modal-title">
       <a href="<%= root_url %>" >
         <h1>Quenchd</h1>
         <h2>DRINK UP!</h2>
@@ -13,13 +13,12 @@
     <form class="landing-form" action="<%= session_url %>" method="post">
       <%= auth_token %>
 
-      <input class="landing-form-field username"
+      <input
         type="text"
         name="user[username]"
         placeholder="Username">
 
       <input
-        class="landing-form-field password"
         type="password"
         name="user[password]"
         placeholder="Password">

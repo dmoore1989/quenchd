@@ -62,7 +62,6 @@ section.landing-modal-title {
 }
 
 .landing-form {
-  width: 650px;
   font-size: 20px;
   padding: 10px
 }
@@ -99,24 +98,29 @@ input.landing-form-button {
 }
 
 
-.loggin-signup {
+.sign-up {
   border-top: 1px solid lightgrey;
   padding: 10px;
   font-weight: 500;
+  width: 460px;
   color: grey;
 }
 
-.sign-up {
+.sign-up>input {
+  font-size: 14px;
+  width: 210px;
+  padding: 5px;
+  height: 20px;
+  margin: 2px inherit;
+  border-radius: 5px
 }
 
 .sign-up>input:nth-child(2n) {
   float:right;
-  margin: 5px inherit;
 }
 
 .sign-up>input:nth-child(2n+1){
   float:left;
-  margin: 5px inherit;
 }
 
 .disclaimer{

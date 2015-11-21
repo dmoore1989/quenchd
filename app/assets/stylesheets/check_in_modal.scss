@@ -1,4 +1,4 @@
-.check-in-form {
+.check-in {
   position: absolute;
   background-color: #fff;
   top: 50%;
@@ -21,7 +21,20 @@
 
 }
 
-.check-in-form>form {
+.check-in-form {
   position: relative;
   padding: 10px;
+}
+
+.check-in-form > textarea {
+  z-index: 10;
+  height: 80px;
+  width: 375px;
+}
+
+.check-in-form > .word-count {
+  position:absolute;
+  z-index: 20;
+  bottom: 40px;
+  right: 135px;
 }

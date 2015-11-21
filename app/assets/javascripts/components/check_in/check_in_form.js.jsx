@@ -36,12 +36,12 @@ window.CheckInForm = React.createClass({
   render: function () {
 
     return (
-      <div className="check-in-form">
+      <div className="check-in">
         <header className="check-in-header">
           <h4>Check-In</h4>
         </header>
 
-        <form>
+        <form className="check-in-form">
           <textarea
             onChange={this.handleReviewChange}
             value={this.state.review}
@@ -62,8 +62,8 @@ window.CheckInForm = React.createClass({
           </select>
 
           <button onClick={this.createCheckIn}>Confirm</button>
+          <WordCount count={this.state.review.length} />
         </form>
-        <WordCount count={this.state.review.length} />
       </div>
     );
   }

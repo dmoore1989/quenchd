@@ -31,7 +31,7 @@ window.CheckInIndex = React.createClass({
   render: function () {
     if (this.state.checkIns) {
       return (
-        <div>
+        <div className="content">
           {this.state.checkIns.map(function(checkIn, idx){
             var beer = checkIn.beer;
             return (<CheckInItem

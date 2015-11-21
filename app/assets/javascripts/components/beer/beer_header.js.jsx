@@ -13,20 +13,33 @@ window.BeerHeader = React.createClass({
   render: function () {
     console.log(this.props.beer);
     return (
-      <div>
-        <h1>{this.props.beer.name}</h1>
-        <h3>{this.props.beer.style}</h3>
-        <colgroup>
-          <col>{this.props.beer.abv}</col>
-          <col>{this.props.beer.ibu}</col>
-        </colgroup>
-        <button onClick={this.renderCheckInModal}>
-            Check In to This Beer
-        </button>
-        <div className={this.state.checkInForm} >
-          <CheckInForm
-            beer={this.props.beer} />
-        </div>
+      <div className="show-header">
+        <section className="header-top-bar group">
+          <div className="thumbnail"></div>
+          <div className="title">
+            <h3>{this.props.beer.name}</h3>
+            <h4>Brewery Name HERE</h4>
+            <h6>{this.props.beer.style}</h6>
+          </div>
+          <div className="check-in-stats"></div>
+        </section>
+          <ul className="detail-bar group">
+            <li>ABV: {this.props.beer.abv}</li>
+            <li>IBU: {this.props.beer.ibu}</li>
+            <li><div>This will be the ratings</div></li>
+            <li>10,250 RATINGS</li>
+            <li>CREATED:{this.props.beer.create}</li>
+          </ul>
+        <section className="header-bottom-bar group">
+
+          <button className="header-button" onClick={this.renderCheckInModal}>
+            ✓
+          </button>
+          <div className={this.state.checkInForm} >
+            <CheckInForm
+              beer={this.props.beer} />
+            </div>
+        </section>
       </div>
     );
   }

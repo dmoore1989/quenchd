@@ -3,8 +3,8 @@ Index = React.createClass({
 
   render: function (){
     return (
-      <div>
-        <h4 className="page-title">Recent Activity</h4>
+      <div className="content">
+        <h5 className="page-title">Recent Activity</h5>
         <CheckInIndex checkInData={QuenchdConstants.FETCH} />
         <ReactRouter.Link to="/beers/new">Create a New Beer</ReactRouter.Link>
       </div>

@@ -48,3 +48,16 @@
   color: white;
   cursor: pointer;
 }
+
+.bottom-check-in-bar {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ccc;
+  margin: 5px 0px;
+}
+
+.bottom-check-in-bar div, .bottom-check-in-bar button {
+  float: left;
+  margin-right: 5px;
+}

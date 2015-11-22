@@ -10,31 +10,84 @@
 }
 
 .check-in-header {
-  width: 100%;
+  width: auto;
   height: auto;
   position: relative;
   color: #fff;
   background-color: #000;
   weight: 600;
   padding: 10px;
-  margin-bottom: 10px
-
+  margin-bottom: 5px
 }
+
+.check-in-header h6 {
+  float: left;
+  font-weight: 600;
+}
+
 
 .check-in-form {
   position: relative;
-  padding: 10px;
+  padding: 16px;
 }
 
 .check-in-form > textarea {
+  resize: none;
   z-index: 10;
-  height: 80px;
-  width: 375px;
+  height: 70px;
+  width: 365px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid lightgrey;
 }
 
 .check-in-form > .word-count {
   position:absolute;
   z-index: 20;
-  bottom: 40px;
-  right: 135px;
+  bottom: 43px;
+  right: 111px;
+  color: grey;
+  background-color: lightgrey
+}
+
+.check-in-form > .word-count > p {
+  font-size: 12px;
+}
+
+.check-in-header > button {
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  font-weight: 200;
+}
+
+.check-in-form > .photo-button {
+  float: right;
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  background-color: #ffcc00;
+  cursor: pointer;
+  text-align: center;
+  font-size: 50px;
+  position:relative;
+  margin-top: 3px
+}
+
+.rating-range {
+  float: left;
+  margin: 10px;
+}
+
+.rating-amount {
+  display: block;
+  float: left;
+  border-radius: 3px;
+  background-color: grey;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  width: 68px;
 }

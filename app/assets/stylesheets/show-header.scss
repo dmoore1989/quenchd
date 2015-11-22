@@ -43,6 +43,10 @@
   overflow: hidden;
 }
 
+.detail-bar> li:first-child {
+  border: 0
+}
+
 .header-button-tooltip {
 }
 

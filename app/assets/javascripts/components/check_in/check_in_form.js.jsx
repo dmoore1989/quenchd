@@ -13,7 +13,7 @@ window.CheckInForm = React.createClass({
     checkIn = {
       check_in:{
         beer_id: this.props.beer.id,
-        rating: this.state.rating,
+        rating: (this.state.rating/2.0),
         review: this.state.review
       }
     };
@@ -33,12 +33,41 @@ window.CheckInForm = React.createClass({
     this.setState({review: review});
   },
 
-  render: function () {
+  handleRatingChange: function (e) {
+    this.setState({rating: e.currentTarget.value});
+  },
 
+  modalToggle: function () {
+    this.props.modalToggle();
+  },
+
+  ratingAmt: function () {
+    if (parseInt(this.state.rating) === 0) {
+      return (
+        <div className="rating-amount">
+          <h5>No</h5>
+          <h6>Rating</h6>
+        </div>
+      );
+    } else {
+      return (
+        <div className="rating-amount">
+          <h5>{(this.state.rating/2)}</h5>
+          <h6>Stars</h6>
+        </div>
+      );
+    }
+  },
+
+  render: function () {
+    console.log(this.state.rating);
     return (
       <div className="check-in">
-        <header className="check-in-header">
-          <h4>Check-In</h4>
+        <header className="check-in-header group">
+          <h6>Check-In</h6>
+          <button onClick={this.modalToggle}>
+            X
+          </button>
         </header>
 
         <form className="check-in-form">
@@ -47,20 +76,20 @@ window.CheckInForm = React.createClass({
             value={this.state.review}
             placeholder="What did you think?">
           </textarea>
-          <select valueLink={this.linkState('rating')}>
-            <option value="0.0">0</option>
-            <option value="0.5">0.5</option>
-            <option value="1.0">1</option>
-            <option value="1.5">1.5</option>
-            <option value="2.0">2</option>
-            <option value="2.5">2.5</option>
-            <option value="3.0">3</option>
-            <option value="3.5">3.5</option>
-            <option value="4.0">4</option>
-            <option value="4.5">4.5</option>
-            <option value="5.0">5</option>
-          </select>
 
+          <button className="photo-button">
+            📷
+          </button>
+
+          <input
+            className="rating-range"
+            type="range"
+            min="0"
+            max="10"
+            step = "1"
+            onChange={this.handleRatingChange}
+            value={this.state.rating}/>
+          {this.ratingAmt()}
           <button onClick={this.createCheckIn}>Confirm</button>
           <WordCount count={this.state.review.length} />
         </form>

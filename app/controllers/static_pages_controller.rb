@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
   before_action :ensure_login, except: [:landing]
 
   def landing
+    @disable_header = true
 
   end
 

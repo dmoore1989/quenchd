@@ -2,7 +2,7 @@ window.WordCount = React.createClass({
   render: function () {
     return (
       <div className="word-count">
-        <h6>{140 - this.props.count}</h6>
+        <p>{140 - this.props.count}</p>
       </div>
     );
   }

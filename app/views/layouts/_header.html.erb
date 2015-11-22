@@ -1,25 +1,37 @@
 <header>
   <nav class="header-nav group">
-    <section class="header-title">
-      <a href="/#/">
-        <h3>QUENCHD</h3>
-        <h6>DRINK UP!</h6>
-      </a>
+    <section class="header-left">
+      <section class="header-title">
+        <a href="/#/">
+          <h3>QUENCHD</h3>
+          <h6>DRINK UP!</h6>
+        </a>
 
 
+      </section>
+      <ul class="header-links group">
+        <li><a href="#">The Pub</a></li>
+        <li><a href="#">Best Beers</a></li>
+      </ul>
     </section>
-    <ul class="header-links group">
-      <li><a href="#">The Pub</a></li>
-      <li><a href="#">Best Beers</a></li>
-    </ul>
 
+    <section class="header-right">
 
-    <section class="header-user-search">
-
-
-      <form>
-        <input type="text"
-      </form>
+      <nav class="user-navigation">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=35&h=35"/>
+        <ul class="user-navigation-dropdown">
+          <li><a href="<%= root_url %>">Recent Activity</li>
+          <li><a href="/#/users/<%= current_user.id %>"> My Profile</li>
+          <li>
+            <a>
+              <form action="<%= session_url %>" method="post">
+                <%= auth_token %>
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Log Out">
+              </form>
+            </a>
+          </li>
+        </ul>
     </section>
 
 

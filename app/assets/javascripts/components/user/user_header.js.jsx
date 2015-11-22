@@ -2,7 +2,7 @@ window.UserHeader = React.createClass({
   render: function () {
     return (
       <div className="user-profile-header group">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=A%20very%20abstract%20user&w=125&h=125" />
+        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=abstract%20user&w=125&h=125" />
         <section className="user-profile-info">
           <h2>{this.props.user.username}</h2>
           <ul>

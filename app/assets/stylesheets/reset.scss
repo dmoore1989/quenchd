@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, strong, a, ul, li, div, button, p, section, span, label, form, input {
+body, h1, h2, h3, h4, h5, h6, strong, a, ul, li, div, button, p, section, span, label, form, input, nav {
   padding: 0;
   margin: 0;
   border: 0;
@@ -12,6 +12,7 @@ body, h1, h2, h3, h4, h5, h6, strong, a, ul, li, div, button, p, section, span, 
   text-decoration: none;
   list-style: none;
 }
+
 
 .group:after {
   content: "";

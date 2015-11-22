@@ -17,6 +17,23 @@ header nav.header-nav {
 
 section.header-title > a {
   display: block;
-  float: left;
   text-align: center;
+  float: left;
+}
+
+.header-links {
+  display: block;
+  height: 100%;
+}
+
+.header-links > li  {
+  float: left;
+
+}
+
+.header-links> li a {
+  display: block;
+  padding: 17px 27px;
+  font-size: 18px;
+  weight: 500;
 }

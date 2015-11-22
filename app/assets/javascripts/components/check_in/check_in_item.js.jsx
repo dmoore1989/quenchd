@@ -2,9 +2,9 @@ window.CheckInItem = React.createClass({
   getInitialState: function () {
     var checkInUser= this.props.checkIn.user.id;
     if (checkInUser === current_user_id){
-      return ({editable:"visible"});
+      return ({editable:"visible", toggleCommentForm: false});
     } else
-      return ({editable:"hidden"});
+      return ({editable:"hidden", toggleCommentForm: false});
   },
 
   componentDidMount: function () {
@@ -26,6 +26,10 @@ window.CheckInItem = React.createClass({
 
   deleteCheckIn: function () {
     CheckInApiUtil.deleteCheckIn(this.props.checkIn.id);
+  },
+
+  toggleComment: function () {
+    this.setState({toggleCommentForm: !this.state.toggleCommentForm});
   },
 
   render: function () {
@@ -60,7 +64,7 @@ window.CheckInItem = React.createClass({
             </div>
           <CommentsIndex
             checkIn={this.props.checkIn}
-            toggleComment={this.state.toggleComment} />
+            toggleCommentForm={this.state.toggleCommentForm} />
         </section>
         <img
           className="beer-img"

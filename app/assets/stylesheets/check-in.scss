@@ -25,9 +25,26 @@
 
 .check-in-review {
   margin: 10px 0 5px 0;
-  border: 1px solid lightgrey;
+  border: 1px solid #ddd;
 }
 
 .check-in-review >p {
   padding: 5px;
+}
+
+.interact-bar {
+  display: block;
+  background-color: #eee;
+
+}
+
+.interact-bar .comment-button {
+  width: 100px;
+  padding: 10px;
+  background-color: #bbb;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
 }

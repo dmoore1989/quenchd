@@ -27,10 +27,10 @@ window.CommentsIndex = React.createClass({
                         checkIn={this.props.checkIn}/>
                       );
             }, this)}
+            <li className={this.commentForm()}>
+              <CommentForm checkIn={this.props.checkIn} />
+            </li>
           </ul>
-          <div className={this.commentForm()}>
-            <CommentForm checkIn={this.props.checkIn} />
-          </div>
         </div>
       );
     } else {

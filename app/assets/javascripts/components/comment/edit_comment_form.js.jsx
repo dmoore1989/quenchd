@@ -31,13 +31,16 @@ window.EditCommentForm = React.createClass({
 
   render: function () {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="comment-form edit group">
+        <form >
           <textarea onChange={this.handleChange} value={this.state.body}>
           </textarea>
-          <button>Submit</button>
+          <button className="edit-button cancel" onClick={this.cancelEdit}>Cancel</button>
+          <button
+            onClick={this.handleSubmit}
+            className="edit-button link">Update
+          </button>
         </form>
-          <button onClick={this.cancelEdit}>Cancel</button>
         <WordCount count={this.state.body.length} />
       </div>
     );

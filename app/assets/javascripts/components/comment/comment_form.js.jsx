@@ -26,13 +26,16 @@ window.CommentForm = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="comment-form group">
         <form onSubmit={this.handleSubmit}>
-          <textarea onChange={this.handleChange} value={this.state.body}>
+          <textarea
+            placeholder="Leave a comment"
+            onChange={this.handleChange}
+            value={this.state.body}>
           </textarea>
-          <button>Submit</button>
+          <WordCount count={this.state.body.length} />
+          <button className="post-button">Post</button>
         </form>
-        <WordCount count={this.state.body.length} />
       </div>
     );
   }

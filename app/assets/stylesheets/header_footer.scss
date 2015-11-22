@@ -49,14 +49,15 @@ section.header-title > a {
 .header-right {
   display: block;
   float: right;
-  width: 300px;
+  width: 270px;
+
 }
 
 .user-navigation {
   float: left;
   height: 100%;
-  width: 100%;
-  padding: 9px 5px 9px 0;
+  width: 35px;
+  padding: 9px 5px 11px 0;
 }
 
 .user-navigation > img {
@@ -80,11 +81,12 @@ section.header-title > a {
 .user-navigation-dropdown > li{
   height: 35px;
   border-top: 1px solid #aaa;
+  width: 175px
 }
 
 .user-navigation-dropdown a, .user-navigation-dropdown .log-out  {
   display: block;
-  padding: 10px;
+  padding: 10px 50px 10px 10px;
   text-align: left;
   cursor: pointer
 }
@@ -95,4 +97,13 @@ section.header-title > a {
 
 .user-navigation:hover .user-navigation-dropdown {
   display: block;
+}
+
+.search-bar {
+  float: right;
+  height: 37px;
+  width: 225px;
+  margin: 6px 0px;
+  background-color: #fff;
+  border-radius: 3px;
 }

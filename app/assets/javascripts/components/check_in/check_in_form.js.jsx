@@ -90,7 +90,10 @@ window.CheckInForm = React.createClass({
             onChange={this.handleRatingChange}
             value={this.state.rating}/>
           {this.ratingAmt()}
-          <button onClick={this.createCheckIn}>Confirm</button>
+
+          <input type="input" placeholder="enter your location" className="check-in-location" />
+          <button className="check-in-submit" onClick={this.createCheckIn}>Confirm</button>
+
           <WordCount count={this.state.review.length} />
         </form>
       </div>

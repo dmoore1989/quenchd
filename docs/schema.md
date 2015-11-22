@@ -16,15 +16,15 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
-brewer_id   | integer   | not null, foreign key (references users), indexed
-location    | string    | not null
+brewer_id   | integer   | foreign key (references users), indexed
+location    | string    |
 
 ## venues
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
-owner_id    | integer   | not null, foreign key (references users), indexed
+owner_id    | integer   | foreign key (references users), indexed
 address     | string    | not null
 
 ## likes

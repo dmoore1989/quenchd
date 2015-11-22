@@ -7,7 +7,9 @@ class CheckIn < ActiveRecord::Base
 
   belongs_to :beer
   belongs_to :user
+  has_one :brewery, through: :beer, source: :brewery
   has_many :comments
+  belongs_to :venue
 
 
 end

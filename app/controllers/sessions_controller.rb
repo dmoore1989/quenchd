@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       redirect_to root_url
     else
       flash.now[:errors] = ["Incorrect Username or Password"]
+      @disable_header = true
       render :new
     end
   end

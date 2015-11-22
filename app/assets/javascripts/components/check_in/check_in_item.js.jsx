@@ -33,22 +33,38 @@ window.CheckInItem = React.createClass({
     var linkBeer = "/beers/" + this.props.beer.id;
     var linkUser = "/users/" + this.props.checkIn.user.id;
     return (
-      <h6 className="page-feed" key={this.props.checkIn.id}>
-        <ReactRouter.Link
-          to={linkUser}
-          className="link">
-          {user}
-          </ReactRouter.Link> is drinking a <ReactRouter.Link
-            to={linkBeer} className="link">
-               {this.props.beer.name}
+      <h6 className="page-feed group" key={this.props.checkIn.id}>
+        <img
+          className="user-img"
+          src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=50&h=50" />
+        <section className="check-in-detail">
+          <ReactRouter.Link
+            to={linkUser}
+            className="link">
+            {user}
+            </ReactRouter.Link> is drinking a <ReactRouter.Link
+              to={linkBeer} className="link">
+                 {this.props.beer.name}
           </ReactRouter.Link>
-          <p>{this.props.checkIn.rating}</p>
-          <p>{this.props.checkIn.review}</p>
-          <div className={this.state.editable}>
-            <button onClick={this.deleteCheckIn}>Delete</button>
+          <div className="check-in-review">
+            <p>{this.props.checkIn.review}</p>
+            <p>{this.props.checkIn.rating}</p>
           </div>
+          <section className="interact-bar">
+            <button className="comment-button" onClick={this.toggleComment}>
+              Comment
+            </button>
+          </section>
+            <div className={this.state.editable}>
+              <button onClick={this.deleteCheckIn}>Delete</button>
+            </div>
           <CommentsIndex
-            checkIn={this.props.checkIn} />
+            checkIn={this.props.checkIn}
+            toggleComment={this.state.toggleComment} />
+        </section>
+        <img
+          className="beer-img"
+          src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=40&h=40" />
       </h6>
     );
   }

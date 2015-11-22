@@ -1,0 +1,33 @@
+
+.page-feed {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.page-feed > .user-img {
+  float: left;
+  border-radius: 50%
+}
+
+.page-feed > .beer-img {
+  float: left;
+  margin-left: 8px;
+}
+
+.check-in-detail {
+  display: block;
+  float: left;
+  padding: 0px 10px;
+  width: 510px;
+}
+
+.check-in-review {
+  margin: 10px 0 5px 0;
+  border: 1px solid lightgrey;
+}
+
+.check-in-review >p {
+  padding: 5px;
+}

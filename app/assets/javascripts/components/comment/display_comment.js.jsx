@@ -21,15 +21,22 @@ window.DisplayComment = React.createClass ({
     var linkUser = "/users/" + this.props.comment.user.id;
     return (
       <div>
-        <ReactRouter.Link
-          to={linkUser}
-          className="link">
-          {user}
-        </ReactRouter.Link>: {this.props.comment.body}
-        {this.props.comment.created}
-        <div className={this.state.editable}>
-          <button onClick={this.toggleEdit}>Edit</button>
-          <button onClick={this.deleteComment}>Delete</button>
+      <img
+        className="comment-img"
+        src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=35&h=35" />
+        <div className="comment-detail">
+          <ReactRouter.Link
+            to={linkUser}
+            className="link">
+            {user}
+          </ReactRouter.Link>: {this.props.comment.body}
+          <sub className="bottom-check-in-bar group">
+            <div>{this.props.comment.created}</div>
+            <div className={this.state.editable}>
+              <button className="link" onClick={this.toggleEdit}>Edit</button>
+              <button className="link" onClick={this.deleteComment}>Delete</button>
+            </div>
+          </sub>
         </div>
       </div>
     );

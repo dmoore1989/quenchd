@@ -29,7 +29,7 @@ window.CommentItem = React.createClass ({
 
   render: function () {
     return(
-      <li>
+      <li className="comment group">
         {this.displayOrEditComment()}
       </li>
     );

@@ -62,7 +62,7 @@ window.CheckInItem = React.createClass({
           <sub className="bottom-check-in-bar group">
             <div>{this.props.checkIn.created_at}</div>
             <div className={this.state.editable}>
-              <button onClick={this.deleteCheckIn}>Delete Check-In</button>
+              <button className="link" onClick={this.deleteCheckIn}>Delete Check-In</button>
             </div>
           </sub>
           <CommentsIndex

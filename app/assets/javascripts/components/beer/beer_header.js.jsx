@@ -17,14 +17,13 @@ window.BeerHeader = React.createClass({
   },
 
   render: function () {
-    console.log(this.props.beer);
     return (
       <div className="show-header">
         <section className="header-top-bar group">
           <div className="thumbnail"></div>
           <div className="title">
             <h3>{this.props.beer.name}</h3>
-            <h4>Brewery Name HERE</h4>
+            <h4>{this.props.beer.brewery.name}</h4>
             <h6>{this.props.beer.style}</h6>
           </div>
           <div className="check-in-stats"></div>

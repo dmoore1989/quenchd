@@ -1,5 +1,6 @@
 json.beer do
   json.extract! @beer, :id, :name, :abv, :ibu, :style, :description
+  json.brewery @beer.brewery
   json.create @beer.created_at.strftime("%m/%d/%Y")
 end
 

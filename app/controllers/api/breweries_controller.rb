@@ -1,6 +1,6 @@
 class Api::BreweriesController < ApplicationController
   def show
-    @beer = Beer.find(params[:id])
+    @brewery = Brewery.find(params[:id])
     render :show
   end
 

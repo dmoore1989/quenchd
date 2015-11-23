@@ -6,6 +6,7 @@ window.VenueApiUtil = {
       dataType: "json",
       success: (function (data) {
         VenueApiAction.receiveVenue(data.venue);
+        CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });
   }

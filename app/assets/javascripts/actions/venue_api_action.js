@@ -1,5 +1,5 @@
 window.VenueApiAction = {
-  receiveVenue: function (brewery) {
+  receiveVenue: function (venue) {
     AppDispatcher.dispatch({
       actionType: QuenchdConstants.ITEM_RECEIVED,
       item: {venue: venue}

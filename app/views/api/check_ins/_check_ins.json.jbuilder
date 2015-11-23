@@ -1,6 +1,8 @@
 json.id check_in.id
 json.user check_in.user
 json.beer check_in.beer
+json.brewery check_in.beer.brewery
+json.venue check_in.venue
 json.rating check_in.rating
 json.review check_in.review
 if Time.now - check_in.created_at < 1.day

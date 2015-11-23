@@ -18,6 +18,9 @@ window.Show = React.createClass({
       case QuenchdConstants.BEER:
         BeerApiUtil.fetchBeer(modelParams.beerId);
         break;
+      case QuenchdConstants.BREWERY:
+        BreweryApiUtil.fetchBeer(modelParams.breweryId);
+        break;
 
     }
   },
@@ -42,6 +45,8 @@ window.Show = React.createClass({
         return (<UserHeader user={this.state.item} />);
       case QuenchdConstants.BEER:
         return (<BeerHeader beer={this.state.item} />);
+      case QuenchdConstants.BREWERY:
+        return (<BreweryHeader brewer={this.state.item} />); 
     }
   },
 

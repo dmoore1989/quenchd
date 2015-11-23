@@ -35,6 +35,7 @@ window.CheckInItem = React.createClass({
   render: function () {
     var user = this.props.checkIn.user.username;
     var linkBeer = "/beers/" + this.props.beer.id;
+    var linkBrewery = "/breweries/" + this.props.checkIn.brewery.id;
     var linkUser = "/users/" + this.props.checkIn.user.id;
     return (
       <h6 className="page-feed group" key={this.props.checkIn.id}>
@@ -46,10 +47,14 @@ window.CheckInItem = React.createClass({
             to={linkUser}
             className="link">
             {user}
-            </ReactRouter.Link> is drinking a <ReactRouter.Link
-              to={linkBeer} className="link">
-                 {this.props.beer.name}
-          </ReactRouter.Link>
+          </ReactRouter.Link> is drinking a <ReactRouter.Link
+            to={linkBeer} className="link">
+              {this.props.beer.name}
+            </ReactRouter.Link> by <ReactRouter.Link
+              to={linkBrewery} className="link">
+              {this.props.checkIn.brewery.name}
+            </ReactRouter.Link>
+
           <div className="check-in-review">
             <p>{this.props.checkIn.review}</p>
             <p>{this.props.checkIn.rating}</p>

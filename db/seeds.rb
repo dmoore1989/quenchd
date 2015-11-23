@@ -20,7 +20,7 @@ end
   Beer.create(
     name: Faker::Commerce.product_name,
     style: "Imperial Lambic Dark Pumpkin IPA",
-    brewery_id: x
+    brewery_id: 1
   )
 end
 
@@ -40,3 +40,9 @@ end
     body: Faker::Lorem.sentence(5)
   )
 end
+
+Brewery.create(
+  name: "Catfish Tail Brewing Company",
+  brewer_id: 1,
+  location: "Newark, NJ"
+)

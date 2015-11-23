@@ -3,7 +3,7 @@ class Brewery < ActiveRecord::Base
 
   has_many :beers
   has_many :check_ins, through: :beers, source: :check_ins
-  belongs_to (
+  belongs_to(
     :brewer,
     class_name: "User",
     foreign_key: :brewer_id

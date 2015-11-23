@@ -27,6 +27,10 @@ $(function () {
         path="users/:userId"
         component={Show}
         type={QuenchdConstants.USER} />
+      <Route
+        path="breweries/:breweryId"
+        component={Show}
+        type={QuenchdConstants.BREWERY} />
     </Route>
   );
 

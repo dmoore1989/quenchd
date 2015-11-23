@@ -5,6 +5,8 @@ class Api::LikesController < ApplicationController
 
     if @like.save
       render :show
+    else
+      render @like
     end
   end
 

@@ -1,0 +1,157 @@
+/* line 3, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+content.landing {
+  position: relative;
+  display: block;
+  min-height: 600px;
+  background-image: url(/assets/obamagetsschwifty-d4be5cccea07d93ca1b681954acb3d7bb39b6d9694fd20b01242d97eabacf7a9.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  color: white;
+  font-family: Helvetica;
+}
+
+/* line 14, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+content.landing h5 > a {
+  text-decoration: underline;
+}
+
+/* line 20, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+content.landing > section {
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+/* line 27, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+section.landing-title {
+  left: 30px;
+  top: 20px;
+}
+
+/* line 32, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+section.landing-descriptions {
+  left: 45px;
+  top: 225px;
+}
+
+/* line 37, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+section.landing-action {
+  left: 50px;
+  bottom: 50px;
+}
+
+/* line 43, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.landing-signup {
+  padding: 10px;
+  margin: 5px auto;
+  display: block;
+  background-color: blue;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+/* line 52, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.landing-signup > a {
+  padding: 10px;
+}
+
+/* line 56, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+section.landing-modal {
+  background-color: #ffffff;
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+/* line 66, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+section.landing-modal-title {
+  color: #ffcc00;
+}
+
+/* line 70, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.landing-form {
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* line 75, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.landing-form input {
+  display: block;
+  width: 290px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: left;
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* line 87, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.dob:before {
+  content: "Birthday:";
+  color: #aaa;
+}
+
+/* line 93, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+input.landing-form-button {
+  height: auto;
+  margin: 10px 0;
+  display: block;
+  background-color: #ffcc00;
+  padding: 10px;
+  width: 300px;
+  margin: auto;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* line 108, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.sign-up {
+  border-top: 1px solid lightgrey;
+  padding: 10px;
+  font-weight: 500;
+  width: 460px;
+}
+
+/* line 115, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.sign-up input {
+  font-size: 14px;
+  width: 210px;
+  padding: 5px;
+  height: 20px;
+  margin: 2px inherit;
+  border-radius: 5px;
+}
+
+/* line 124, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.sign-up > input:nth-child(2n) {
+  float: right;
+}
+
+/* line 128, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.sign-up > input:nth-child(2n+1) {
+  float: left;
+}
+
+/* line 132, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.disclaimer {
+  display: block;
+  width: 450px;
+  margin: 10px auto;
+  font-size: 10px;
+  color: grey;
+}
+
+/* line 140, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/landing.scss */
+.new-item {
+  position: fixed;
+  top: 65px;
+  background-color: #fff;
+  height: 1000px;
+}

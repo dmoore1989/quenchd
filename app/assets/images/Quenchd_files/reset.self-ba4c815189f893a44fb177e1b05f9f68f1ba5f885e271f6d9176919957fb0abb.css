@@ -1,0 +1,25 @@
+/* line 1, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/reset.scss */
+body, h1, h2, h3, h4, h5, h6, strong, a, ul, li, div, button, p, sub, section, span, label, form, input, nav {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+  color: inherit;
+  background-color: transparent;
+  text-emphasis: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* line 17, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/reset.scss */
+*:focus {
+  outline: 0;
+}
+
+/* line 21, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/reset.scss */
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}

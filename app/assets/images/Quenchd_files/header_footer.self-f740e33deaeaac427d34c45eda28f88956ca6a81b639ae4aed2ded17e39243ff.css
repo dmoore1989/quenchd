@@ -1,0 +1,124 @@
+/* line 1, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+header {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  background-color: #ffcc00;
+  height: 55px;
+  width: 100%;
+  top: 0px;
+  color: #ffffff;
+}
+
+/* line 12, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+header nav.header-nav {
+  display: block;
+  width: 1025px;
+  margin: auto;
+}
+
+/* line 18, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.header-left {
+  display: block;
+  float: left;
+  width: 700px;
+}
+
+/* line 24, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+section.header-title > a {
+  display: block;
+  margin-right: 20px;
+  width: 150px;
+  text-align: center;
+  float: left;
+}
+
+/* line 32, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.header-links {
+  height: 100%;
+}
+
+/* line 36, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.header-links > li {
+  float: left;
+}
+
+/* line 41, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.header-links > li a {
+  display: block;
+  padding: 17px 0;
+  margin: 0 15px;
+  font-size: 18px;
+  weight: 500;
+}
+
+/* line 49, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.header-right {
+  display: block;
+  float: right;
+  width: 270px;
+}
+
+/* line 56, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation {
+  float: left;
+  height: 100%;
+  width: 35px;
+  padding: 9px 5px 11px 0;
+}
+
+/* line 63, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation > img {
+  float: left;
+  weight: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* line 70, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation-dropdown {
+  position: absolute;
+  display: none;
+  bottom: -107px;
+  background-color: #333;
+}
+
+/* line 77, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation-dropdown > li:first-child {
+  border: 0;
+}
+
+/* line 81, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation-dropdown > li {
+  height: 35px;
+  border-top: 1px solid #aaa;
+  width: 175px;
+}
+
+/* line 87, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation-dropdown a, .user-navigation-dropdown .log-out {
+  display: block;
+  padding: 10px 50px 10px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* line 94, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation-dropdown .log-out:focus {
+  outline: 0;
+}
+
+/* line 98, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.user-navigation:hover .user-navigation-dropdown {
+  display: block;
+}
+
+/* line 102, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/header_footer.scss */
+.search-bar {
+  float: right;
+  height: 37px;
+  width: 225px;
+  margin: 6px 0px;
+  background-color: #fff;
+  border-radius: 3px;
+}

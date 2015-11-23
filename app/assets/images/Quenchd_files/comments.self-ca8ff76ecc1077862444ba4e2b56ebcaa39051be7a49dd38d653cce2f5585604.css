@@ -1,0 +1,89 @@
+/* line 1, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comments {
+  background-color: #eee;
+}
+
+/* line 8, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 14, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-img {
+  float: left;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+/* line 20, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-detail {
+  display: block;
+  width: 445px;
+  float: left;
+  margin: 8px 5px 5px 5px;
+  font-size: 14px;
+}
+
+/* line 28, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form {
+  margin: 5px;
+}
+
+/* line 33, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form.edit {
+  margin: 10px;
+}
+
+/* line 37, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form.edit textarea {
+  width: 475px;
+}
+
+/* line 42, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form textarea {
+  display: block;
+  width: 495px;
+  height: 45px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  resize: none;
+  font-size: 14px;
+}
+
+/* line 53, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form .word-count {
+  float: left;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* line 60, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form .post-button {
+  float: right;
+  background-color: #bbb;
+  padding: 5px 30px;
+  border-radius: 3px;
+  margin: 5px 0 5px 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* line 70, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form .post-button:hover {
+  background-color: #999;
+}
+
+/* line 74, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form .edit-button {
+  float: right;
+  font-size: 14px;
+  font-weight: 575;
+  margin-left: 18px;
+}
+
+/* line 81, /Users/user/Documents/App Academy Work/quenchd/app/assets/stylesheets/comments.scss */
+.comment-form .cancel {
+  color: #aaa;
+}

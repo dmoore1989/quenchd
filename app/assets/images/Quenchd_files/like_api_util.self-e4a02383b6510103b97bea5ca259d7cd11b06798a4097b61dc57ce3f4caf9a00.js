@@ -6,7 +6,7 @@ window.LikeApiUtil = {
       data: like,
       dataType: "json",
       success: (function (data) {
-        CheckInApiAction.receiveCheckIn(data);
+        LikeApiAction.handleLike(data);
       })
     });
   }

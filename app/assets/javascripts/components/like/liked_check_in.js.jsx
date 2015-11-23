@@ -15,10 +15,10 @@ window.LikedCheckIn = React.createClass({
   render: function () {
     return (
       <span>
-        <button className={this.likedCheckIn} onClick={this.toggleLike}>
+        <button className="comment-button" onClick={this.toggleLike}>
           Cheers!
         </button>
-        <h5>{this.props.likes.length}</h5>
+        <div className="like-counter"><h4>{this.props.likes.length} 🍺</h4></div>
       </span>
     );
   }

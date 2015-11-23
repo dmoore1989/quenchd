@@ -9,5 +9,16 @@ window.LikeApiUtil = {
         CheckInApiAction.receiveCheckIn(data);
       })
     });
+  },
+
+  deleteLike: function (likeId) {
+    $.ajax({
+      url: "/api/likes/" + likeId,
+      type: "DELETE",
+      dataType: "json",
+      success: (function (data) {
+        CheckInApiAction.receiveCheckIn(data);
+      })
+    });
   }
 };

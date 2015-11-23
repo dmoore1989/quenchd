@@ -10,4 +10,5 @@ class Brewery < ActiveRecord::Base
   )
 
   has_many :likes, as: :likeable
+  has_many :user_likes, through: :likes, source: :liker
 end

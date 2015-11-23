@@ -19,6 +19,7 @@ Quenchd is a web application inspired by Untappd built using Ruby on Rails and R
 - [ ] View beers they and other users have drank in the past.
 - [ ] View brewery and bar pages that contain check ins.
 - [ ] Like checkins, breweries, beers, and venues.
+- [ ] Integration with Foursquare API
 
 
 

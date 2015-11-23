@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :check_ins, except: [:new, :edit]
     resources :comments, only: [:create, :destroy, :update]
     resources :users, only: [:show]
+    resources :breweries, except: [:index, :new, :edit]
+    resources :venues, except: [:index, :new, :edit]
   end
 
 

@@ -21,6 +21,20 @@ window.CheckInItem = React.createClass({
     this.setState({toggleCommentForm: !this.state.toggleCommentForm});
   },
 
+  venueCheckIn: function () {
+
+    if (this.props.checkIn.venue) {
+      linkVenue = "/venues/" + this.props.checkIn.venue.id;
+      return (
+        <span>
+          at <ReactRouter.Link to={linkVenue} className="link">
+            {this.props.checkIn.venue.name}
+          </ReactRouter.Link>
+        </span>
+      );
+    }
+  },
+
   render: function () {
     var user = this.props.checkIn.user.username;
     var linkBeer = "/beers/" + this.props.beer.id;
@@ -42,7 +56,8 @@ window.CheckInItem = React.createClass({
             </ReactRouter.Link> by <ReactRouter.Link
               to={linkBrewery} className="link">
               {this.props.checkIn.brewery.name}
-            </ReactRouter.Link>
+            </ReactRouter.Link> {this.venueCheckIn()}
+
 
           <div className="check-in-review">
             <p>{this.props.checkIn.review}</p>

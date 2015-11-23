@@ -11,6 +11,7 @@ window.QuenchdConstants = {
   STARTING_REQUESTS: 10,
   USER: "USER",
   BEER: "BEER",
+  VENUE: "VENUE",
   BREWERY: "BREWERY",
   ITEM_RECEIVED: "ITEM_RECEIVED"
 };

@@ -6,7 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-10.times do |x|
+
+User.create(
+username: "doug",
+password: "hello1",
+email: "doug@email.io",
+location: "New York, NY",
+dob: "1989-02-01"
+)
+
+9.times do |x|
   User.create(
     username: Faker::Name.name,
     password: "testing",
@@ -31,6 +40,16 @@ end
     rating: 4,
     review: Faker::Lorem.sentence(5)
   )
+end
+
+Venue.create(
+  name: "A cool bar",
+  address: "123 Fake St. Brooklyn, NY 11215"
+)
+
+CheckIn.all[0..4].each do |check_in|
+  check_in.venue_id = 1
+  check_in.save
 end
 
 40.times do |x|

@@ -42,11 +42,11 @@ window.Show = React.createClass({
   renderHeader: function () {
     switch (this.props.route.type) {
       case QuenchdConstants.USER:
-        return (<UserHeader user={this.state.item} />);
+        return (<UserHeader item={this.state.item} />);
       case QuenchdConstants.BEER:
-        return (<BeerHeader beer={this.state.item} />);
+        return (<BeerHeader item={this.state.item} />);
       case QuenchdConstants.BREWERY:
-        return (<BreweryHeader brewery={this.state.item} />);
+        return (<BreweryHeader item={this.state.item} />);
     }
   },
 

@@ -1,5 +1,5 @@
 window.BeerApiUtil = {
-  fetchBeer: function(id) {
+  fetchBeer: function (id) {
     $.ajax({
       url: "/api/beers/" + id,
       type: "GET",
@@ -11,7 +11,7 @@ window.BeerApiUtil = {
     });
   },
 
-  createBeer: function(beer) {
+  createBeer: function (beer) {
     $.ajax({
       url: "/api/beers",
       type: "POST",

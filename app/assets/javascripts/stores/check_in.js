@@ -36,7 +36,7 @@
 
     addLike: function (like) {
       for (var j = 0; j < _checkIns.length; j++) {
-        if (_checkIns[j].id === like.id) {
+        if (_checkIns[j].id === like.likeable_id) {
           _checkIns[j].likes.unshift(like);
           return;
         }
@@ -62,6 +62,9 @@
           CheckInStore.addLike(payload.like);
           CheckInStore.emit(CHANGE_EVENT);
           break;
+        case QuenchdConstants.UNLIKED:
+          CheckInStore.removeLike(payload.like)
+          
       }
     })
 

@@ -5,7 +5,7 @@ window.LikedCheckIn = React.createClass({
 
     like = {
       like:{
-        likeable_id: this.props.checkIn.id,
+        likeable_id: this.props.id,
         likeable_type: "CheckIn"
       }
     };

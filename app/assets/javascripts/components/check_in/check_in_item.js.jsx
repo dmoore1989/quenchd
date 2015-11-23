@@ -68,7 +68,7 @@ window.CheckInItem = React.createClass({
             <button className="comment-button" onClick={this.toggleComment}>
               Comment
             </button>
-            < LikedCheckIn likes={this.props.checkIn.likes} />
+            < LikedCheckIn id={this.props.checkIn.id} likes={this.props.checkIn.likes} />
           </section>
           <sub className="bottom-check-in-bar group">
             <div>{this.props.checkIn.created_at}</div>

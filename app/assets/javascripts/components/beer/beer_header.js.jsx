@@ -44,7 +44,7 @@ window.BeerHeader = React.createClass({
             </button>
             <div className={this.state.checkInForm} onClick={this.closeModal}>
               <CheckInForm
-                beer={this.props.beer}
+                beer={beer}
                 modalToggle={this.modalToggle} />
               </div>
           </section>

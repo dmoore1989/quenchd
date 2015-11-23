@@ -5,6 +5,7 @@ json.brewery check_in.beer.brewery
 json.venue check_in.venue
 json.rating check_in.rating
 json.review check_in.review
+json.likes check_in.likes
 if Time.now - check_in.created_at < 1.day
   json.created_at (time_ago_in_words(check_in.created_at) + " ago")
 else

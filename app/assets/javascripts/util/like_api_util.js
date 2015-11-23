@@ -6,7 +6,7 @@ window.LikeApiUtil = {
       data: like,
       dataType: "json",
       success: (function (data) {
-        debugger
+        LikeApiAction.handleLike(data);
       })
     });
   }

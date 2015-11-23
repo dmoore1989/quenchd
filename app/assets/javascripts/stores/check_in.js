@@ -34,6 +34,15 @@
       _checkIns.unshift(checkIn);
     },
 
+    addLike: function (like) {
+      for (var j = 0; j < _checkIns.length; j++) {
+        if (_checkIns[j].id === like.id) {
+          _checkIns[j].likes.unshift(like);
+          return;
+        }
+      }
+    },
+
 
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
@@ -47,6 +56,10 @@
           break;
         case QuenchdConstants.CHECKIN_DELETED:
           CheckInStore.delete(payload.checkIn.id);
+          CheckInStore.emit(CHANGE_EVENT);
+          break;
+        case QuenchdConstants.LIKED:
+          CheckInStore.addLike(payload.like);
           CheckInStore.emit(CHANGE_EVENT);
           break;
       }

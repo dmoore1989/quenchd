@@ -13,5 +13,6 @@ window.QuenchdConstants = {
   BEER: "BEER",
   VENUE: "VENUE",
   BREWERY: "BREWERY",
-  ITEM_RECEIVED: "ITEM_RECEIVED"
+  ITEM_RECEIVED: "ITEM_RECEIVED",
+  LIKED: "LIKED"
 };

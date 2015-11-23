@@ -14,7 +14,6 @@ window.CheckInApiAction = {
   },
 
   receiveCheckIn: function (checkIn) {
-    console.log(checkIn.user.id, "CheckInApiAction#receiveCheckIn");
     AppDispatcher.dispatch({
       actionType: QuenchdConstants.CHECKIN_RECEIVED,
       checkIn: checkIn

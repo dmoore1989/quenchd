@@ -1,26 +1,15 @@
 window.CheckInItem = React.createClass({
   getInitialState: function () {
-    var checkInUser= this.props.checkIn.user.id;
-    if (checkInUser === current_user_id){
-      return ({editable:"visible", toggleCommentForm: false});
-    } else
-      return ({editable:"hidden", toggleCommentForm: false});
+    return ({toggleCommentForm: false});
   },
 
-  componentDidMount: function () {
-    CheckInStore.addChangeHandler(this.updateVisibility);
-  },
-
-  componentWillUnmount: function () {
-    CheckInStore.removeChangeHandler(this.updateVisibility);
-  },
-
-  updateVisibility: function () {
-    var checkInUser= this.props.checkIn.user.id;
-    if (checkInUser === current_user_id){
-      this.setState({editable: "visible"});
-    } else {
-      this.setState({editable: "hidden"});
+  deleteButton: function () {
+    if (this.props.checkIn.user.id === currentUserId) {
+      return (
+        <div className={this.state.editable}>
+          <button className="link" onClick={this.deleteCheckIn}>Delete Check-In</button>
+        </div>
+      );
     }
   },
 
@@ -66,9 +55,7 @@ window.CheckInItem = React.createClass({
           </section>
           <sub className="bottom-check-in-bar group">
             <div>{this.props.checkIn.created_at}</div>
-            <div className={this.state.editable}>
-              <button className="link" onClick={this.deleteCheckIn}>Delete Check-In</button>
-            </div>
+            {this.deleteButton()}
           </sub>
           <CommentsIndex
             checkIn={this.props.checkIn}

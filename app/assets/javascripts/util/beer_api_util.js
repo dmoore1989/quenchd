@@ -5,8 +5,8 @@ window.BeerApiUtil = {
       type: "GET",
       dataType: "json",
       success:(function (data) {
-        CheckInApiAction.receiveCheckIns(data.check_ins);
         BeerApiAction.receiveBeer(data.beer);
+        CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });
   },

@@ -43,7 +43,6 @@
           break;
         case QuenchdConstants.CHECKIN_RECEIVED:
           CheckInStore.insertNewCheckIn(payload.checkIn);
-          console.log(_checkIns[0].user.id, "CheckInStore#dispatch");
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_DELETED:

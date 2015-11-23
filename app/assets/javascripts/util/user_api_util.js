@@ -5,8 +5,8 @@ window.UserApiUtil = {
       type: "GET",
       dataType: "json",
       success:(function (data) {
-        CheckInApiAction.receiveCheckIns(data.check_ins);
         UserApiAction.receiveUser(data.user);
+        CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });
   },

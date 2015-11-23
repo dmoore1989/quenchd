@@ -1,11 +1,15 @@
 window.DisplayComment = React.createClass ({
-  getInitialState: function () {
+  editableButton: function () {
     var checkInUser= this.props.checkIn.user.id;
     var commentUser = this.props.comment.user.id;
-    if (checkInUser === current_user_id || commentUser === current_user_id){
-      return ({editable:"visible"});
-    } else
-      return ({editable:"hidden"});
+    if (checkInUser === currentUserId || commentUser === currentUserId){
+      return (
+        <div>
+          <button className="link" onClick={this.toggleEdit}>Edit</button>
+          <button className="link" onClick={this.deleteComment}>Delete</button>
+        </div>
+      );
+    }
   },
 
   toggleEdit: function () {
@@ -32,10 +36,7 @@ window.DisplayComment = React.createClass ({
           </ReactRouter.Link>: {this.props.comment.body}
           <sub className="bottom-check-in-bar group">
             <div>{this.props.comment.created}</div>
-            <div className={this.state.editable}>
-              <button className="link" onClick={this.toggleEdit}>Edit</button>
-              <button className="link" onClick={this.deleteComment}>Delete</button>
-            </div>
+            {this.editableButton()}
           </sub>
         </div>
       </div>

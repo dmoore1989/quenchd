@@ -10,6 +10,6 @@ class CheckIn < ActiveRecord::Base
   has_one :brewery, through: :beer, source: :brewery
   has_many :comments
   belongs_to :venue
-
+  has_many :cheers, as :likeable
 
 end

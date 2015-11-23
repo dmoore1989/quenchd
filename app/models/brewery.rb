@@ -7,5 +7,7 @@ class Brewery < ActiveRecord::Base
     :brewer,
     class_name: "User",
     foreign_key: :brewer_id
-  )  
+  )
+
+  has_many :likes, as: :likeable
 end

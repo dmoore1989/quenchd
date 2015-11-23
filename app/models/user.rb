@@ -12,6 +12,12 @@ class User < ActiveRecord::Base
     class_name: "Comment"
     )
   has_many :check_in_comments, through: :check_ins, source: :comments
+  has_many (
+    :likes,
+    class_name: "Like",
+    foreign_key: "liker_id"
+    )
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

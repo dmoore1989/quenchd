@@ -2,18 +2,18 @@
 
 ## Rails
 ### Models
-* Brewers
-* Venues
-* Likes
+* Brewersx
+* Venuesx
+* Likesx
 
 ### Controllers
-* Api::BreweriesController (create, destroy, search, show, update)
-* Api::VenuesController (create, destroy, search, show, update)
+* Api::BreweriesController (create, destroy, search, show, update)x
+* Api::VenuesController (create, destroy, search, show, update)x
 * Api::LikesController (create, destroy)
 
 ### Views
-* breweries/show.json.jbuilder
-* venues/show.json.jbuilder
+* breweries/show.json.jbuilder x
+* venues/show.json.jbuilder x
 * breweries/new.html.erb
 * venues/new.html.erb
 * breweries/edit.html.erb
@@ -28,16 +28,15 @@
 * LikeButton
 
 ### Stores
-* Brewers
-* Venues
 
 ### Actions
-* ApiActions.receiveSingleVenue
-* ApiActions.receiveSingleBrewer
-* ApiAction.CreateLike
+* ApiActions.receiveVenue x
+* ApiActions.receiveBrewer x
+* ApiAction.CreateLikex
 
 ### ApiUtil
-* ApiUtil.fetchBrewer
-* ApiUtil.fetchVenue
+* ApiUtil.fetchBrewer x
+* ApiUtil.fetchVenue x
+* ApiUtil.CreateLike
 
 ## Gems/Libraries

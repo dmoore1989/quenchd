@@ -35,6 +35,17 @@ window.CheckInItem = React.createClass({
     }
   },
 
+  toggleLike: function (e) {
+    e.preventDefault();
+    like = {
+      like:{
+        likeable_id: this.props.checkIn.id,
+        likeable_type: "CheckIn"
+      }
+    };
+    LikeApiUtil.createLike(like);
+  },
+
   render: function () {
     var user = this.props.checkIn.user.username;
     var linkBeer = "/beers/" + this.props.beer.id;
@@ -66,6 +77,9 @@ window.CheckInItem = React.createClass({
           <section className="interact-bar">
             <button className="comment-button" onClick={this.toggleComment}>
               Comment
+            </button>
+            <button className="comment-button" onClick={this.toggleLike}>
+              Cheers!
             </button>
           </section>
           <sub className="bottom-check-in-bar group">

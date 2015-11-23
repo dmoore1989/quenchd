@@ -30,28 +30,43 @@ window.BeerForm = React.createClass({
 
   render: function() {
     return(
-      <form>
-        <label>Beer
-          <input type="text" valueLink={this.linkState('name')}/>
-        </label>
-        <label>Alcohol By Volume
-          <input type="text" valueLink={this.linkState('abv')}/>
-        </label>
-        <label>International Bittering Units
-          <input type="text" valueLink={this.linkState('ibu')}/>
-        </label>
-        <label>Style
-          <input type="text" valueLink={this.linkState('style')}/>
-        </label>
-        <label>Description
-          <input type="text" valueLink={this.linkState('description')}/>
-        </label>
-        <label>Brewer Id
-          <input type="text" valueLink={this.linkState('brewerId')}/>
-        </label>
 
-        <button onClick={this.createBeer}>Create!</button>
-      </form>
+        <section className="new-item">
+
+          <a href="<%= root_url %>" >
+            <h1>Quenchd</h1>
+            <h2>DRINK UP!</h2>
+          </a>
+
+
+          <section className="landing-modal-title">
+            <form className="landing-form">
+              <div className="sign-up group">
+                <label>Beer
+                  <input type="text" valueLink={this.linkState('name')}/>
+                </label>
+                <label>Alcohol By Volume
+                  <input type="text" valueLink={this.linkState('abv')}/>
+                </label>
+                <label>International Bittering Units
+                  <input type="text" valueLink={this.linkState('ibu')}/>
+                </label>
+                <label>Style
+                  <input type="text" valueLink={this.linkState('style')}/>
+                </label>
+                <label>Description
+                  <input type="text" valueLink={this.linkState('description')}/>
+                </label>
+                <label>Brewer Id
+                  <input type="text" valueLink={this.linkState('brewerId')}/>
+                </label>
+
+                <button className="landing-form-button" onClick={this.createBeer}>Create!</button>
+              </div>
+            </form>
+
+          </section>
+        </section>
     );
   }
 

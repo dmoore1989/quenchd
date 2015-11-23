@@ -112,7 +112,7 @@ input.landing-form-button {
   width: 460px;
 }
 
-.sign-up>input {
+.sign-up input {
   font-size: 14px;
   width: 210px;
   padding: 5px;
@@ -135,4 +135,12 @@ input.landing-form-button {
   margin: 10px auto;
   font-size: 10px;
   color: grey;
+}
+
+.new-item {
+  position: fixed;
+  top: 65px;
+  background-color: #fff;
+  height: 1000px;
+
 }

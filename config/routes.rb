@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
     resources :breweries, except: [:index, :new, :edit]
     resources :venues, except: [:index, :new, :edit]
+    resources :likes, only: [:create, :destroy]
   end
 
 

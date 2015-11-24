@@ -12,6 +12,14 @@
       return _likes.slice();
     },
 
+    deleteLike: function () {
+      for (var i = 0; i < _likes.length; i++) {
+        if (_likes[i].liker_id === currentUserId) {
+          _likes.splice(i,1);
+        }
+      }
+    },
+
     addChangeHandler: function (callback) {
       ShowStore.on(CHANGE_EVENT, callback);
     },
@@ -27,9 +35,12 @@
           _likes = payload.likes;
           ShowStore.emit(CHANGE_EVENT);
           break;
-        case QuenchdConstants.LIKED:
-          debugger
+        case QuenchdConstants.SHOW_LIKED:
           _likes.push(payload.like);
+          ShowStore.emit(CHANGE_EVENT);
+          break;
+        case QuenchdConstants.SHOW_UNLIKED:
+          ShowStore.deleteLike();
           ShowStore.emit(CHANGE_EVENT);
           break;
 

@@ -15,14 +15,14 @@ window.LikeApiUtil = {
     });
   },
 
-  deleteLike: function (likeId) {
+  deleteLike: function (likeId, likeableType) {
     $.ajax({
       url: "/api/likes/" + likeId,
       type: "DELETE",
       dataType: "json",
       success: (function (data) {
         debugger
-        if (like.like && like.like.likeable_type === "CheckIn") {
+        if (likeableType && likeableType === "CheckIn") {
           CheckInApiAction.receiveCheckIn(data);
         } else {
           LikeApiAction.deleteLike();

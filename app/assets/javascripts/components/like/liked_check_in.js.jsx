@@ -12,7 +12,7 @@ window.LikedCheckIn = React.createClass({
       };
       LikeApiUtil.createLike(like);
     } else {
-      LikeApiUtil.deleteLike(checkInLikeId);
+      LikeApiUtil.deleteLike(checkInLikeId, "CheckIn");
     }
   },
 

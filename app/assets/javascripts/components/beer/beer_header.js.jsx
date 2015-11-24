@@ -33,8 +33,8 @@ window.BeerHeader = React.createClass({
             <ul className="detail-bar group">
               <li>ABV: {beer.abv}</li>
               <li>IBU: {beer.ibu}</li>
-              <li><div>This will be the ratings</div></li>
-              <li>10,250 RATINGS</li>
+              <li>Average Rating: {beer.avg}</li>
+              <li>{beer.rating_count} RATINGS</li>
               <li>CREATED:{beer.create}</li>
             </ul>
           <section className="header-bottom-bar group">

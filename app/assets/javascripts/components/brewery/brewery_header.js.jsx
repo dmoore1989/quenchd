@@ -16,8 +16,8 @@ window.BreweryHeader =  React.createClass({
             <ul className="detail-bar group">
               <li></li>
               <li></li>
-              <li><div>This will be the ratings</div></li>
-              <li>10,250 RATINGS</li>
+              <li>Average Rating: {brewery.avg}</li>
+              <li>{brewery.rating_count} RATINGS</li>
               <li>CREATED:{brewery.create}</li>
             </ul>
           <section className="header-bottom-bar group">

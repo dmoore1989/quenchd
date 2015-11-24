@@ -6,7 +6,7 @@ window.LikeApiUtil = {
       data: like,
       dataType: "json",
       success: (function (data) {
-        if (like.likeable_type === "CheckIn") {
+        if (like.like.likeable_type === "CheckIn") {
           CheckInApiAction.receiveCheckIn(data);
         } else {
           LikeApiAction.receiveLike(data);

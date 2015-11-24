@@ -1,9 +1,9 @@
 json.beer do
   json.extract! @beer, :id, :name, :abv, :ibu, :style, :description
   json.brewery @beer.brewery
-  json.likes @beer.likes
   json.create @beer.created_at.strftime("%m/%d/%Y")
 end
+json.likes @beer.likes
 
 json.check_ins do
   json.array! @beer.check_ins.order(created_at: :desc) do |check_in|

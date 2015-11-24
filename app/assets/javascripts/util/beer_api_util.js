@@ -5,7 +5,7 @@ window.BeerApiUtil = {
       type: "GET",
       dataType: "json",
       success:(function (data) {
-        BeerApiAction.receiveBeer(data.beer);
+        BeerApiAction.receiveBeer(data.beer, data.likes);
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });

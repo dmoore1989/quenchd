@@ -79,6 +79,14 @@
   width: 75px;
 }
 
+.header-button.liked{
+  background-color: #bbb;
+}
+
+.header-button.liked:hover{
+  background-color: #999;
+}
+
 .header-button:hover {
   background-color: #f4b800;
 }

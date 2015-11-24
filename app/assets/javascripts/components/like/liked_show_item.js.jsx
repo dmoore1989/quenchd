@@ -18,9 +18,10 @@ window.LikedShowItem = React.createClass({
 
 
   checkInIsLiked: function () {
-    for (var i = 0 ; i < this.props.likes.length; i++){
-      if (this.props.likes[i].liker_id === currentUserId) {
-        return this.props.likes[i].id;
+    var showLikes = ShowStore.allLikes();
+    for (var i = 0 ; i < showLikes.length; i++){
+      if (showLikes[i].liker_id === currentUserId) {
+        return showLikes[i].id;
       }
     }
 

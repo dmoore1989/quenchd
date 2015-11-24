@@ -4,6 +4,7 @@ $(function () {
   var Router = ReactRouter.Router;
   var Route = ReactRouter.Route;
   var IndexRoute = ReactRouter.IndexRoute;
+  var search = document.getElementById('search-bar')
 
   var App = React.createClass({
     render: function () {
@@ -39,4 +40,5 @@ $(function () {
   );
 
   React.render(<Router>{routes}</Router>, root);
+  React.render(<SearchBar />, search);
 });

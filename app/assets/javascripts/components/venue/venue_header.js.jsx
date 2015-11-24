@@ -13,13 +13,7 @@ window.VenueHeader = React.createClass({
             </div>
             <div className="check-in-stats"></div>
           </section>
-            <ul className="detail-bar group">
-              <li></li>
-              <li></li>
-              <li><div>This will be the ratings</div></li>
-              <li>10,250 RATINGS</li>
-              <li>CREATED:{venue.create}</li>
-            </ul>
+            
           <section className="header-bottom-bar group">
 
           <LikedShowItem id={venue.id} type={"Venue"} />

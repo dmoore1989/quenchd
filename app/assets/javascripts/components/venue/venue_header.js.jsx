@@ -22,9 +22,7 @@ window.VenueHeader = React.createClass({
             </ul>
           <section className="header-bottom-bar group">
 
-            <button className="header-button" >
-              +
-            </button>
+          <LikedShowItem id={venue.id} type={"Venue"} />
 
           </section>
         </div>
@@ -33,4 +31,4 @@ window.VenueHeader = React.createClass({
       return (<div></div>);
     }
   }
-})
+});

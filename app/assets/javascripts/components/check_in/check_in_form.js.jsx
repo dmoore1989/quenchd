@@ -60,7 +60,6 @@ window.CheckInForm = React.createClass({
   },
 
   render: function () {
-    console.log(this.state.rating);
     return (
       <div className="check-in">
         <header className="check-in-header group">

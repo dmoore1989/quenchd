@@ -27,7 +27,6 @@ window.CheckInApiUtil = {
         stop: stop
       },
       success: (function (data) {
-        console.log(data.checkIn.user.id, "CheckInApiUtil#fetchMoreCheckIns");
         CheckInApiAction.receiveMoreCheckIns(data);
       })
     });

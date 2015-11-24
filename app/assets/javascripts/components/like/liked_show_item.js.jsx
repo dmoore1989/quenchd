@@ -1,5 +1,4 @@
-window.LikedCheckIn = React.createClass({
-
+window.LikedShowItem = React.createClass({
   toggleLike: function (e) {
     e.preventDefault();
     var checkInLikeId = this.checkInIsLiked();
@@ -7,13 +6,14 @@ window.LikedCheckIn = React.createClass({
       like = {
         like:{
           likeable_id: this.props.id,
-          likeable_type: "CheckIn"
+          likeable_type: this.props.type
         }
       };
       LikeApiUtil.createLike(like);
     } else {
       LikeApiUtil.deleteLike(checkInLikeId);
     }
+
   },
 
 
@@ -29,20 +29,17 @@ window.LikedCheckIn = React.createClass({
 
   likeClass: function () {
     if (this.checkInIsLiked()) {
-      return "comment-button liked";
+      return "header-button liked";
     } else {
-      return "comment-button";
+      return "header-button";
     }
   },
 
   render: function () {
     return (
-      <span>
-        <button className={this.likeClass()} onClick={this.toggleLike}>
-          Cheers!
-        </button>
-        <div className="like-counter"><h4>{this.props.likes.length} 🍺</h4></div>
-      </span>
+      <button className={this.likeClass()} onClick={this.toggleLike}>
+          +
+      </button>
     );
   }
 });

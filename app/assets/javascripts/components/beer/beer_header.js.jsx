@@ -42,6 +42,7 @@ window.BeerHeader = React.createClass({
             <button className="header-button" onClick={this.modalToggle}>
               ✓
             </button>
+            < LikedShowItem id={beer.id} likes={beer.likes} type={QuenchdConstants.BEER} />
             <div className={this.state.checkInForm} onClick={this.closeModal}>
               <CheckInForm
                 beer={beer}

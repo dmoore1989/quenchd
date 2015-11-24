@@ -6,7 +6,11 @@ window.LikeApiUtil = {
       data: like,
       dataType: "json",
       success: (function (data) {
-        CheckInApiAction.receiveCheckIn(data);
+        if (like.likeable_type === "CheckIn") {
+          CheckInApiAction.receiveCheckIn(data);
+        } else {
+          LikeApiAction.receiveLike(data);
+        }
       })
     });
   },

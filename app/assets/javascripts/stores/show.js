@@ -22,6 +22,11 @@
           _show = payload.item;
           ShowStore.emit(CHANGE_EVENT);
           break;
+        case QuenchdConstants.LIKED:
+          _show.likes.push(payload.item);
+          ShowStore.emit(CHANGE_EVENT);
+          break;
+
       }
     })
   });

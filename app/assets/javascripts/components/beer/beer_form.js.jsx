@@ -32,11 +32,11 @@ window.BeerForm = React.createClass({
     return(
 
         <section className="new-item">
-
-          <a href="<%= root_url %>" >
-            <h1>Quenchd</h1>
-            <h2>DRINK UP!</h2>
-          </a>
+          <section className="new-item-header">
+            <h2>NEW BEER!</h2>
+            <h6>Note: Please do not create duplicate beers or home brew, they will be deleted....
+            </h6>
+          </section>
 
 
           <section className="landing-modal-title">
@@ -61,7 +61,7 @@ window.BeerForm = React.createClass({
                   <input type="text" valueLink={this.linkState('brewerId')}/>
                 </label>
 
-                <button className="landing-form-button" onClick={this.createBeer}>Create!</button>
+                <button className="submit-button" onClick={this.createBeer}>Create!</button>
               </div>
             </form>
 

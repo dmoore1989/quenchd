@@ -138,9 +138,18 @@ input.landing-form-button {
 }
 
 .new-item {
-  position: fixed;
-  top: 65px;
   background-color: #fff;
-  height: 1000px;
+}
 
+.new-item-header {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px
+}
+
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #fff;
 }

@@ -21,7 +21,6 @@ window.LikeApiUtil = {
       type: "DELETE",
       dataType: "json",
       success: (function (data) {
-        debugger
         if (likeableType && likeableType === "CheckIn") {
           CheckInApiAction.receiveCheckIn(data);
         } else {

@@ -15,11 +15,11 @@ window.UserHeader = React.createClass({
           <footer className="user-profile-footer group">
             <ul>
               <li>
-                <h4>9,000</h4>
-                <h6>total</h6>
+                <h4>{user.count}</h4>
+                <h6>Total</h6>
               </li>
               <li>
-                <h4>6,517</h4>
+                <h4>{user.uniqueCount}</h4>
                 <h6>Unique</h6>
               </li>
               <li>

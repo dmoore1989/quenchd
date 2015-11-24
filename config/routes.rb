@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :breweries, except: [:index, :new, :edit]
     resources :venues, except: [:index, :new, :edit]
     resources :likes, only: [:create, :destroy]
+    resources :search, only: [:index]
   end
 
 

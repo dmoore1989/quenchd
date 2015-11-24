@@ -25,18 +25,18 @@
 * ShowPageIndex x
   -CheckInIndexItem x
 * DetailSnapShot
-* LikeButton
+* LikeButton x
 
 ### Stores
 
 ### Actions
 * ApiActions.receiveVenue x
 * ApiActions.receiveBrewer x
-* ApiAction.CreateLikex
+* ApiAction.CreateLike x
 
 ### ApiUtil
 * ApiUtil.fetchBrewer x
 * ApiUtil.fetchVenue x
-* ApiUtil.CreateLike
+* ApiUtil.CreateLike x
 
 ## Gems/Libraries

@@ -42,7 +42,7 @@ section.landing-action {
 
 .landing-signup {
   padding: 10px;
-  margin: 5px auto;
+  margin: 10px auto;
   display: block;
   background-color: blue;
   font-size: 20px;
@@ -152,4 +152,13 @@ input.landing-form-button {
   padding: 10px 20px;
   background-color: #ffcc00;
   color: #fff;
+}
+
+.guest-sign-in-button{
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 5px
 }

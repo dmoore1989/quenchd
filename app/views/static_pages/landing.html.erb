@@ -12,6 +12,11 @@
 
   <section class="landing-action">
     <button class="landing-signup"><a href="<%= new_user_url %>">Sign Up</a></button>
+    <form for="guest-sign-in" action="<%= session_url %>" method="POST">
+      <input type="hidden" name="user[username]" value="guest">
+      <input type="hidden" name="user[password]" value="testing">
+      <input class="guest-sign-in-button" type="submit" value="Guest Sign In">
+    </form>
     <h5>Already a Member? <a href="<%= new_session_url %>">Sign In!</a></h5>
   </section>
 

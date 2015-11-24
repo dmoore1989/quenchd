@@ -5,7 +5,15 @@ class Api::BeersController < ApplicationController
   end
 
   def show
-    @beer = Beer.find(params[:id])
+    @beer = Beer
+      .includes(:likes, :check_ins)
+      .find(params[:id])
+    @check_ins = @beer
+      .check_ins
+      .includes(:comments, :beer, :brewery, :venue, :user, :likes)
+      .order(created_at: :desc)
+      .page(params[:page_number])
+      .per(10)
     render :show
   end
 

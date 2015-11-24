@@ -1,6 +1,10 @@
 class Api::CheckInsController < ApplicationController
   def index
-    @check_ins = CheckIn.order(created_at: :desc).page(params[:page_number]).per(10)
+    @check_ins = CheckIn
+      .includes(:comments, :beer, :brewery, :venue, :user, :likes)
+      .order(created_at: :desc)
+      .page(params[:page_number])
+      .per(10)
     render :index
   end
 

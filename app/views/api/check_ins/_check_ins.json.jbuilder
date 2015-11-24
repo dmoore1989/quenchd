@@ -11,7 +11,6 @@ if Time.now - check_in.created_at < 1.day
 else
   json.created_at check_in.created_at.strftime("%m/%d/%Y")
 end
-
 json.comments do
   json.partial! 'api/comments/comments', comments: check_in.comments.order(created_at: :asc)
 end

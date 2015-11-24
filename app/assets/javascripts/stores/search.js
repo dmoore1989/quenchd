@@ -2,7 +2,7 @@
   var _search_results = {};
   var CHANGE_EVENT = "CHANGE";
 
-  root.SearchResultStore = $.extend({}, EventEmitter.prototype, {
+  root.SearchStore = $.extend({}, EventEmitter.prototype, {
 
     addChangeHandler: function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -17,12 +17,11 @@
       return _search_results;
     },
 
-    dispatcherId: AppDispatcher.register(function (payload) {
-      switch (payload.ActionType) {
+    dispatchId: AppDispatcher.register(function (payload) {
+      switch (payload.actionType) {
         case QuenchdConstants.RECEIVE_RESULTS:
           _search_results = payload.results;
-          console.log(_search_results)
-          SearchResultStore.emit(CHANGE_EVENT);
+          SearchStore.emit(CHANGE_EVENT);
           break;
       }
     })

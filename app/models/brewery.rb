@@ -1,5 +1,8 @@
 class Brewery < ActiveRecord::Base
   validates :name, presence: true
+  include PgSearch
+  multisearchable :against => :name
+
 
   has_many :beers
   has_many :check_ins, through: :beers, source: :check_ins

@@ -62,7 +62,7 @@ window.CheckInItem = React.createClass({
 
           <div className="check-in-review">
             <p>{this.props.checkIn.review}</p>
-            <p>{this.props.checkIn.rating}</p>
+            <CheckInRating rating={this.props.checkIn.rating} />
           </div>
           <section className="interact-bar group">
             <button className="comment-button" onClick={this.toggleComment}>

@@ -47,7 +47,11 @@
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
         case QuenchdConstants.CHECKINS_RECEIVED:
-          _checkIns = payload.checkIns;
+          _checkIns = _checkIns.concat(payload.checkIns);
+          CheckInStore.emit(CHANGE_EVENT);
+          break;
+        case QuenchdConstants.CHECKINS_CLEARED:
+          _checkIns = [];
           CheckInStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CHECKIN_RECEIVED:

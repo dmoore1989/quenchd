@@ -1,6 +1,6 @@
 class Api::CheckInsController < ApplicationController
   def index
-    @check_ins = CheckIn.all.order(created_at: :desc)
+    @check_ins = CheckIn.order(created_at: :desc).page(params[:page_number]).per(10)
     render :index
   end
 
@@ -8,7 +8,7 @@ class Api::CheckInsController < ApplicationController
   end
 
 
-  
+
   def create
     @check_in = CheckIn.new(check_in_params)
     @check_in.user_id = current_user.id

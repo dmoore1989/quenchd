@@ -8,7 +8,7 @@ window.CheckInIndex = React.createClass({
   componentDidMount: function () {
     CheckInStore.addChangeHandler(this.updateCheckIns);
     if (this.props.checkInData === QuenchdConstants.FETCH) {
-      CheckInApiUtil.fetchCheckins(0, QuenchdConstants.STARTING_REQUESTS);
+      CheckInApiUtil.fetchCheckins(1);
     }
   },
 
@@ -40,7 +40,9 @@ window.CheckInIndex = React.createClass({
                       beer={beer}/>
                     );
           }, this)}
-          <ShowMoreCheckins onClick={this.fetchMoreCheckIns} />
+          <ShowMoreCheckins
+            checkInData={this.props.checkInData}
+            onClick={this.fetchMoreCheckIns} />
         </div>
       );
     } else {

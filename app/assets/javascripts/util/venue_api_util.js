@@ -5,6 +5,7 @@ window.VenueApiUtil = {
       type: "GET",
       dataType: "json",
       success: (function (data) {
+        CheckInApiAction.clearCheckIns();
         VenueApiAction.receiveVenue(data.venue);
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })

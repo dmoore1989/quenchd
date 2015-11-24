@@ -1,12 +1,11 @@
 window.CheckInApiUtil = {
-  fetchCheckins: function () {
+  fetchCheckins: function (pageNumber) {
     $.ajax({
       url: "/api/check_ins",
       type: "GET",
       dataType:"json",
       data: {
-        start: 0,
-        stop: QuenchdConstants.STARTING_REQUESTS
+        page_number: pageNumber
       },
       success: (function (data) {
         CheckInApiAction.receiveCheckIns(data);

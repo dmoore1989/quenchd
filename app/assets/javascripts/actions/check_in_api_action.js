@@ -6,6 +6,12 @@ window.CheckInApiAction = {
     });
   },
 
+  clearCheckIns: function (checkIns) {
+    AppDispatcher.dispatch({
+      actionType: QuenchdConstants.CHECKINS_CLEARED
+    });
+  },
+
   receiveMoreCheckIns: function (checkIns) {
     AppDispatcher.dispatch({
       actionType: QuenchdConstants.CHECKINS_ADDED,

@@ -5,6 +5,7 @@ window.BreweryApiUtil = {
       type: "GET",
       dataType: "json",
       success:(function (data) {
+        CheckInApiAction.clearCheckIns();
         BreweryApiAction.receiveBrewery(data.brewery);
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })

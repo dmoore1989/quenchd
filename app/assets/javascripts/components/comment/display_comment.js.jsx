@@ -35,7 +35,7 @@ window.DisplayComment = React.createClass ({
             {user}
           </ReactRouter.Link>: {this.props.comment.body}
           <sub className="bottom-check-in-bar group">
-            <div>{this.props.comment.created}</div>
+            <div>{this.props.comment.created} ago</div>
             {this.editableButton()}
           </sub>
         </div>

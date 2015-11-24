@@ -32,7 +32,7 @@
       switch (payload.actionType){
         case QuenchdConstants.ITEM_RECEIVED:
           _show = payload.item;
-          _likes = payload.likes;
+          _likes = payload.likes || [];
           ShowStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.SHOW_LIKED:

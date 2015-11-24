@@ -37,6 +37,7 @@ window.LikedShowItem = React.createClass({
   },
 
   render: function () {
+    debugger
     return (
       <button className={this.likeClass()} onClick={this.toggleLike}>
           +

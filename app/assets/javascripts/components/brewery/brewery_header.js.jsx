@@ -22,9 +22,7 @@ window.BreweryHeader =  React.createClass({
             </ul>
           <section className="header-bottom-bar group">
 
-            <button className="header-button" >
-              +
-            </button>
+          <LikedShowItem id={brewery.id} type={"Brewery"} />
 
           </section>
         </div>

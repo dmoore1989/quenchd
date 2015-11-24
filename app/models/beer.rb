@@ -1,12 +1,7 @@
 class Beer < ActiveRecord::Base
   include PgSearch
   multisearchable :against => :name
-  PgSearch.multisearch_options= {
-    :using => {
-      :tsearch => {
-        :prefix => true
-      }
-    }
+
 
   validates :name, :style, :brewery_id, presence: true
   has_many :check_ins

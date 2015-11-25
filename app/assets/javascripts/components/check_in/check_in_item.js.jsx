@@ -57,7 +57,7 @@ window.CheckInItem = React.createClass({
       <h6 className="page-feed group" key={this.props.checkIn.id}>
         <img
           className="user-img"
-          src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=50&h=50" />
+          src={this.props.checkIn.userImage} />
         <section className="check-in-detail">
           <ReactRouter.Link
             to={linkUser}

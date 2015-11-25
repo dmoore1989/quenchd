@@ -17,7 +17,7 @@
 
     <section class="header-right group">
       <nav class="user-navigation">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=35&h=35"/>
+        <img src="<%= asset_path(current_user.image.url(:small)) %>" />
         <ul class="user-navigation-dropdown">
           <li><a href="<%= root_url %>">Recent Activity</a></li>
           <li><a href="/#/users/<%= current_user.id %>"> My Profile</a></li>

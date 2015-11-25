@@ -27,7 +27,7 @@ window.DisplayComment = React.createClass ({
       <div>
       <img
         className="comment-img"
-        src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=35&h=35" />
+        src={this.props.comment.userImage} />
         <div className="comment-detail">
           <ReactRouter.Link
             to={linkUser}

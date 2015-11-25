@@ -5,7 +5,7 @@ window.SearchPage = React.createClass({
 
   componentDidMount: function () {
     SearchStore.addChangeHandler(this.updateResults);
-    SearchApiUtil.specificSearch(this.state.query);
+    SearchApiUtil.specificSearch(this.state.query, this.state.type);
   },
 
   componentWillUnmount: function () {

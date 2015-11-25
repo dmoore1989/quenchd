@@ -13,10 +13,10 @@ window.SearchApiUtil = {
 
   specificSearch: function (query, type ) {
     $.ajax({
-      url: 'api/search',
+      url: 'api/search/' + type,
       type: 'GET',
       dataType: 'json',
-      data: {query: query, type: type},
+      data: {query: query},
       success: function () {
         SearchResultAction.receiveResults(results);
       }

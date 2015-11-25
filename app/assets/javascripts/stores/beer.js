@@ -16,7 +16,7 @@
     },
 
     dispatchId: AppDispatcher.register(function (payload) {
-      switch (payload.actionType){
+      switch (payload.actionType) {
         case QuenchdConstants.BEER_RECEIVED:
           _beer = payload.beer;
           BeerStore.emit(CHANGE_EVENT);

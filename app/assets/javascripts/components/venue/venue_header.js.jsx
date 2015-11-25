@@ -11,9 +11,16 @@ window.VenueHeader = React.createClass({
               <h4>venue Name HERE</h4>
               <h6>Microvenue</h6>
             </div>
-            <div className="check-in-stats"></div>
+            <ul className="check-in-stats">
+              <li><p>total</p><h5>{beer.check_ins}</h5></li>
+              <li><p>unique</p><h5>{beer.uniq_check_ins}</h5></li>
+              <li><p>monthly</p><h5>{beer.monthly}</h5></li>
+              <li><p>you</p><h5><a
+                className="link"
+                href="#">{beer.current_user_check_in}</a></h5></li>
+            </ul>
           </section>
-            
+
           <section className="header-bottom-bar group">
 
           <LikedShowItem id={venue.id} type={"Venue"} />

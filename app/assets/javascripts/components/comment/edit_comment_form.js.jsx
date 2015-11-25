@@ -5,7 +5,8 @@ window.EditCommentForm = React.createClass({
     });
   },
 
-  cancelEdit: function () {
+  cancelEdit: function (e) {
+    e.preventDefault();
     this.props.toggleEdit();
   },
 

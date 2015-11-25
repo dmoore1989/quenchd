@@ -16,13 +16,24 @@ window.SearchDropdown = React.createClass({
       }, this));
     },
 
+  displaySeeMore: function () {
+    if (Object.keys(this.props.results).length !== 0) {
+      return (
+        <a href={"/#/search/"+ this.props.query || ""} className="link">
+          See More
+        </a>
+      );
+    } else {
+      return (<div></div>);
+    }
+  },
+
   render: function () {
     if (this.props.results) {
       return (
-        <div className="dropdown">{this.displayResults()}
-          <a href={"/#/search/"+ this.props.query || ""} className="link">
-              See More
-          </a>
+        <div className="dropdown">
+          {this.displayResults()}
+          {this.displaySeeMore()}
         </div>);
     } else {
       return (<div className="hidden"></div>);

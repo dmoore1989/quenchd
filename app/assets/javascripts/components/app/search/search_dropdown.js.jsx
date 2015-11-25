@@ -16,7 +16,7 @@ window.SearchDropdown = React.createClass({
     if (this.props.results) {
       return (
         <div className="dropdown">{this.displayResults()}
-          <a className="link" href="#">See More</a>
+          <a className="link" href="#/search">See More</a>
         </div>);
     } else {
       return (<div className="hidden"></div>);

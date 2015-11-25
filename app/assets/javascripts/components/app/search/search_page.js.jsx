@@ -17,12 +17,17 @@ window.SearchPage = React.createClass({
 
   submitQuery: function (e) {
     e.preventDefault();
-    SearchApiUtil.paginatedSearch(this.state.query);
+    SearchApiUtil.specificSearch(this.state.query, this.state.type);
   },
 
   updateQuery: function (e) {
     e.preventDefault();
     this.setState({query: e.currentTarget.value});
+  },
+
+  changeType: function (type) {
+    SearchApiUtil.specificSearch(this.state.query, type);
+    this.setState({type: type});
   },
 
   render: function () {
@@ -33,10 +38,10 @@ window.SearchPage = React.createClass({
           <button onClick={this.submitQuery} />
         </header>
         <nav>
-          <SearchTypeNav type=this.state.type />
+          <SearchTypeNav type={this.state.type} change={this.changeType} />
         </nav>
         <section>
-          <SearchResults Result
+          <SearchResults results={this.state.results} />
         </section>
       </div>
     );

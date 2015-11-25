@@ -78,5 +78,10 @@ column name | data type | details
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key(references users), indexed
 friend_id   | string    | not null, foreign key(references users), indexed
-approved    | boolean   | default false, must be approved by associated friend
-image       |           | use paper clip gem/AWS S3
+
+## friend_requests
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+requester_id| integer   | not null, foreign key(references users), indexed
+approver_id | string    | not null, foreign key(references users), indexed

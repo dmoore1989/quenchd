@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125183355) do
+ActiveRecord::Schema.define(version: 20151125211907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,26 @@ ActiveRecord::Schema.define(version: 20151125183355) do
 
   add_index "comments", ["check_in_id"], name: "index_comments_on_check_in_id", using: :btree
   add_index "comments", ["commenter_id"], name: "index_comments_on_commenter_id", using: :btree
+
+  create_table "friend_requests", force: :cascade do |t|
+    t.integer  "requester_id", null: false
+    t.integer  "approver_id",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friend_requests", ["approver_id"], name: "index_friend_requests_on_approver_id", using: :btree
+  add_index "friend_requests", ["requester_id"], name: "index_friend_requests_on_requester_id", using: :btree
+
+  create_table "friends", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "friend_id",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friends", ["friend_id"], name: "index_friends_on_friend_id", using: :btree
+  add_index "friends", ["user_id"], name: "index_friends_on_user_id", using: :btree
 
   create_table "likes", force: :cascade do |t|
     t.integer  "liker_id",      null: false

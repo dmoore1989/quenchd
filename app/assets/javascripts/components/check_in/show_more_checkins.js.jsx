@@ -12,12 +12,12 @@ window.ShowMoreCheckins = React.createClass({
   render: function () {
     if (this.props.checkInData === QuenchdConstants.FETCH){
       return (
-        <button onClick={this.nextCheckInPage}>
+        <button className="show-more" onClick={this.nextCheckInPage}>
           Show More
         </button>
       );
     } else {
-      return (<div></div>)
+      return (<div></div>);
     }
   }
 });

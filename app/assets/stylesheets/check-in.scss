@@ -85,3 +85,16 @@
 .spacer {
   padding: 5px;
 }
+
+.show-more {
+  display: block;
+  text-align: center;
+  color:#fff;
+  padding: 10px 40px;
+  margin: 10px auto;
+  background-color: #ffcc00;
+}
+
+.show-more:hover {
+  background-color: #f4b800;
+}

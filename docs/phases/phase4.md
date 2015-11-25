@@ -11,17 +11,17 @@
 ### Views (React Components)
 * SearchBar x
 * SearchPage x
-  - ToggleSearchType
-  - SearchItemsIndex
-    - SearchItems
+  - ToggleSearchType x
+  - SearchItemsIndex x
+    - SearchItems x
 
 
 ### Stores
 
 ## Actions
-* ApiActions.receiveSearchedBeers
-* ApiActions.receiveSearchedBreweries
-* ApiActions.receiveSearchedVenues
+* ApiActions.receiveSearchedBeers x
+* ApiActions.receiveSearchedBreweries x
+* ApiActions.receiveSearchedVenues x
 
 ### ApiUtil
 * ApiUtil.fetchSearchedBeers x

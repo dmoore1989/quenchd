@@ -10,6 +10,7 @@ ibu         | integer   |
 style       | string    | not null
 description | text      |
 brewery_id  | integer   | not null, foreign key (references breweries), indexed
+image       |           | use paper clip gem/AWS S3
 
 ## breweries
 column name | data type | details
@@ -18,6 +19,7 @@ id          | integer   | not null, primary key
 name        | string    | not null
 brewer_id   | integer   | foreign key (references users), indexed
 location    | string    |
+image       |           | use paper clip gem/AWS S3
 
 ## venues
 column name | data type | details
@@ -26,6 +28,7 @@ id          | integer   | not null, primary key
 name        | string    | not null
 owner_id    | integer   | foreign key (references users), indexed
 address     | string    | not null
+image       |           | use paper clip gem/AWS S3
 
 ## likes
 column name   | data type | details
@@ -35,12 +38,6 @@ liker_id      | integer   | not null, foreign key(references users)
 likeable_id   | integer   | not null, polymorphic key (for checkins, beers, breweries, and venues), indexed
 likeable_type | string    | not null, polymorphic type
 
-## images
-column name   | data type | details
---------------|-----------|-----------------------
-id            | integer   | not null, primary key
-imagable_id   | integer   | not null, polymorphic key (for users, and checkins), indexed
-imagable_type | string    | not null, polymorphic type
 
 ## checkins
 column name   | data type | details
@@ -51,6 +48,7 @@ beer_id       | integer   | not null, foreign key (references beers), indexed
 venue_id      | integer   | foreign key (references venues), index
 rating        | float     | not null, between 0 and 5
 review        | string    | less than: 140 chars
+image         |           | use paper clip gem/AWS S3
 
 ## comments
 column name   | data type | details
@@ -72,6 +70,7 @@ DOB             | datetime  | not null
 location        | string    |
 website         | string    |
 about           | string    |    
+image           |           | use paper clip gem/AWS S3
 
 ## friends
 column name | data type | details
@@ -80,3 +79,4 @@ id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key(references users), indexed
 friend_id   | string    | not null, foreign key(references users), indexed
 approved    | boolean   | default false, must be approved by associated friend
+image       |           | use paper clip gem/AWS S3

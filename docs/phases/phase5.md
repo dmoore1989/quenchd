@@ -3,11 +3,9 @@
 ## Rails
 ### Models
 * Friend
-* Image
 
 ### Controllers
 * Api::FriendsController (create, destroy, update)
-* Api::ImageController (create, destroy)
 
 ### Views
 
@@ -22,7 +20,6 @@
 
 ### Stores
   * Friend
-  * Image
 
 ### Actions
   * ApiActions.receiveAllFriends
@@ -33,7 +30,7 @@
   * ApiActions.destroyImages
 
 ### ApiUtil
-  * ApiUtil.fetchAllFriends
+  * ApiUtil.fetchAllFriends x
   * ApiUtil.fetchImages
 
 ## Gems/Libraries

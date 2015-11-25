@@ -5,7 +5,7 @@ window.VenueHeader = React.createClass({
       return (
         <div className="show-header">
           <section className="header-top-bar group">
-            <div className="thumbnail"></div>
+            <div className="thumbnail"><img src={venue.venueImage} /></div>
             <div className="title">
               <h3>{venue.name}</h3>
               <h4>venue Name HERE</h4>

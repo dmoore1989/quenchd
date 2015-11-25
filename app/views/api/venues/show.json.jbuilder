@@ -1,5 +1,6 @@
 json.venue do
   json.extract! @venue, :id, :name, :address
+  json.venueImage asset_path(@venue.image.url(:title))
   json.create @venue.created_at.strftime("%m/%d/%Y")
 
   json.check_ins @check_ins.count

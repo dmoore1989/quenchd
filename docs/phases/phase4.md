@@ -9,8 +9,8 @@
 
 ## Flux
 ### Views (React Components)
-* SearchBar
-* SearchPage
+* SearchBar x
+* SearchPage x
   - ToggleSearchType
   - SearchItemsIndex
     - SearchItems
@@ -24,8 +24,8 @@
 * ApiActions.receiveSearchedVenues
 
 ### ApiUtil
-* ApiUtil.fetchSearchedBeers
-* ApiUtil.fetchSearchedBreweries
-* ApiUtil.fetchSearchedVenues
+* ApiUtil.fetchSearchedBeers x
+* ApiUtil.fetchSearchedBreweries x
+* ApiUtil.fetchSearchedVenues x
 
 ## Gems/Libraries

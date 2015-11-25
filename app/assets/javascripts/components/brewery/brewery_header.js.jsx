@@ -12,12 +12,12 @@ window.BreweryHeader =  React.createClass({
               <h6>Microbrewery</h6>
             </div>
             <div className="check-in-stats group">
-              <li><p>total</p><h5>{beer.check_ins}</h5></li>
-              <li><p>unique</p><h5>{beer.uniq_check_ins}</h5></li>
-              <li><p>monthly</p><h5>{beer.monthly}</h5></li>
+              <li><p>total</p><h5>{brewery.check_ins}</h5></li>
+              <li><p>unique</p><h5>{brewery.uniq_check_ins}</h5></li>
+              <li><p>monthly</p><h5>{brewery.monthly}</h5></li>
               <li><p>you</p><h5><a
                 className="link"
-                href="#">{beer.current_user_check_in}</a></h5></li>
+                href="#">{brewery.current_user_check_in}</a></h5></li>
             </div>
           </section>
             <ul className="detail-bar group">

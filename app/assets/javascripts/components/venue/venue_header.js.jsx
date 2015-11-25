@@ -12,12 +12,12 @@ window.VenueHeader = React.createClass({
               <h6>Microvenue</h6>
             </div>
             <ul className="check-in-stats">
-              <li><p>total</p><h5>{beer.check_ins}</h5></li>
-              <li><p>unique</p><h5>{beer.uniq_check_ins}</h5></li>
-              <li><p>monthly</p><h5>{beer.monthly}</h5></li>
+              <li><p>total</p><h5>{venue.check_ins}</h5></li>
+              <li><p>unique</p><h5>{venue.uniq_check_ins}</h5></li>
+              <li><p>monthly</p><h5>{venue.monthly}</h5></li>
               <li><p>you</p><h5><a
                 className="link"
-                href="#">{beer.current_user_check_in}</a></h5></li>
+                href="#">{venue.current_user_check_in}</a></h5></li>
             </ul>
           </section>
 

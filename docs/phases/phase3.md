@@ -9,7 +9,7 @@
 ### Controllers
 * Api::BreweriesController (create, destroy, search, show, update)x
 * Api::VenuesController (create, destroy, search, show, update)x
-* Api::LikesController (create, destroy)
+* Api::LikesController (create, destroy) x
 
 ### Views
 * breweries/show.json.jbuilder x
@@ -24,7 +24,7 @@
 ### Views (React Components)
 * ShowPageIndex x
   -CheckInIndexItem x
-* DetailSnapShot
+* DetailSnapShot x
 * LikeButton x
 
 ### Stores

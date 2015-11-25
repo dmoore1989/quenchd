@@ -1,10 +1,11 @@
 window.SearchPage = React.createClass({
   getInitialState: function () {
-    return ({query: "", results: SearchStore.results(), type: QuenchdConstants.BEER});
+    return ({query: "", results: SearchStore.results(), type: "beers"});
   },
 
   componentDidMount: function () {
     SearchStore.addChangeHandler(this.updateResults);
+    SearchApiUtil.specificSearch(this.state.query);
   },
 
   componentWillUnmount: function () {
@@ -41,7 +42,7 @@ window.SearchPage = React.createClass({
           <SearchTypeNav type={this.state.type} change={this.changeType} />
         </nav>
         <section>
-          <SearchResults results={this.state.results} />
+          <SearchResults results={["awesome"]} />
         </section>
       </div>
     );

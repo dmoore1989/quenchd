@@ -19,6 +19,23 @@ class User < ActiveRecord::Base
     class_name: "Like",
     foreign_key: :liker_id
     )
+  has_many(
+    :friends,
+    class_name: "Friend",
+    foreign_key: :friend_id
+    )
+
+  has_many(
+    :approvals,
+    class_name: "FriendRequest",
+    foreign_key: :approver_id
+  )
+
+  has_many(
+    :requests,
+    class_name: "FriendRequest",
+    foreign_key: :requester_id
+  )
 
 
 

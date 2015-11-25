@@ -8,6 +8,4 @@ class Like < ActiveRecord::Base
     class_name: "User",
     foreign_key: :liker_id
     )
-
-
 end

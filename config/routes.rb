@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :venues, except: [:index, :new, :edit]
     resources :likes, only: [:create, :destroy]
     resources :search, only: [:index]
+    resources :friend_requests, only: [:create, :destroy]
+    resources :friends, only: [:create, :destroy]
     get 'search/beers', to: 'search#beers'
     get 'search/breweries', to: 'search#breweries'
     get 'search/venues', to: 'search#venues'

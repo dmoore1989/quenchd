@@ -6,9 +6,9 @@ window.SearchTypeNav = React.createClass({
 
   selectedItem: function (elType) {
     if (elType === this.props.type) {
-      return "search-nav-selected"
+      return "search-nav-selected";
     } else {
-      return "search-nav"
+      return "search-nav";
     }
   },
 

@@ -10,6 +10,7 @@ class Api::SearchController < ApplicationController
       .multisearch(params[:query])
       .includes(:searchable)
       .where("searchable_type = 'Beer'")
+    render :items
   end
 
   def breweries
@@ -17,6 +18,7 @@ class Api::SearchController < ApplicationController
       .multisearch(params[:query])
       .includes(:searchable)
       .where("searchable_type = 'Brewery'")
+    render :items
   end
 
   def venues
@@ -24,6 +26,7 @@ class Api::SearchController < ApplicationController
       .multisearch(params[:query])
       .includes(:searchable)
       .where("searchable_type = 'Venue'")
+    render :items
   end
 
 end

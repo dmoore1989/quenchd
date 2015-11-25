@@ -28,7 +28,6 @@ window.SearchPage = React.createClass({
   },
 
   changeType: function (type) {
-
     SearchApiUtil.specificSearch(this.state.query, type);
     this.setState({type: type});
   },

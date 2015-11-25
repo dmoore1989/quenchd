@@ -4,8 +4,8 @@ json.user do
   json.joined @user.created_at.strftime("%m/%d/%Y")
   json.count @user.check_ins.count
   json.uniqueCount @user.check_ins.select(:beer_id).distinct.count(:beer_id)
+  json.status friendship_status(@user)
 end
-
 
 
 json.check_ins do

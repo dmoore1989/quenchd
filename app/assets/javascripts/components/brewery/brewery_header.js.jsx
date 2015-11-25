@@ -5,7 +5,7 @@ window.BreweryHeader =  React.createClass({
       return (
         <div className="show-header">
           <section className="header-top-bar group">
-            <div className="thumbnail"></div>
+            <div className="thumbnail"><img src={brewery.breweryImage} /></div>
             <div className="title">
               <h3>{brewery.name}</h3>
               <h4>{brewery.address}</h4>

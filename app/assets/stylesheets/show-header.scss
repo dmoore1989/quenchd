@@ -4,10 +4,14 @@
 
 .thumbnail {
   display: block;
-  width: 98px;
-  height: 98px;
-  background-image: image-url("beer-placeholder.jpeg");
+  margin: 5px;
   float:left;
+}
+
+.thumbnail img {
+  max-width: 98px;
+  max-height: 98px;
+
 }
 
 .title {

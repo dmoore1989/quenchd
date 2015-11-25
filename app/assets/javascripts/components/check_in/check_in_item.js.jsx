@@ -89,7 +89,7 @@ window.CheckInItem = React.createClass({
         </section>
         <img
           className="beer-img"
-          src="https://placeholdit.imgix.net/~text?txtsize=6&txt=abstract%20user&w=40&h=40" />
+          src={this.props.checkIn.beerImage} />
       </h6>
     );
   }

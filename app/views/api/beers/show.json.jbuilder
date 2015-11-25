@@ -1,5 +1,6 @@
 json.beer do
   json.extract! @beer, :id, :name, :abv, :ibu, :style, :description
+  json.beerImage asset_path(@beer.image.url(:title))
   json.brewery @beer.brewery
   json.create @beer.created_at.strftime("%m/%d/%Y")
   json.check_ins @check_ins.count

@@ -2,6 +2,7 @@ json.id check_in.id
 json.user check_in.user
 json.userImage asset_path(check_in.user.image.url(:thumb))
 json.beer check_in.beer
+json.beerImage asset_path(check_in.beer.image.url(:thumb))
 json.brewery check_in.beer.brewery
 json.venue check_in.venue
 json.rating check_in.rating

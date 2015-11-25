@@ -1,9 +1,10 @@
 window.SearchResults = React.createClass({
   render: function () {
+    var results = this.props.results || [];
     return(
       <div>
-        {this.props.results.map(function (result) {
-          return (<h4>result</h4>);
+        {results.map(function (result) {
+          return (<h4>{result.name}</h4>);
         })}
       </div>
     );

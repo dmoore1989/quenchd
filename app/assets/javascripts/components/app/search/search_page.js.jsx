@@ -1,6 +1,6 @@
 window.SearchPage = React.createClass({
   getInitialState: function () {
-    return ({query: "", results: SearchStore.results(), type: "beers"});
+    return ({query: "", results: SearchStore.detailResults(), type: "beers"});
   },
 
   componentDidMount: function () {
@@ -13,11 +13,12 @@ window.SearchPage = React.createClass({
   },
 
   updateResults: function () {
-    this.setState({results: SearchStore.results()});
+    this.setState({results: SearchStore.detailResults()});
   },
 
   submitQuery: function (e) {
     e.preventDefault();
+
     SearchApiUtil.specificSearch(this.state.query, this.state.type);
   },
 
@@ -34,15 +35,17 @@ window.SearchPage = React.createClass({
   render: function () {
     return(
       <div className="content">
-        <header className="submission">
-          <input type="text" value={this.state.query} />
-          <button onClick={this.submitQuery} />
-        </header>
+        <div className="submission">
+          <form>
+            <input type="text" value={this.state.query} onChange={this.updateQuery} />
+            <button onClick={this.submitQuery}>Submit</button>
+          </form>
+        </div>
         <nav>
           <SearchTypeNav type={this.state.type} change={this.changeType} />
         </nav>
         <section>
-          <SearchResults results={["awesome"]} />
+          <SearchResults results={this.state.results.beers} />
         </section>
       </div>
     );

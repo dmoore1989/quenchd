@@ -35,7 +35,7 @@ window.SearchBar = React.createClass({
           placeholder="Find a Beer, Brewery, or Venue"
           onChange={this.submitQuery}
           value={this.state.query} />
-        <SearchDropdown results={this.state.results} />
+        <SearchDropdown results={this.state.results} query={this.state.query} />
       </div>
     );
   }

@@ -1,6 +1,9 @@
 window.SearchPage = React.createClass({
   getInitialState: function () {
-    return ({query: "", results: SearchStore.detailResults(), type: "beers"});
+    return ({
+      query: this.props.params.query,
+      results: SearchStore.detailResults(), type: "beers"
+    });
   },
 
   componentDidMount: function () {

@@ -1,5 +1,5 @@
 class Beer < ActiveRecord::Base
-  has_attached_file :image, styles: {title: "98x98>", thumb: "40x40>"}, default_url: "missing-beer.png"
+  has_attached_file :image, styles: {title: "98x98#", thumb: "40x40#"}, default_url: "missing-beer.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   include PgSearch

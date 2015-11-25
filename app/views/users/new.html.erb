@@ -12,7 +12,7 @@
         <h2>DRINK UP!</h2>
       </a>
     </section>
-    <form class="landing-form" action="<%= users_url %>" method="post">
+    <form class="landing-form" enctype='multipart/form-data' action="<%= users_url %>" method="post">
       <%= auth_token %>
 
       <div class="sign-up group">
@@ -21,11 +21,13 @@
         <input placeholder="Password" type="password" name="user[password]" value="<%= @user.password %>">
 
 
-        <input placeholder="Password Confirmation" type="password" name="user[password_confirmation]" value="<%= @user.password %>">
+        <input placeholder="Password Confirmation" type="password" value="<%= @user.password %>">
 
         <input placeholder="Location" type="text" name="user[location]" value="<%= @user.location %>">
         <input class="dob" type="date" name="user[dob]" value="<%= @user.dob %>">
       </div>
+      <h5>Upload a Photo</h5>
+      <input type="file" name="user[image]" >
 
       <p class="disclaimer">You must be of legal drinking age in your country to join Quenchd. By clicking Create Account, you agree to our Terms of Use and our Privacy Policy</p>
       <input class="landing-form-button" type="submit" value="Sign Up"></input>

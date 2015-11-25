@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_attached_file :image, styles: {title: "133x133>", thumb: "50x50>", small: "35x35>" }, default_url: "missing-user.png"
+  has_attached_file :image, styles: {title: "133x133#", thumb: "50x50#", small: "35x35#" }, default_url: "missing-user.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   validates :username, :email, :password_digest, :session_token, :dob, :location, presence: true

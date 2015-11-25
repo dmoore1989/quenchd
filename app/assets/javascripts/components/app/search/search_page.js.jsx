@@ -28,6 +28,7 @@ window.SearchPage = React.createClass({
   },
 
   changeType: function (type) {
+
     SearchApiUtil.specificSearch(this.state.query, type);
     this.setState({type: type});
   },
@@ -42,10 +43,10 @@ window.SearchPage = React.createClass({
           </form>
         </div>
         <nav>
-          <SearchTypeNav type={this.state.type} change={this.changeType} />
+          <SearchTypeNav type={this.state.type} changeType={this.changeType} />
         </nav>
         <section>
-          <SearchResults results={this.state.results.beers} />
+          <SearchResults results={this.state.results.items} />
         </section>
       </div>
     );

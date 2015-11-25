@@ -18,6 +18,7 @@ window.SearchApiUtil = {
       dataType: 'json',
       data: {query: query},
       success: function (data) {
+        debugger
         SearchResultAction.receiveSpecificResults(data);
       }
     });

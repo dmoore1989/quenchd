@@ -13,8 +13,7 @@ window.FriendRequestButton = React.createClass({
         return (<button onClick={this.approveRequest}>Approve Friend Request</button>);
       case "friend":
         return (<button onClick={this.removeFriend}>Remove Friend</button>);
-      case "self":
-        return (<div className="hidden"></div>);
     }
+    return (<div className="hidden"></div>);
   }
 });

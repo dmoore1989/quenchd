@@ -35,6 +35,18 @@ window.CheckInItem = React.createClass({
     }
   },
 
+  checkInReview: function () {
+    if (this.props.checkIn.review !== "" || this.props.checkIn.rating !== 0) {
+      return (
+        <div className="check-in-review">
+          <p>{this.props.checkIn.review}</p>
+          <CheckInRating rating={this.props.checkIn.rating} />
+        </div>
+      );
+    } else {
+      return (<div className="spacer"></div>);
+    }
+  },
 
   render: function () {
     var user = this.props.checkIn.user.username;
@@ -59,11 +71,8 @@ window.CheckInItem = React.createClass({
               {this.props.checkIn.brewery.name}
             </ReactRouter.Link> {this.venueCheckIn()}
 
+          {this.checkInReview()}
 
-          <div className="check-in-review">
-            <p>{this.props.checkIn.review}</p>
-            <CheckInRating rating={this.props.checkIn.rating} />
-          </div>
           <section className="interact-bar group">
             <button className="comment-button" onClick={this.toggleComment}>
               Comment

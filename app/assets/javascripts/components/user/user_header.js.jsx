@@ -12,6 +12,7 @@ window.UserHeader = React.createClass({
               <li>{user.website}</li>
             </ul>
           </section>
+          <FriendRequestButton />
           <footer className="user-profile-footer group">
             <ul>
               <li>

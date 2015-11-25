@@ -4,7 +4,7 @@ window.SearchDropdownItem = React.createClass({
     return (
       <ul>
         {this.props.samples.map(function(sample){
-          return (<li key={sample.id}>
+          return (<li className="sample" key={sample.id}>
                 {sample.name}
             </li>);
         })}

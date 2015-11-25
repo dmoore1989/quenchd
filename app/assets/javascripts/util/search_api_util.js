@@ -17,8 +17,8 @@ window.SearchApiUtil = {
       type: 'GET',
       dataType: 'json',
       data: {query: query},
-      success: function () {
-        SearchResultAction.receiveResults(results);
+      success: function (data) {
+        SearchResultAction.receiveSpecificResults(data);
       }
     });
   }

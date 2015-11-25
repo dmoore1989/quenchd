@@ -4,7 +4,7 @@ $(function () {
   var Router = ReactRouter.Router;
   var Route = ReactRouter.Route;
   var IndexRoute = ReactRouter.IndexRoute;
-  var search = document.getElementById('search-bar')
+  var search = document.getElementById('search-bar');
 
   var App = React.createClass({
     render: function () {
@@ -20,6 +20,7 @@ $(function () {
     <Route path="/" component={App}>
       <IndexRoute component={Index} />
       <Route path="beers/new" component={BeerForm} />
+      <Route path="search" component={SearchPage} />
       <Route
         path="beers/:beerId"
         component={Show}

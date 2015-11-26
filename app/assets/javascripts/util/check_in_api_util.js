@@ -8,26 +8,13 @@ window.CheckInApiUtil = {
         page_number: pageNumber
       },
       success: (function (data) {
-        CheckInApiAction.clearCheckIns();
+        if (pageNumber === 1) {
+          CheckInApiAction.clearCheckIns();
+        }
         CheckInApiAction.receiveCheckIns(data);
         data.forEach(function (checkIn){
           CommentApiAction.receiveComments(checkIn.comments);
         });
-      })
-    });
-  },
-
-  fetchMoreCheckIns: function (start, stop) {
-    $.ajax({
-      url: "/api/check_ins",
-      type: "GET",
-      dataType:"json",
-      data: {
-        start: start,
-        stop: stop
-      },
-      success: (function (data) {
-        CheckInApiAction.receiveMoreCheckIns(data);
       })
     });
   },

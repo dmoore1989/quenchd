@@ -60,7 +60,7 @@ window.Show = React.createClass({
         <div>
           {this.renderHeader()}
           <CheckInIndex
-            checkInData={QuenchdConstants.ASSOCIATION}/>
+            checkInData={this.props.route.type}/>
         </div>);
     }
     else {

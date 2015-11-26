@@ -1,6 +1,7 @@
 (function(root){
   var _checkIns = [];
   var CHANGE_EVENT = "CHANGE_EVENT";
+  var PAGE_END = "PAGE_END";
 
   root.CheckInStore = $.extend({}, EventEmitter.prototype, {
     all: function () {
@@ -13,6 +14,14 @@
 
     removeChangeHandler: function (callback) {
       CheckInStore.removeListener(CHANGE_EVENT, callback);
+    },
+
+    addPageEndHandler: function (callback) {
+      CheckInStore.on(PAGE_END, callback);
+    },
+
+    removePageEndHandler: function (callback) {
+      CheckInStore.removeListener(PAGE_END, callback);
     },
 
     delete: function (id) {
@@ -47,6 +56,9 @@
     dispatcherId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
         case QuenchdConstants.CHECKINS_RECEIVED:
+          if (payload.checkIns.length < 10) {
+            CheckInStore.emit(PAGE_END);
+          }
           _checkIns = _checkIns.concat(payload.checkIns);
           CheckInStore.emit(CHANGE_EVENT);
           break;

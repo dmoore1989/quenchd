@@ -17,7 +17,6 @@ window.FriendApiUtil = {
       type: "DELETE",
       dataType: "json",
       success:( function (data) {
-        debugger
         UserApiAction.receiveNewStatus(data.status);
       })
     });

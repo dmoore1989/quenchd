@@ -41,8 +41,7 @@ window.CheckInIndex = React.createClass({
                     );
           }, this)}
           <ShowMoreCheckins
-            checkInData={this.props.checkInData}
-            onClick={this.fetchMoreCheckIns} />
+            checkInData={this.props.checkInData}/>
         </div>
       );
     } else {

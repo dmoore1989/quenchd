@@ -8,6 +8,12 @@ json.venue check_in.venue
 json.rating check_in.rating
 json.review check_in.review
 json.likes check_in.likes
+@like_images = check_in.likes.includes(:liker).limit(5).map do |like|
+  asset_path(like.liker.image.url(:small))
+end
+
+json.likeImages @like_images
+
 json.image asset_path(check_in.image.url(:home_page)) if check_in.image.presence
 if Time.now - check_in.created_at < 1.day
   json.created_at (time_ago_in_words(check_in.created_at) + " ago")

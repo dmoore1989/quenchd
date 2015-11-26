@@ -35,6 +35,12 @@ window.LikedCheckIn = React.createClass({
     }
   },
 
+  likeImages: function () {
+    return this.props.sampleImg.map(function (imageUrl) {
+      return (<img src={imageUrl} />);
+    });
+  },
+
   render: function () {
     return (
       <span>
@@ -42,6 +48,7 @@ window.LikedCheckIn = React.createClass({
           Cheers!
         </button>
         <div className="like-counter"><h4>{this.props.likes.length} 🍺</h4></div>
+        {this.likeImages()}
       </span>
     );
   }

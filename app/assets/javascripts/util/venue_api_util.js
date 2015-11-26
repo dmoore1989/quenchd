@@ -4,7 +4,7 @@ window.VenueApiUtil = {
       url: "/api/venues/" + id,
       type: "GET",
       dataType: "json",
-      data: {page_number: pageNumber}
+      data: {page_number: pageNumber},
       success: (function (data) {
         if (pageNumber === 1) {
           CheckInApiAction.clearCheckIns();

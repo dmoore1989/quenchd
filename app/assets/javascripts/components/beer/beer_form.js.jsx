@@ -33,19 +33,31 @@ window.BeerForm = React.createClass({
 
   createBeer: function(e) {
     e.preventDefault();
-    beer= {
-      beer:{
-        name: this.state.name,
-        abv: this.state.abv,
-        ibu: this.state.ibu,
-        style: this.state.style,
-        description: this.state.description,
-        brewery_id: this.state.brewerId,
-        image: this.state.imageFile
-      }
-    };
-    BeerApiUtil.createBeer(beer);
-    this.props.history.pushState(null, "/");
+
+    var name = this.state.name;
+    var abv = this.state.abv;
+    var ibu = this.state.ibu;
+    var style =  this.state.style;
+    var description = this.state.description;
+    var brewery_id = this.state.brewerId;
+    var image = this.state.imageFile;
+
+    var formData = new FormData();
+    formData.append('beer[name]', name);
+    formData.append('beer[abv]', abv);
+    formData.append('beer[ibu]', ibu);
+    formData.append('beer[style]', style);
+    formData.append('beer[description]', description);
+    formData.append('beer[brewery_id]', brewery_id);
+    formData.append('beer[image]', image);
+
+
+    BeerApiUtil.createBeer(formData, this.routeToBeer);
+  },
+
+  routeToBeer: function (beerId) {
+    var link  = "#/beers/" + beerId;
+    this.props.history.pushState(null, link);
   },
 
   render: function() {

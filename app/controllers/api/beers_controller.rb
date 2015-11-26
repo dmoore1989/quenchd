@@ -18,13 +18,14 @@ class Api::BeersController < ApplicationController
   end
 
   def create
+    puts "CREATE"
     @beer = Beer.new(beer_params)
-
-    if @beer.save
-      flash.now[:notice] = ["Beer Created!"]
-      render json: @beer
+    puts @beer
+    if @beer.save!
+      puts "HELLO!!!!"
+      render json: {id: @beer.id}
     else
-      flash.now[:error] = @beer.errors.full_messages
+      render json: {id: @beer.errors.full_messages}
     end
   end
 
@@ -44,7 +45,7 @@ class Api::BeersController < ApplicationController
   end
 
   def beer_params
-    params.require(:beer).permit(:name, :abv, :ibu, :style, :description, :brewery_id)
+    params.require(:beer).permit(:name, :image, :abv, :ibu, :style, :description, :brewery_id)
   end
 
 end

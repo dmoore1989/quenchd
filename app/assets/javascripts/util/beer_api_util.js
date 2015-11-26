@@ -12,14 +12,16 @@ window.BeerApiUtil = {
     });
   },
 
-  createBeer: function (beer) {
+  createBeer: function (formData, callback) {
     $.ajax({
       url: "/api/beers",
       type: "POST",
-      data: beer,
+      processData: false,
+      contentType: false,
+      data: formData,
       dataType: "json",
       success: (function(data) {
-        BeerApiAction.receiveBeer(data);
+        callback && callback(data.id)
       })
     });
   }

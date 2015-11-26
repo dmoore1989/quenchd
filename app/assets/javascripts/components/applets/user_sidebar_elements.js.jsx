@@ -4,6 +4,7 @@ window.UserSidebarElements = React.createClass({
       <div>
         <div className="filler"></div>
         <FriendImages friends={this.props.user.friends} />
+        <LikeImages likes={this.props.user.likes} />
       </div>
     );
   }

@@ -16,7 +16,7 @@ window.Show = React.createClass({
         UserApiUtil.fetchUser(modelParams.userId);
         break;
       case QuenchdConstants.BEER:
-        BeerApiUtil.fetchBeer(modelParams.beerId);
+        BeerApiUtil.fetchBeer(modelParams.beerId, 1);
         break;
       case QuenchdConstants.BREWERY:
         BreweryApiUtil.fetchBrewery(modelParams.breweryId);
@@ -60,7 +60,8 @@ window.Show = React.createClass({
         <div>
           {this.renderHeader()}
           <CheckInIndex
-            checkInData={this.props.route.type}/>
+            checkInData={this.props.route.type}
+            id={this.state.item.id}/>
         </div>);
     }
     else {

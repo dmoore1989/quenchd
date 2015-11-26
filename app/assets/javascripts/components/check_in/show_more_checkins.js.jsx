@@ -17,17 +17,26 @@ window.ShowMoreCheckins = React.createClass({
 
   nextCheckInPage: function () {
     newPageNumber = this.state.pageNumber + 1;
-    this.fetchMoreCheckIns();
+    this.fetchMoreCheckIns(newPageNumber);
     this.setState({pageNumber: newPageNumber});
   },
 
-  fetchMoreCheckIns: function () {
+  fetchMoreCheckIns: function (pageNumber) {
     switch (this.props.checkInData) {
       case QuenchdConstants.FETCH:
-        CheckInApiUtil.fetchCheckins(this.state.pageNumber);
+        CheckInApiUtil.fetchCheckins(pageNumber);
         break;
       case QuenchdConstants.USER:
-        UserApiUtil.fetchMoreCheckIns(this.state.pageNumber);
+        UserApiUtil.fetchMoreCheckIns(this.props.id, pageNumber);
+        break;
+      case QuenchdConstants.BEER:
+        BeerApiUtil.fetchBeer(this.props.id, pageNumber);
+        break;
+      case QuenchdConstants.BREWERY:
+        BreweryApiUtil.fetchMoreCheckIns(this.props.id, pageNumber);
+        break;
+      case QuenchdConstants.VENUE:
+        VenueApiUtil.fetchMoreCheckIns(this.props.id, pageNumber);
         break;
     }
   },

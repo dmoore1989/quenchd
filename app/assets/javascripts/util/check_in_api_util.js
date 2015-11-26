@@ -12,9 +12,6 @@ window.CheckInApiUtil = {
           CheckInApiAction.clearCheckIns();
         }
         CheckInApiAction.receiveCheckIns(data);
-        data.forEach(function (checkIn){
-          CommentApiAction.receiveComments(checkIn.comments);
-        });
       })
     });
   },

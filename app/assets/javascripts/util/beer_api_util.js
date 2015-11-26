@@ -1,12 +1,15 @@
 window.BeerApiUtil = {
-  fetchBeer: function (id) {
+  fetchBeer: function (id, pageNumber) {
     $.ajax({
       url: "/api/beers/" + id,
       type: "GET",
+      data: {page_number: pageNumber},
       dataType: "json",
       success:(function (data) {
-        CheckInApiAction.clearCheckIns();
-        BeerApiAction.receiveBeer(data.beer, data.likes);
+        if (pageNumber === 1) {
+          CheckInApiAction.clearCheckIns();
+          BeerApiAction.receiveBeer(data.beer, data.likes);
+        }
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });

@@ -7,13 +7,13 @@ json.user do
   json.status friendship_status(@user)
 
   friend_images = @user.friends.limit(16).includes(:user).map do |friend|
-    asset_path(friend.user.image.url(:tile))
+    asset_path(friend.user.image.url)
   end
 
   json.friends friend_images
 
   liked_items = @user.likes.where("likeable_type != 'CheckIn'").includes(:likeable).map do |like|
-    like.likeable.image.url
+    asset_path(like.likeable.image.url)
   end
 
   json.likes liked_items

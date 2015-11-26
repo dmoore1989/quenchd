@@ -1,7 +1,7 @@
 window.FriendImages = React.createClass({
   renderImages: function () {
     return this.props.friends.map(function(friend){
-      return (<li>{friend}</li>);
+      return (<li><img src={friend} /></li>);
     });
   },
 

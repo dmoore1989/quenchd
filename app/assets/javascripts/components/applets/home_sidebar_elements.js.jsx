@@ -21,7 +21,7 @@ window.HomeSidebarElements = React.createClass({
       return (
         <div>
           <UserSnapshot user={this.state.user.user} />
-          <PendingFriendRequests friends={this.state.user.friends} />
+          <PendingFriendRequests approvals={this.state.user.user.approvals} />
         </div>
       );} else {
         return (<div></div>);

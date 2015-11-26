@@ -1,7 +1,6 @@
 window.UserSnapshot = React.createClass({
 
   render: function () {
-    debugger
     return (
       <div>
         <div>{this.props.user.username}</div>

@@ -17,7 +17,7 @@ window.CheckInForm = React.createClass({
     var rating = this.state.rating/2.0;
     var review = this.state.review;
     var image = this.state.imageFile || "";
-    debugger
+
 
     var formData = new FormData();
     formData.append('check_in[beer_id]', beer_id);

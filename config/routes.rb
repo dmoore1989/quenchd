@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :check_ins, except: [:new, :edit]
     resources :comments, only: [:create, :destroy, :update]
     resources :users, only: [:show]
-    get 'users/sidebar/:id', to: "user#sidebar"
+    get 'users/sidebar/:id', to: "users#sidebar"
     resources :breweries, except: [:index, :new, :edit]
     resources :venues, except: [:index, :new, :edit]
     resources :likes, only: [:create, :destroy]

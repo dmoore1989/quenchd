@@ -26,6 +26,11 @@ window.SearchBar = React.createClass({
     }
   },
 
+  clearSearchBar: function () {
+    SearchResultAction.clearResults();
+    this.setState({query: "", results: undefined});
+  },
+
   render: function () {
     return (
       <div>
@@ -35,7 +40,10 @@ window.SearchBar = React.createClass({
           placeholder="Find a Beer, Brewery, or Venue"
           onChange={this.submitQuery}
           value={this.state.query} />
-        <SearchDropdown results={this.state.results} query={this.state.query} />
+        <SearchDropdown
+          results={this.state.results}
+          query={this.state.query}
+          clearSearchBar={this.clearSearchBar} />
       </div>
     );
   }

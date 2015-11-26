@@ -6,6 +6,12 @@ window.SearchResultAction = {
     });
   },
 
+  clearResults: function (results) {
+    AppDispatcher.dispatch({
+      actionType: QuenchdConstants.CLEAR_RESULTS
+    });
+  },
+
   receiveSpecificResults: function (results) {
     AppDispatcher.dispatch({
       actionType:QuenchdConstants.RECEIVE_SPECIFIC_RESULTS,

@@ -18,11 +18,17 @@ window.SearchDropdown = React.createClass({
       }, this));
     },
 
+  clearSearchBar: function () {
+    this.props.clearSearchBar();
+  },
+
   displaySeeMore: function () {
     if (Object.keys(this.props.results).length !== 0) {
       return (
-        <a href={"/#/search/"+ this.props.query || ""} className="link">
-          See More
+        <a href={"/#/search/"+ this.props.query || ""}
+          className="link"
+          onClick={this.clearSearchBar}>
+            See More
         </a>
       );
     } else {
@@ -32,7 +38,6 @@ window.SearchDropdown = React.createClass({
 
   render: function () {
     if (this.props.results && Object.keys(this.props.results).length !== 0) {
-      debugger
       return (
         <div className="dropdown">
           {this.displayResults()}

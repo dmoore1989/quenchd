@@ -14,7 +14,7 @@ Index = React.createClass({
         </section>
 
         <section className="sidebar">
-          
+          <UserSnapshot />
         </section>
       </div>
     );

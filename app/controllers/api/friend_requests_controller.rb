@@ -19,4 +19,15 @@ class Api::FriendRequestsController < ApplicationController
     end
 
   end
+
+  def reject
+    @request = FriendRequest.find_by(
+      requester_id: params[:user_id],
+      approver_id: current_user.id
+    )
+    
+    if @request.destroy
+      render json: {status: "stranger"}
+    end
+  end
 end

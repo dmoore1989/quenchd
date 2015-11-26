@@ -8,7 +8,6 @@ window.FriendRequestApiUtil = {
       success:(function (data) {
         UserApiAction.receiveNewStatus(data.status);
       })
-
     });
   },
 
@@ -19,6 +18,17 @@ window.FriendRequestApiUtil = {
       dataType: "json",
       success:( function (data) {
         UserApiAction.receiveNewStatus(data.status);
+      })
+    });
+  },
+
+  rejectRequest: function (userId) {
+    $.ajax({
+      url: "/api/friend_requests/reject/?user_id=" + userId,
+      type: "DELETE",
+      dataType: "json",
+      success: (function (data) {
+        UserApiUtil.fetchSidebarInfo(currentUserId);
       })
     });
   }

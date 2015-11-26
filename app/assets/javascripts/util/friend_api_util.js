@@ -6,8 +6,9 @@ window.FriendApiUtil = {
       dataType: "json",
       data: ({friend_id: friendId}),
       success:(function (data) {
-        UserApiAction.receiveNewStatus(data.status);
-        if (sidebarRequest) {
+        if (!sidebarRequest) {
+          UserApiAction.receiveNewStatus(data.status);
+        } else {
           UserApiUtil.fetchSidebarInfo(currentUserId);
         }
       })

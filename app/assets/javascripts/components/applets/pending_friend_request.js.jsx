@@ -4,8 +4,9 @@ window.PendingFriendRequests = React.createClass({
     FriendApiUtil.approveRequest(e.currentTarget.id, "sidebarRequest");
   },
 
-  rejectRequest: function () {
-    debugger
+  rejectRequest: function (e) {
+    e.preventDefault();
+    FriendRequestApiUtil.rejectRequest(e.currentTarget.id);
   },
 
   render: function () {

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     get 'search/breweries', to: 'search#breweries'
     get 'search/venues', to: 'search#venues'
     delete 'friend_requests/delete/', to: 'friend_requests#destroy'
+    delete 'friend_requests/reject/', to: 'friend_requests#reject'
     delete 'friends/delete/', to: 'friends#destroy'
   end
 

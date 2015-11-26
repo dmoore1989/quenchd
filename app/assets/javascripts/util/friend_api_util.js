@@ -1,5 +1,5 @@
 window.FriendApiUtil = {
-  approveRequest: function (friendId) {
+  approveRequest: function (friendId, sidebarRequest) {
     $.ajax({
       url: "/api/friends",
       type: "POST",
@@ -7,6 +7,9 @@ window.FriendApiUtil = {
       data: ({friend_id: friendId}),
       success:(function (data) {
         UserApiAction.receiveNewStatus(data.status);
+        if (sidebarRequest) {
+          UserApiUtil.fetchSidebarInfo(currentUserId);
+        }
       })
     });
   },

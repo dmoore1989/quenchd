@@ -40,7 +40,8 @@ window.BeerForm = React.createClass({
     var style =  this.state.style;
     var description = this.state.description;
     var brewery_id = this.state.brewerId;
-    var image = this.state.imageFile;
+    var image = this.state.imageFile || "";
+
 
     var formData = new FormData();
     formData.append('beer[name]', name);

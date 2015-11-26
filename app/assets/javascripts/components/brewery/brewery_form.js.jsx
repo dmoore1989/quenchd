@@ -32,7 +32,7 @@ window.BreweryForm = React.createClass({
 
     var name = this.state.name;
     var location = this.state.location;
-    var image = this.state.imageFile;
+    var image = this.state.imageFile || "";
 
     var formData = new FormData();
     formData.append('brewery[name]', name);

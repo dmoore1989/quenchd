@@ -54,6 +54,19 @@ window.Show = React.createClass({
     }
   },
 
+  renderSidebar: function () {
+    switch (this.props.route.type) {
+      case QuenchdConstants.USER:
+        return (<UserSidebarElements user={this.state.item.user} />);
+      case QuenchdConstants.BEER:
+        return (<BeerHeader item={this.state.item} />);
+      case QuenchdConstants.BREWERY:
+        return (<BreweryHeader item={this.state.item} />);
+      case QuenchdConstants.VENUE:
+        return (<VenueHeader item={this.state.item} />);
+    }
+  },
+
   render: function () {
     if (this.state.item){
       return (
@@ -65,6 +78,7 @@ window.Show = React.createClass({
               id={this.state.item.id}/>
           </div>
           <div className="sidebar">
+            {this.renderSidebar()}
           </div>
         </div>
       );

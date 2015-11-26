@@ -8,7 +8,7 @@ json.venue check_in.venue
 json.rating check_in.rating
 json.review check_in.review
 json.likes check_in.likes
-@like_images = check_in.likes.includes(:liker).limit(5).map do |like|
+@like_images = check_in.likes.order(created_at: :desc).includes(:liker).limit(5).map do |like|
   asset_path(like.liker.image.url(:small))
 end
 

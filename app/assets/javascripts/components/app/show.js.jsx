@@ -56,13 +56,18 @@ window.Show = React.createClass({
 
   render: function () {
     if (this.state.item){
-      return(
+      return (
         <div>
-          {this.renderHeader()}
-          <CheckInIndex
-            checkInData={this.props.route.type}
-            id={this.state.item.id}/>
-        </div>);
+          <div className="primary">
+            {this.renderHeader()}
+            <CheckInIndex
+              checkInData={this.props.route.type}
+              id={this.state.item.id}/>
+          </div>
+          <div className="sidebar">
+          </div>
+        </div>
+      );
     }
     else {
       return (<div>LOADING</div>);

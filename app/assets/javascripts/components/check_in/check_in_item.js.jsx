@@ -35,6 +35,12 @@ window.CheckInItem = React.createClass({
     }
   },
 
+  imageDisplay: function () {
+    if (this.props.checkIn.image) {
+      return (<img src={this.props.checkIn.image} />);
+    }
+  },
+
   checkInReview: function () {
     if (this.props.checkIn.review !== "" || this.props.checkIn.rating !== 0) {
       return (
@@ -74,7 +80,8 @@ window.CheckInItem = React.createClass({
             </ReactRouter.Link> {this.venueCheckIn()}
 
           {this.checkInReview()}
-          <img src={this.props.checkIn.image} />
+          {this.imageDisplay()}
+
 
           <section className="interact-bar group">
             <button className="comment-button" onClick={this.toggleComment}>

@@ -12,4 +12,17 @@ class Api::BreweriesController < ApplicationController
     render :show
   end
 
+  def create
+    @brewery = Brewery.new(brewery_params)
+
+    if @brewery.save!
+      render json: {id: @brewery.id}
+    else
+      render json: {id: @brewery.errors.full_messages}
+    end
+  end
+
+  def brewery_params
+    params.require(:brewery).permit(:name, :image, :location)
+  end
 end

@@ -19,3 +19,4 @@
 * Beers list 1.5 hours
 * Friends list 1 hour
 * Top Beers 1 hour
+* Like applet

@@ -21,7 +21,7 @@ window.BeerApiUtil = {
       data: formData,
       dataType: "json",
       success: (function(data) {
-        callback && callback(data.id)
+        callback && callback(data.id);
       })
     });
   }

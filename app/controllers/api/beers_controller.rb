@@ -18,11 +18,8 @@ class Api::BeersController < ApplicationController
   end
 
   def create
-    puts "CREATE"
     @beer = Beer.new(beer_params)
-    puts @beer
     if @beer.save!
-      puts "HELLO!!!!"
       render json: {id: @beer.id}
     else
       render json: {id: @beer.errors.full_messages}

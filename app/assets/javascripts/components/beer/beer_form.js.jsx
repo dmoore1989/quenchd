@@ -56,7 +56,7 @@ window.BeerForm = React.createClass({
   },
 
   routeToBeer: function (beerId) {
-    var link  = "#/beers/" + beerId;
+    var link  = "/beers/" + beerId;
     this.props.history.pushState(null, link);
   },
 

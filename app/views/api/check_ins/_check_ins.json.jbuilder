@@ -16,7 +16,7 @@ else
 end
 
 json.comments do
-  json.array! check_comments.order(created_at: :asc) do |comment|
+  json.array! check_in.comments.order(created_at: :asc) do |comment|
     json.partial! 'api/comments/comments', comment: comment
   end
 end

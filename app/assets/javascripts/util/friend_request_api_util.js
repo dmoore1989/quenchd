@@ -14,10 +14,10 @@ window.FriendRequestApiUtil = {
 
   deleteRequest: function (requestId) {
     $.ajax({
-      url: "/api/friend_requests/" + requestId,
+      url: "/api/friend_requests/delete/?user_id=" + requestId,
       type: "DELETE",
       dataType: "json",
-      success:( function () {
+      success:( function (data) {
         UserApiAction.receiveNewStatus(data.status);
       })
     });

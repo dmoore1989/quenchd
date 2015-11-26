@@ -10,8 +10,10 @@ class Api::FriendRequestsController < ApplicationController
   end
 
   def destroy
-    @request = FriendRequest.find_by(params[:id])
-
+    @request = FriendRequest.find_by(
+      requester_id: current_user.id,
+      approver_id: params[:user_id]
+      )
     if @request.destroy
       render json: {status: "stranger"}
     end

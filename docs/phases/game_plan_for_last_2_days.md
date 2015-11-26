@@ -1,11 +1,11 @@
 #STUFF I NEED TO DO
-* Beer Submission 1 hour
+* Beer Submission 1 hour x
 * Beer Edits 30 min
-* Brewery Submission 30 min
+* Brewery Submission 30 min x
 * Brewery Edit 30 min
-* Friend Confirmation 1 hour
+* Friend Confirmation 1 hour /
 * Debug Pagination 1 hour
-* Debug Likes 30 minutes
+* Debug Likes 30 minutes x
 * n+ 1 comments (switch to mapping) - 30 minutes
 * Styling Flourishes for Search, Friends
 

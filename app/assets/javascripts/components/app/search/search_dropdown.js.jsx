@@ -4,13 +4,12 @@ window.SearchDropdown = React.createClass({
     var resultKeys = Object.keys(this.props.results);
     return (resultKeys.map(function (item) {
         if (this.props.results[item].count === 0) {
-          return (<div className="hidden"></div>);
+          return (<div key={item} className="hidden"></div>);
         } else {
           return (
-            <div>
+            <div key={item}>
               <nav className="item-count">{item}:{this.props.results[item].count}</nav>
               <SearchDropdownItem
-                key={item}
                 type={item}
                 samples={this.props.results[item].samples} />
             </div>
@@ -32,7 +31,8 @@ window.SearchDropdown = React.createClass({
   },
 
   render: function () {
-    if (this.props.results) {
+    if (this.props.results && Object.keys(this.props.results).length !== 0) {
+      debugger
       return (
         <div className="dropdown">
           {this.displayResults()}

@@ -7,6 +7,9 @@ window.FriendRequestButton = React.createClass({
     FriendRequestApiUtil.deleteRequest(this.props.id);
   },
 
+  approveRequest: function () {
+  },
+
   render: function () {
     switch (this.props.status) {
       case "stranger":

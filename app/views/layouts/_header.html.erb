@@ -21,7 +21,7 @@
         <ul class="user-navigation-dropdown">
           <li><a href="<%= root_url %>">Recent Activity</a></li>
           <li><a href="/#/users/<%= current_user.id %>"> My Profile</a></li>
-          <li><a href="#">Edit Profile</a></li>
+          <li><a href="<%= edit_user_url(current_user) %>">Edit Profile</a></li>
           <li>
             <form action="<%= session_url %>" method="post">
               <input class="log-out" type="submit" value="Log Out">

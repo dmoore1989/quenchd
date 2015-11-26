@@ -1,29 +1,33 @@
-<section class="landing-modal-title">
-  <a href="<%= root_url %>" >
-    <h1>Quenchd</h1>
-    <h2>DRINK UP!</h2>
-  </a>
+<main>
+  <div class="primary">
+    <div class="content">
 
 
-  <h3>Edit User</h3>
-</section>
-<form class="landing-form" enctype='multipart/form-data' action="<%= users_url %>" method="post">
-  <%= auth_token %>
+      <h3>Edit User</h3>
+      </section>
+      <form class="landing-form" enctype='multipart/form-data' action="<%= user_url(current_user) %>" method="post">
+        <input type="hidden" name="_method" value="patch">
 
-  <div class="sign-up group">
-    <input placeholder="Username" type="text" name="user[username]" value="<%= @user.username %>">
-    <input placeholder="Email" type="text" name="user[email]" value="<%= @user.email %>">
-    <input placeholder="Password" type="password" name="user[password]" value="<%= @user.password %>">
+        <%= auth_token %>
+
+        <label>Username
+          <input placeholder="Username" type="text" name="user[username]" value="<%= @user.username %>">
+        <label>Email
+          <input placeholder="Email" type="text" name="user[email]" value="<%= @user.email %>">
+        </label>
+        <label>Location
+          <input placeholder="Location" type="text" name="user[location]" value="<%= @user.location %>">
+        </label>
+        <label>Birthday
+          <input class="dob" type="date" name="user[dob]" value="<%= @user.dob %>">
+        </label>
+        <h5>Update Photo</h5>
+        <input type="file" name="user[image]" >
 
 
-    <input placeholder="Password Confirmation" type="password" value="<%= @user.password %>">
+        <input class="landing-form-button" type="submit" value="Update User"></input>
 
-    <input placeholder="Location" type="text" name="user[location]" value="<%= @user.location %>">
-    <input class="dob" type="date" name="user[dob]" value="<%= @user.dob %>">
+      </form>
+    </div>
   </div>
-  <h5>Update Photo</h5>
-  <input type="file" name="user[image]" >
-
-
-  <input class="landing-form-button" type="submit" value="Update User"></input>
-</form>
+</main>

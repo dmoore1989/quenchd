@@ -19,16 +19,16 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
     render :edit
   end
 
   def update
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
 
     if @user.update_attributes(user_params)
       flash[:notice] = ["User Updated!!!"]
-      redirect_to user_url(@user.id)
+      redirect_to root_url
     else
       flash[:error] = @user.errors.full_messages
       render :edit

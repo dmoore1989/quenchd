@@ -10,7 +10,7 @@ class Api::FriendRequestsController < ApplicationController
   end
 
   def destroy
-    @request = FriendRequest.find(params[:id])
+    @request = FriendRequest.find_by(params[:id])
 
     if @request.destroy
       render json: {status: "stranger"}

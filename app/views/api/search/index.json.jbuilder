@@ -7,12 +7,12 @@ json.beers do
   json.samples beers[0..2].map(&:searchable)
 end
 
-json.brewery do
+json.breweries do
   json.count breweries.count
   json.samples breweries[0..2].map(&:searchable)
 end
 
-json.venue do
+json.venues do
   json.count venues.count
   json.samples venues[0..2].map(&:searchable)
 end

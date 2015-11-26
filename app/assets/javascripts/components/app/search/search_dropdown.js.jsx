@@ -9,7 +9,10 @@ window.SearchDropdown = React.createClass({
           return (
             <div>
               <nav className="item-count">{item}:{this.props.results[item].count}</nav>
-              <SearchDropdownItem key={item} samples={this.props.results[item].samples} />
+              <SearchDropdownItem
+                key={item}
+                type={item}
+                samples={this.props.results[item].samples} />
             </div>
           );
         }

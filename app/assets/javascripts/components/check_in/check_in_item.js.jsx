@@ -48,6 +48,8 @@ window.CheckInItem = React.createClass({
     }
   },
 
+
+
   render: function () {
     var user = this.props.checkIn.user.username;
     var linkBeer = "/beers/" + this.props.beer.id;

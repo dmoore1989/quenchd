@@ -5,7 +5,7 @@ class Api::FriendRequestsController < ApplicationController
       approver_id: params[:request]
       )
     if @request.save
-      render json: {status: "requested"}
+      render json: {status: "requested", id: @request.id}
     end
   end
 

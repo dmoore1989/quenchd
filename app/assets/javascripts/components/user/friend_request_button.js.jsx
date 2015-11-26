@@ -4,10 +4,11 @@ window.FriendRequestButton = React.createClass({
   },
 
   cancelRequest: function () {
-    FriendRequestApiUtil.deleteRequest(this.props.id);
+    FriendRequestApiUtil.deleteRequest(this.props.id, currentUserId);
   },
 
   approveRequest: function () {
+    FriendApiUtil.approveRequest(this.props.id, currentUserId);
   },
 
   render: function () {

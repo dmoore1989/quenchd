@@ -33,9 +33,9 @@
           SearchStore.emit(CHANGE_EVENT);
           break;
         case QuenchdConstants.CLEAR_RESULTS:
-          debugger
           _search_results = {};
           SearchStore.emit(CHANGE_EVENT);
+          break;
       }
     })
 

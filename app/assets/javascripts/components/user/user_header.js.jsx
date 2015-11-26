@@ -1,4 +1,8 @@
 window.UserHeader = React.createClass({
+  calculateBeerScore: function () {
+    return (this.props.item.user.count * 100 + this.props.item.user.uniqueCount * 200);
+  },
+
   render: function () {
     if (this.props.item.user) {
       var user = this.props.item.user;
@@ -24,7 +28,7 @@ window.UserHeader = React.createClass({
                 <h6>Unique</h6>
               </li>
               <li>
-                <h4>9000</h4>
+                <h4>{this.calculateBeerScore()}</h4>
                 <h6>Beer Score</h6>
               </li>
               <li>

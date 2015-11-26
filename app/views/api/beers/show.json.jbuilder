@@ -10,6 +10,12 @@ json.beer do
 
   json.rating_count @check_ins.where('rating != 0').count
   json.avg @check_ins.where('rating != 0').average('rating').to_f.round(3)
+  beer_likers = @beer.likes.includes(:likeable).limit(16).map do |like|
+    asset_path(like.likeable.image.url)
+  end
+
+  json.likes beer_likers
+
 end
 json.likes @beer.likes
 

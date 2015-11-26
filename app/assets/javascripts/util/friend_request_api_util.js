@@ -1,4 +1,4 @@
-window.FriendRequest = {
+window.FriendRequestApiUtil = {
   createNewRequest: function (friendId) {
     $.ajax({
       url: "/friend_requests",

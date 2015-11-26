@@ -1,6 +1,10 @@
 window.FriendRequestButton = React.createClass({
-  addRequest: function() {
+  addRequest: function () {
     FriendRequestApiUtil(this.props.userId);
+  },
+
+  approveRequest: function () {
+
   },
 
   render: function () {

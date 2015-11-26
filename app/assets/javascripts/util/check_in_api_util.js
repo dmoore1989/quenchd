@@ -8,6 +8,7 @@ window.CheckInApiUtil = {
         page_number: pageNumber
       },
       success: (function (data) {
+        CheckInApiAction.clearCheckIns();
         CheckInApiAction.receiveCheckIns(data);
         data.forEach(function (checkIn){
           CommentApiAction.receiveComments(checkIn.comments);

@@ -32,11 +32,13 @@ window.CheckInApiUtil = {
     });
   },
 
-  createCheckIn: function (checkIn) {
+  createCheckIn: function (formData) {
     $.ajax({
       url: "api/check_ins",
       type: "POST",
-      data: checkIn,
+      processData: false,
+      contentType: false,
+      data: formData,
       dataType: "json",
       success: (function (data) {
         CheckInApiAction.receiveCheckIn(data);

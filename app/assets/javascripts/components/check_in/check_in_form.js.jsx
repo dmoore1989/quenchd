@@ -17,7 +17,7 @@ window.CheckInForm = React.createClass({
     var rating = this.state.rating/2.0;
     var review = this.state.review;
     var image = this.state.imageFile || "";
-
+    debugger
 
     var formData = new FormData();
     formData.append('check_in[beer_id]', beer_id);
@@ -25,6 +25,7 @@ window.CheckInForm = React.createClass({
     formData.append('check_in[review]', review);
     formData.append('check_in[image]', image);
 
+    CheckInApiUtil.createCheckIn(formData);
 
     this.setState({
       rating: 0,
@@ -32,7 +33,6 @@ window.CheckInForm = React.createClass({
       imageUrl: "",
       imageFile: null
     });
-    CheckInApiUtil.createCheckIn(checkIn);
     this.props.modalToggle();
   },
 
@@ -70,7 +70,7 @@ window.CheckInForm = React.createClass({
     }
   },
 
-  changeFile: function () {
+  changeFile: function (e) {
     var reader = new FileReader();
     var file = e.currentTarget.files[0];
     var that = this;

@@ -72,6 +72,7 @@ window.CheckInItem = React.createClass({
             </ReactRouter.Link> {this.venueCheckIn()}
 
           {this.checkInReview()}
+          <img src={this.props.checkIn.image} />
 
           <section className="interact-bar group">
             <button className="comment-button" onClick={this.toggleComment}>

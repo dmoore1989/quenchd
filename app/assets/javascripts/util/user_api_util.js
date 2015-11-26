@@ -14,4 +14,15 @@ window.UserApiUtil = {
       })
     });
   },
+
+  fetchSidebarInfo: function(id) {
+    $.ajax({
+      url: "/api/users/sidebar/" + id,
+      type: "GET",
+      dataType:"json",
+      success: (function (data) {
+        UserApiAction.receiveUser(data);
+      })
+    });
+  }
 };

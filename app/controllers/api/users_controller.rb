@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
   def show
-    @user = User.includes(:check_ins).find(params[:id])
+    @user = User.includes(:check_ins, :friends).find(params[:id])
     @check_ins = @user
       .check_ins
       .includes({comments: [:commenter]}, :beer, :brewery, :venue, :user, :likes)
@@ -10,4 +10,9 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+  def sidebar
+    @user= User.includes(:check_ins, :friend_requests).find(params[:id])
+
+    render :sidebar
+  end
 end

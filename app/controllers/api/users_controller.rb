@@ -11,7 +11,7 @@ class Api::UsersController < ApplicationController
   end
 
   def sidebar
-    @user= User.includes(:check_ins, :friend_requests).find(params[:id])
+    @user= User.includes( :friend_requests).find(params[:id])
 
     render :sidebar
   end

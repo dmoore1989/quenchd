@@ -15,7 +15,6 @@ Index = React.createClass({
 
         <section className="sidebar">
           <HomeSidebarElements />
-
         </section>
       </div>
     );

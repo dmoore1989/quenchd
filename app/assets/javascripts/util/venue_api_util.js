@@ -6,7 +6,7 @@ window.VenueApiUtil = {
       dataType: "json",
       success: (function (data) {
         CheckInApiAction.clearCheckIns();
-        VenueApiAction.receiveVenue(data.venue);
+        VenueApiAction.receiveVenue(data.venue, data.likes);
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });

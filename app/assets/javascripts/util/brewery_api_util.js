@@ -6,7 +6,7 @@ window.BreweryApiUtil = {
       dataType: "json",
       success:(function (data) {
         CheckInApiAction.clearCheckIns();
-        BreweryApiAction.receiveBrewery(data.brewery);
+        BreweryApiAction.receiveBrewery(data.brewery, data.likes);
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });

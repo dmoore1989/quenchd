@@ -27,16 +27,16 @@ window.ShowMoreCheckins = React.createClass({
         CheckInApiUtil.fetchCheckins(pageNumber);
         break;
       case QuenchdConstants.USER:
-        UserApiUtil.fetchMoreCheckIns(this.props.id, pageNumber);
+        UserApiUtil.fetchUser(this.props.id, pageNumber);
         break;
       case QuenchdConstants.BEER:
         BeerApiUtil.fetchBeer(this.props.id, pageNumber);
         break;
       case QuenchdConstants.BREWERY:
-        BreweryApiUtil.fetchMoreCheckIns(this.props.id, pageNumber);
+        BreweryApiUtil.fetchBrewery(this.props.id, pageNumber);
         break;
       case QuenchdConstants.VENUE:
-        VenueApiUtil.fetchMoreCheckIns(this.props.id, pageNumber);
+        VenueApiUtil.fetchVenue(this.props.id, pageNumber);
         break;
     }
   },

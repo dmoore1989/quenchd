@@ -13,16 +13,16 @@ window.Show = React.createClass({
     var modelParams = newParams || this.props.params;
     switch (modelType) {
       case QuenchdConstants.USER:
-        UserApiUtil.fetchUser(modelParams.userId);
+        UserApiUtil.fetchUser(modelParams.userId, 1);
         break;
       case QuenchdConstants.BEER:
         BeerApiUtil.fetchBeer(modelParams.beerId, 1);
         break;
       case QuenchdConstants.BREWERY:
-        BreweryApiUtil.fetchBrewery(modelParams.breweryId);
+        BreweryApiUtil.fetchBrewery(modelParams.breweryId, 1);
         break;
       case QuenchdConstants.VENUE:
-        VenueApiUtil.fetchVenue(modelParams.venueId);
+        VenueApiUtil.fetchVenue(modelParams.venueId, 1);
         break;
     }
   },

@@ -1,12 +1,15 @@
 window.UserApiUtil = {
-  fetchUser: function(id) {
+  fetchUser: function(id, pageNumber) {
     $.ajax({
       url: "/api/users/" + id,
       type: "GET",
       dataType: "json",
+      data: {page_number: pageNumber},
       success:(function (data) {
-        CheckInApiAction.clearCheckIns();
-        UserApiAction.receiveUser(data.user);
+        if (pageNumber === 1) {
+          CheckInApiAction.clearCheckIns();
+          UserApiAction.receiveUser(data.user);
+        }
         CheckInApiAction.receiveCheckIns(data.check_ins);
       })
     });

@@ -14,11 +14,13 @@ Rails.application.routes.draw do
     resources :venues, except: [:index, :new, :edit]
     resources :likes, only: [:create, :destroy]
     resources :search, only: [:index]
-    resources :friend_requests, only: [:create, :destroy]
+    resources :friend_requests, only: [:create]
     resources :friends, only: [:create, :destroy]
     get 'search/beers', to: 'search#beers'
     get 'search/breweries', to: 'search#breweries'
     get 'search/venues', to: 'search#venues'
+    delete 'friend_requests/delete/', to: 'friend_requests#destroy'
+    delete 'friends/delete/', to: 'friends#destroy'
   end
 
 

@@ -1,10 +1,10 @@
 window.FriendRequestButton = React.createClass({
   addRequest: function () {
-    FriendRequestApiUtil(this.props.userId);
+    FriendRequestApiUtil.createNewRequest(this.props.id);
   },
 
-  approveRequest: function () {
-
+  cancelRequest: function () {
+    FriendRequestApiUtil.deleteRequest(this.props.id);
   },
 
   render: function () {
@@ -12,7 +12,7 @@ window.FriendRequestButton = React.createClass({
       case "stranger":
         return (<button onClick={this.addRequest}>Add Friend</button>);
       case "requested":
-        return (<button>Request Pending</button>);
+        return (<button onClick={this.cancelRequest}>Request Pending(Click to Cancel)</button>);
       case "pending":
         return (<button onClick={this.approveRequest}>Approve Friend Request</button>);
       case "friend":

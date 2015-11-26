@@ -43,6 +43,10 @@
           ShowStore.deleteLike();
           ShowStore.emit(CHANGE_EVENT);
           break;
+        case QuenchdConstants.STATUS_CHANGED:
+          _show.user.status = payload.status;
+          ShowStore.emit(CHANGE_EVENT);
+          break;
 
       }
     })

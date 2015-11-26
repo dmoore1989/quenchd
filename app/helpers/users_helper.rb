@@ -2,11 +2,11 @@ module UsersHelper
   def friendship_status(user)
     if user == current_user
       "self"
-    elsif user.friends.include?(current_user)
+    elsif !user.friends.where("friend_id = ?", current_user.id).empty?
       "friend"
-    elsif user.approvals.include?(current_user)
+    elsif !user.approvals.where("requester_id = ?", current_user.id).empty?
       "requested"
-    elsif user.requests.include?(current_user)
+    elsif !user.requests.where("approver_id =?", current_user.id).empty?
       "pending"
     else
       "stranger"

@@ -1,11 +1,12 @@
 window.FriendRequestApiUtil = {
   createNewRequest: function (friendId) {
     $.ajax({
-      url: "/friend_requests",
+      url: "/api/friend_requests",
       type: "POST",
       dataType:"json",
-      data: ({friendId: friendId}),
+      data: ({request: friendId}),
       success:(function (data) {
+        UserApiAction.receiveNewStatus(data.status);
       })
 
     });
@@ -13,10 +14,11 @@ window.FriendRequestApiUtil = {
 
   deleteRequest: function (requestId) {
     $.ajax({
-      url: "/friend_requests/" + requestId,
+      url: "/api/friend_requests/" + requestId,
       type: "DELETE",
       dataType: "json",
       success:( function () {
+        UserApiAction.receiveNewStatus(data.status);
       })
     });
   }

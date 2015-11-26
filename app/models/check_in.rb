@@ -1,4 +1,7 @@
 class CheckIn < ActiveRecord::Base
+  has_attached_file :image, styles: {home_page: "480x215#"}, default_url: "missing-beer.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
 
   validates :user_id, :beer_id, :rating, presence: true
   validates :rating, numericality: {greater_than_or_equal_to: 0.0}

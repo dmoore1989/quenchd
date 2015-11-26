@@ -4,22 +4,33 @@ window.CheckInForm = React.createClass({
   getInitialState: function () {
     return ({
       rating: 0,
-      review: ""
+      review: "",
+      imageUrl: "",
+      imageFile: null
     });
   },
 
   createCheckIn: function (e) {
     e.preventDefault();
-    checkIn = {
-      check_in:{
-        beer_id: this.props.beer.id,
-        rating: (this.state.rating/2.0),
-        review: this.state.review
-      }
-    };
+
+    var beer_id = this.props.beer.id;
+    var rating = this.state.rating/2.0;
+    var review = this.state.review;
+    var image = this.state.imageFile || "";
+
+
+    var formData = new FormData();
+    formData.append('check_in[beer_id]', beer_id);
+    formData.append('check_in[rating]', rating);
+    formData.append('check_in[review]', review);
+    formData.append('check_in[image]', image);
+
+
     this.setState({
       rating: 0,
-      review: ""
+      review: "",
+      imageUrl: "",
+      imageFile: null
     });
     CheckInApiUtil.createCheckIn(checkIn);
     this.props.modalToggle();
@@ -59,6 +70,23 @@ window.CheckInForm = React.createClass({
     }
   },
 
+  changeFile: function () {
+    var reader = new FileReader();
+    var file = e.currentTarget.files[0];
+    var that = this;
+
+    reader.onloadend = function () {
+      that.setState({imageUrl: reader.result, imageFile: file});
+    };
+
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ imageUrl: "", imageFile: null });
+    }
+  },
+
   render: function () {
     return (
       <div className="check-in">
@@ -69,16 +97,16 @@ window.CheckInForm = React.createClass({
           </button>
         </header>
 
-        <form className="check-in-form">
+        <form className="check-in-form" onSubmit={this.createCheckIn}>
           <textarea
             onChange={this.handleReviewChange}
             value={this.state.review}
             placeholder="What did you think?">
           </textarea>
 
-          <button className="photo-button">
-            📷
-          </button>
+          <label className="photo-button">
+            <input type="file" onChange={this.changeFile} />
+          </label>
 
           <input
             className="rating-range"
@@ -91,7 +119,7 @@ window.CheckInForm = React.createClass({
           {this.ratingAmt()}
 
           <input type="input" placeholder="enter your location" className="check-in-location" />
-          <button className="check-in-submit" onClick={this.createCheckIn}>Confirm</button>
+          <button className="check-in-submit" >Confirm</button>
 
           <WordCount count={this.state.review.length} />
         </form>

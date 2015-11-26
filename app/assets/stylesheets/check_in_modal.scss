@@ -62,7 +62,11 @@
   font-weight: 200;
 }
 
-.check-in-form > .photo-button {
+.check-in-form input[type="file"]{
+  display: none;
+}
+
+.check-in-form .photo-button {
   float: right;
   height: 80px;
   width: 80px;
@@ -74,7 +78,7 @@
   position:relative;
   margin-top: 2px;
   border-radius: 3px;
-
+  background-image: url('ico_checkin_photo');
 }
 
 .rating-range {

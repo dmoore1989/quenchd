@@ -12,9 +12,9 @@ window.FriendRequestApiUtil = {
     });
   },
 
-  deleteRequest: function (requestId) {
+  deleteRequest: function (userId) {
     $.ajax({
-      url: "/api/friend_requests/delete/?user_id=" + requestId,
+      url: "/api/friend_requests/delete/?user_id=" + userId,
       type: "DELETE",
       dataType: "json",
       success:( function (data) {

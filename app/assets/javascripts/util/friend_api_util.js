@@ -9,5 +9,17 @@ window.FriendApiUtil = {
         UserApiAction.receiveNewStatus(data.status);
       })
     });
+  },
+
+  deleteFriendship: function (userId) {
+    $.ajax({
+      url: "/api/friends/delete/?user_id=" + userId,
+      type: "DELETE",
+      dataType: "json",
+      success:( function (data) {
+        debugger
+        UserApiAction.receiveNewStatus(data.status);
+      })
+    });
   }
 };

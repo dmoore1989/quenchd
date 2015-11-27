@@ -21,7 +21,7 @@ window.PendingFriendRequests = React.createClass({
           {this.props.approvals.map(function(approval){
             return (
               <li className= "approval-list-item group" key={approval.requester.id}>
-                <img src={approval.requesterImage} />
+                <a href={"/#/users/"+approval.requester.id}><img src={approval.requesterImage} /></a>
                 <div className= "approval-list-name">
                   <h5>{approval.requester.username}</h5>
                   <p>{approval.requester.location}</p>

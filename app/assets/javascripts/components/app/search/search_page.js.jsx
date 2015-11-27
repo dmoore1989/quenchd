@@ -41,13 +41,13 @@ window.SearchPage = React.createClass({
       <div>
         <section className="primary">
           <div className="content">
-            <div className="submission">
+            <div className="submission group">
               <form>
                 <input type="text" value={this.state.query} onChange={this.updateQuery} />
                 <button onClick={this.submitQuery}>Submit</button>
               </form>
             </div>
-            <nav>
+            <nav className="type group">
               <SearchTypeNav type={this.state.type} changeType={this.changeType} />
             </nav>
             <section>

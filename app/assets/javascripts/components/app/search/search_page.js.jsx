@@ -38,18 +38,44 @@ window.SearchPage = React.createClass({
 
   render: function () {
     return(
-      <div className="content">
-        <div className="submission">
-          <form>
-            <input type="text" value={this.state.query} onChange={this.updateQuery} />
-            <button onClick={this.submitQuery}>Submit</button>
-          </form>
-        </div>
-        <nav>
-          <SearchTypeNav type={this.state.type} changeType={this.changeType} />
-        </nav>
-        <section>
-          <SearchResults results={this.state.results.items} />
+      <div>
+        <section className="primary">
+          <div className="content">
+            <div className="submission">
+              <form>
+                <input type="text" value={this.state.query} onChange={this.updateQuery} />
+                <button onClick={this.submitQuery}>Submit</button>
+              </form>
+            </div>
+            <nav>
+              <SearchTypeNav type={this.state.type} changeType={this.changeType} />
+            </nav>
+            <section>
+              <SearchResults results={this.state.results.items} />
+            </section>
+          </div>
+        </section>
+
+
+        <section className="sidebar">
+          <div className="sidebar-applet">
+            <div className="sidebar-applet-header">
+              <h4>Not Finding What You Want?</h4>
+            </div>
+
+            <ReactRouter.Link
+              className="create"
+              to="/beers/new">
+                Create a New Beer
+            </ReactRouter.Link>
+
+            <ReactRouter.Link
+              className="create"
+              to="/breweries/new">
+                Create a New Brewery
+            </ReactRouter.Link>
+
+          </div>
         </section>
       </div>
     );

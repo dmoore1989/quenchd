@@ -44,12 +44,12 @@ window.ShowMoreCheckins = React.createClass({
   render: function () {
     if (this.state.moreItems) {
       return (
-        <button className="show-more" onClick={this.nextCheckInPage}>
+        <button className="show-more button" onClick={this.nextCheckInPage}>
           Show More
         </button>
       );
     } else {
-      return (<div>All Check-Ins Loaded!</div>);
+      return (<div className="show-more text">All Check-Ins Loaded!</div>);
     }
   }
 });

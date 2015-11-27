@@ -40,7 +40,7 @@
 .interact-bar {
   display: block;
   background-color: #eee;
-
+  padding: 1px 0
 }
 
 .interact-bar .comment-button {
@@ -54,6 +54,7 @@
   cursor: pointer;
   margin-right: 5px;
   float: left;
+  text-align: center;
 }
 
 .interact-bar .comment-button:hover {
@@ -91,7 +92,7 @@
 .like-counter {
   display: block;
   float: left;
-  margin: 10px 10px;
+  margin: 2px 5px 0 5px;
 }
 
 .spacer {
@@ -101,12 +102,20 @@
 .show-more {
   display: block;
   text-align: center;
+}
+
+.show-more.text {
+  font-weight: 600;
+}
+
+.show-more.button {
   color:#fff;
   padding: 10px 40px;
   margin: 10px auto;
   background-color: #ffcc00;
+
 }
 
-.show-more:hover {
+.show-more.button:hover {
   background-color: #f4b800;
 }

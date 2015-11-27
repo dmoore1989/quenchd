@@ -10,8 +10,8 @@ window.PendingFriendRequests = React.createClass({
   },
 
   friendRequests: function () {
-    
-  }
+
+  },
 
   render: function () {
     return (

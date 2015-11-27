@@ -4,6 +4,7 @@ json.user do
   json.joined @user.created_at.strftime("%m/%d/%Y")
   json.count @user.check_ins.count
   json.uniqueCount @user.check_ins.select(:beer_id).distinct.count(:beer_id)
+  json.friendCount @user.friends.count
   json.status friendship_status(@user)
 
   friend_images = @user.friends.limit(16).includes(:user).map do |friend|

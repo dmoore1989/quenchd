@@ -59,8 +59,8 @@ john.beers.create(name: "Really Bad Tasting Cherry Beer", style: "Fruit Ale", ab
 john.beers.create(name: "Ohh my Gourd!!! Pumpkin Ale", style: "Gueze", abv: 6.5 , ibu: 45, image: "http://drinks.seriouseats.com/images/2011/09/20110930_173049_Homebrew_Pumpkin.jpg")
 john.beers.create(name: "Octoberfest", style: "Marzen", abv: 6.8, ibu: 57, image: "http://40.media.tumblr.com/37eea6a15d2779dbfef73f666ded14fb/tumblr_mueoanGAvH1siovoto1_500.jpg")
 
-User.create(username: "DougMoore", email: "doug@email.com", password: "hello1", location: "NYC", image: "http://www.douglasmoore.me/assets/douglas-moore-079fb856e207c7332a5244c1f28a5a6fb0d0b453e0dfeedb329879212c6de367.jpg")
-User.create(username: "DUFFMAN", email: "duffman@ohyeah.com", password: "hello1", location: "NYC", image: "http://vignette2.wikia.nocookie.net/simpsons/images/c/ce/Duff_man.png/revision/latest?cb=20130808075436")
-User.create(username: "Hank Hill", email: "hank@stricklandpropene.com", password: "hello1", location: "Arlen", image: "http://vignette2.wikia.nocookie.net/legendsofthemultiuniverse/images/7/7c/08-King-of-Hill-Hank_l.jpg/revision/latest?cb=20140902033620")
-User.create(username: "Red Ranger", email: "doug@email.com", password: "hello1", location: "NYC", image: "http://pre05.deviantart.net/0662/th/pre/i/2013/289/0/3/red_ranger_by_thuddleston-d6qq8jy.jpg")
-User.create(username: "guest", email: "guest@guest.com", password: "hello1", location: "NYC")
+User.create!(username: "DougMoore", email: "doug@email.com", password: "hello1", location: "NYC", dob: '1989-01-01', image: "http://www.douglasmoore.me/assets/douglas-moore-079fb856e207c7332a5244c1f28a5a6fb0d0b453e0dfeedb329879212c6de367.jpg")
+User.create(username: "DUFFMAN", email: "duffman@ohyeah.com", password: "hello1", location: "NYC", dob: '1989-01-01', image: "http://vignette2.wikia.nocookie.net/simpsons/images/c/ce/Duff_man.png/revision/latest?cb=20130808075436")
+User.create(username: "Hank Hill", email: "hank@stricklandpropene.com", password: "hello1", dob: '1989-01-01', location: "Arlen", image: "http://vignette2.wikia.nocookie.net/legendsofthemultiuniverse/images/7/7c/08-King-of-Hill-Hank_l.jpg/revision/latest?cb=20140902033620")
+User.create(username: "Red Ranger", email: "doug@email.com", password: "hello1", dob: '1989-01-01', location: "NYC", image: "http://pre05.deviantart.net/0662/th/pre/i/2013/289/0/3/red_ranger_by_thuddleston-d6qq8jy.jpg")
+User.create(username: "guest", email: "guest@guest.com", password: "hello1", dob: '1989-01-01', location: "NYC")

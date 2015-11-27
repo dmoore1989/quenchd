@@ -14,7 +14,7 @@ window.SearchTypeNav = React.createClass({
 
   render: function () {
     return (
-      <ul onClick={this.changeType}>
+      <ul className="type group" onClick={this.changeType}>
         <li className={this.selectedItem("beers")} type="beers">Beer</li>
         <li className={this.selectedItem("breweries")} type="breweries">Brewery</li>
         <li className={this.selectedItem("venues")} type="venues">Venue</li>

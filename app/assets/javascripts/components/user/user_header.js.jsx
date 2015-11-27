@@ -33,7 +33,7 @@ window.UserHeader = React.createClass({
               </li>
               <li>
                 <h4>{user.friendCount}</h4>
-                <h6>friends</h6>
+                <h6>Friends</h6>
               </li>
             </ul>
           </footer>

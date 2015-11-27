@@ -47,12 +47,9 @@ window.SearchPage = React.createClass({
                 <button onClick={this.submitQuery}>Submit</button>
               </form>
             </div>
-            <nav className="type group">
-              <SearchTypeNav type={this.state.type} changeType={this.changeType} />
-            </nav>
-            <section>
-              <SearchResults results={this.state.results.items} />
-            </section>
+
+            <SearchTypeNav type={this.state.type} changeType={this.changeType} />
+            <SearchResults type={this.state.type} results={this.state.results.items} />
           </div>
         </section>
 

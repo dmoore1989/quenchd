@@ -1,6 +1,6 @@
 window.UserHeader = React.createClass({
   calculateBeerScore: function () {
-    return (this.props.item.user.count * 100 + this.props.item.user.uniqueCount * 200);
+    return (this.props.item.user.count * 100 + this.props.item.user.uniqueCount * 200 + this.props.item.user.friendCount * 300);
   },
 
   render: function () {
@@ -32,7 +32,7 @@ window.UserHeader = React.createClass({
                 <h6>Beer Score</h6>
               </li>
               <li>
-                <h4>150</h4>
+                <h4>{user.friendCount}</h4>
                 <h6>friends</h6>
               </li>
             </ul>

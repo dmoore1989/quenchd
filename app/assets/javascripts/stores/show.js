@@ -5,7 +5,6 @@
 
   root.ShowStore = $.extend({}, EventEmitter.prototype, {
     item: function () {
-      debugger
       return _show;
     },
 

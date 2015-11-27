@@ -30,16 +30,15 @@ window.LikedShowItem = React.createClass({
 
   likeClass: function () {
     if (this.checkInIsLiked()) {
-      return "header-button liked";
+      return "header-button remove liked";
     } else {
-      return "header-button";
+      return "header-button add";
     }
   },
 
   render: function () {
     return (
       <button className={this.likeClass()} onClick={this.toggleLike}>
-          +
       </button>
     );
   }

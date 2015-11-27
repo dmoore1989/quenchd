@@ -46,8 +46,8 @@ window.BeerHeader = React.createClass({
             </ul>
           <section className="header-bottom-bar group">
 
-            <button className="header-button" onClick={this.modalToggle}>
-              ✓
+            <button className="header-button checked" onClick={this.modalToggle}>
+
             </button>
             <LikedShowItem id={beer.id} type={"Beer"} />
             <div className={this.state.checkInForm} onClick={this.closeModal}>

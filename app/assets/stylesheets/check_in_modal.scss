@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 270px;
+  height: 220px;
   width: 500px;
   overflow: hidden;
 }
@@ -45,7 +45,7 @@
 .check-in-form > .word-count {
   position:absolute;
   z-index: 20;
-  bottom: 134px;
+  bottom: 25px;
   right: 111px;
   color: grey;
   background-color: lightgrey
@@ -101,7 +101,7 @@
 }
 
 .check-in-location {
-  display:block;
+  display: none;
   width: 300px;
   height: 35px;
   background-color: lightgrey;
@@ -132,7 +132,7 @@
   padding: 8px 35px;
   background-color: #ffcc00;
   color: #fff;
-  bottom: 15px;
+  bottom:-40px;
   right: 15px;
   font-weight: 600;
   border-radius: 3px;

@@ -59,11 +59,9 @@ window.Show = React.createClass({
       case QuenchdConstants.USER:
         return (<UserSidebarElements user={this.state.item.user} />);
       case QuenchdConstants.BEER:
-        return (<BeerSidebarElements item={this.state.item.beer} />);
+        return (<BeerSidebarElements beer={this.state.item.beer} />);
       case QuenchdConstants.BREWERY:
-        return (<BreweryHeader item={this.state.item} />);
-      case QuenchdConstants.VENUE:
-        return (<VenueHeader item={this.state.item} />);
+        return (<BrewerySidebarElements brewery={this.state.item.brewery} />);
     }
   },
 

@@ -36,14 +36,14 @@ window.LikedCheckIn = React.createClass({
   },
 
   likeImages: function () {
-    return this.props.sampleImg.map(function (imageUrl) {
-      return (<img src={imageUrl} />);
+    return this.props.sampleImg.map(function (imageUrl, idx) {
+      return (<img key={idx} src={imageUrl} />);
     });
   },
 
   render: function () {
     return (
-      <span>
+      <span className="likes">
         <button className={this.likeClass()} onClick={this.toggleLike}>
           Cheers!
         </button>

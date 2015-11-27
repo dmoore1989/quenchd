@@ -11,6 +11,8 @@ window.SearchBar = React.createClass({
     SearchStore.removeChangeHandler(this.updateResults);
   },
 
+
+
   updateResults: function () {
     this.setState({results: SearchStore.results()});
   },

@@ -68,6 +68,13 @@
   background-color: #ffcc00;
 }
 
+.interact-bar img {
+  float: left;
+  height: 35px;
+  width: 35px;
+  margin: 0 2px;
+}
+
 .bottom-check-in-bar {
   display: block;
   font-size: 11px;
@@ -81,7 +88,7 @@
   margin-right: 5px;
 }
 
-.likecount {
+.like-counter {
   display: block;
   float: left;
   margin: 10px 10px;

@@ -2,7 +2,7 @@ window.BeerSidebarElements = React.createClass({
   render: function () {
     return (
       <div>
-        <LikeImages likes={this.props.item.likes} />
+        <LikeImages likes={this.props.beer.likes} />
       </div>
     );
   }

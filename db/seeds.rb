@@ -6,69 +6,57 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(
-username: "guest",
-password: "testing",
-email: "hello@guest.io",
-location: "New York, NY",
-dob: "1975-01-01"
-)
 
-User.create(
-username: "doug",
-password: "hello1",
-email: "doug@email.io",
-location: "New York, NY",
-dob: "1989-02-01"
-)
-
-9.times do |x|
-  User.create(
-    username: Faker::Name.name,
-    password: "testing",
-    email: Faker::Internet.email,
-    location: Faker::Address.country,
-    dob: Faker::Date.backward(28))
-end
-
-
-5.times do |x|
-  Beer.create(
-    name: Faker::Commerce.product_name,
-    style: "Imperial Lambic Dark Pumpkin IPA",
-    brewery_id: 1
-  )
-end
-
-20.times do |x|
-  CheckIn.create(
-    user_id: (x % 10 + 1),
-    beer_id: (x % 5 + 1),
-    rating: 4,
-    review: Faker::Lorem.sentence(5)
-  )
-end
-
-Venue.create(
-  name: "A cool bar",
-  address: "123 Fake St. Brooklyn, NY 11215"
-)
-
-CheckIn.all[0..4].each do |check_in|
-  check_in.venue_id = 1
-  check_in.save
-end
-
-40.times do |x|
-  Comment.create(
-    check_in_id: (x % 20 + 1),
-    commenter_id: (x % 10 + 1),
-    body: Faker::Lorem.sentence(5)
-  )
-end
-
-Brewery.create(
+catfish = Brewery.create(
   name: "Catfish Tail Brewing Company",
-  brewer_id: 1,
-  location: "Newark, NJ"
+  location: "Newark, NJ",
+  image: "http://fishandgame.idaho.gov/ifwis/fishingplanner/images/FishID/channel_catfish.jpg"
 )
+
+sierra = Brewery.create(
+  name: "Sierra Colorado",
+  location: "Portland, OR",
+  image: "http://www.morningkids.net/name/images/coloring-page-first-name-sierra.jpg"
+)
+
+monks = Brewery.create(
+  name: "Monniken bij Bier Trappist Brouwerij",
+  location: "Antwerp, Belgium",
+  image: "http://www.stpeterslist.com/wp-content/uploads/2011/08/trapppist.png"
+)
+
+belgium = Brewery.create(
+  name: "Old Belgium Brewing Company",
+  location: "Breckenridge, CO",
+  image: "http://crushbrew.com/wp-content/uploads/2015/05/New-Belgium2.jpg"
+)
+
+john = Brewery.create(
+  name: "John Adams Brewing Company",
+  location: "Worcester, MA",
+  image: "http://a4.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE1ODA0OTcxMjc3MzIxNzQx.jpg"
+)
+
+catfish.beers.create(name: "IPA", style: "IPA", abv: 6.5 , ibu: 86, image: "http://assets-s3.mensjournal.com/img/essential/20-things-you-didnt-know-about-hops/618_348_20-things-you-didnt-know-about-hops.jpg")
+catfish.beers.create(name: "Red Ale", style: "Amber", abv: 5.0 , ibu: 43, image: "http://www.homebrewstuff.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/m/amber_1_4.jpg")
+catfish.beers.create(name: "Barleywine", style: "Barleywine", abv: 13.5 , ibu: 52, image: "http://www.foodnavigator-usa.com/var/plain_site/storage/images/publications/food-beverage-nutrition/foodnavigator-usa.com/markets/barley-always-a-bridesmaid-never-a-bride-getting-this-super-grain-into-the-spotlight/8570588-4-eng-GB/Barley-always-a-bridesmaid-never-a-bride-getting-this-super-grain-into-the-spotlight_strict_xxl.jpg")
+
+sierra.beers.create(name: "Mess Your Mouth Up IPA", style: "Double IPA", abv: 8.8 , ibu: 154, image: "https://www.hopgear.com/img/hop-head.png")
+sierra.beers.create(name: "Don't Mess Up Your Mouth Blonde Ale", style: "Blonde Ale", abv: 4.5 , ibu: 20, image: "http://www.shopbrewmeister.com/media/catalog/product/cache/1/image/265x265/17f82f742ffe127f42dca9de82fb58b1/l/a/lager-good_1_1.jpg")
+sierra.beers.create(name: "Seasonal Creep Spring Lager", style: "Spring Lager", abv: 5.5 , ibu: 45, image: "http://www.therubi.com/wp-content/uploads/2015/07/Pale-Lager.jpg")
+
+monks.beers.create(name: "Monniken 6", style: "Dubble", abv: 7.2 , ibu: 45, image: "http://images.newsflow24.com/340/340490/19-hilarious-photos-of-monks-looking-at-alcoholic-beverages_14.jpg")
+monks.beers.create(name: "Monniken 8", style: "Triple", abv: 8.4 , ibu: 50, image: "http://cdn1.bostonmagazine.com/wp-content/uploads/2014/08/trappist-1.jpg")
+monks.beers.create(name: "Monniken 10", style: "Quad", abv: 8.9 , ibu: 55, image: "http://cdn.psfk.com/wp-content/uploads/2012/06/ampleforth-abbey-monk-beer.jpg")
+
+belgium.beers.create(name: "Flat Tire", style: "Belgian Amber", abv: 6.5 , ibu: 55, image: "http://images.thecarconnection.com/med/flat-tire-by-flickr-user-tiger-girl_100398893_m.jpg")
+belgium.beers.create(name: "Cranberry Pumpkin Spice White Lambic Ale", style: "Wild Ale", abv: 7.2 , ibu: 15, image: "http://3.bp.blogspot.com/-8CoE2F0L7Gg/VKf_4jhle1I/AAAAAAAAGiA/ET7YGAd0jFI/s1600/lambic2.jpg")
+belgium.beers.create(name: "Ohh my Gueuze!!!", style: "Gueze", abv: 6.5 , ibu: 55, image: "http://cdn.psfk.com/wp-content/uploads/2012/06/ampleforth-abbey-monk-beer.jpg")
+belgium.beers.create(name: "Audacity of Hops", style: "Belgian IPA" abv: 7.8, ibu: 78, image: "https://beeractivist.files.wordpress.com/2008/10/audacity-of-hops.jpg?w=450&h=590")
+
+john.beers.create(name: "Worcester Lager", style: "German Lager", abv: 5.5 , ibu: 55, image: "http://ransfordpc.com/pestcontrolblog/wordpress/wp-content/uploads/2014/03/map_of_worcester_ma.jpg")
+john.beers.create(name: "Really Bad Tasting Cherry Beer", style: "Fruit Ale", abv: 5.0 , ibu: 15, image: "http://3.bp.blogspot.com/-8CoE2F0L7Gg/VKf_4jhle1I/AAAAAAAAGiA/ET7YGAd0jFI/s1600/lambic2.jpg")
+john.beers.create(name: "Ohh my Gourd!!! Pumpkin Ale", style: "Gueze", abv: 6.5 , ibu: 45, image: "http://drinks.seriouseats.com/images/2011/09/20110930_173049_Homebrew_Pumpkin.jpg")
+john.beers.create(name: "Octoberfest", style: "Marzen" abv: 6.8, ibu: 57, image: "http://40.media.tumblr.com/37eea6a15d2779dbfef73f666ded14fb/tumblr_mueoanGAvH1siovoto1_500.jpg")
+
+User.create(username: "DougMoore", email: "doug@email.com", password: "hello1", location: "NYC", image: "http://www.douglasmoore.me/assets/douglas-moore-079fb856e207c7332a5244c1f28a5a6fb0d0b453e0dfeedb329879212c6de367.jpg")

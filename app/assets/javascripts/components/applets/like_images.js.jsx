@@ -6,6 +6,14 @@ window.LikeImages = React.createClass({
   },
 
   render: function () {
-    return (<ul>{this.renderImages()}</ul>);
+    return (
+      <div className="sidebar-applet">
+        <div className="sidebar-applet-header" >
+          <h4>Likes</h4>
+        </div>
+
+        <ul className="picture-list group">{this.renderImages()}</ul>
+      </div>
+    );
   }
 });

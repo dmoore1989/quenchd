@@ -12,7 +12,7 @@ json.brewery do
   end
   json.likes brewery_likers
 
-  json.beers @brewery.beers
+  json.beers @brewery.beers.map { |beer| {beer: beer, image: asset_path(beer.image.url)} }
 
   json.rating_count @check_ins.where('rating != 0').count
   json.avg @check_ins.where('rating != 0').average('rating').to_f.round(3)

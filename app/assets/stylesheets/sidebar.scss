@@ -90,6 +90,26 @@
 }
 
 
+.beer-list-item  {
+  margin: 5px;
+}
+
+.beer-list-item h6 {
+
+  float: left;
+  vertical-align: middle;
+  display: block;
+  margin-left:  5px;
+  max-width: 190px;
+  padding-top: 10px;
+}
+
+.beer-list-item img {
+  width: 50px;
+  height: 50px;
+  float:left
+}
+
 .filler {
   height: 260px;
 

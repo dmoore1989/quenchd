@@ -9,18 +9,27 @@ window.PendingFriendRequests = React.createClass({
     FriendRequestApiUtil.rejectRequest(e.currentTarget.id);
   },
 
+  friendRequests: function () {
+    
+  }
+
   render: function () {
     return (
-      <ul>
-        {this.props.approvals.map(function(approval){
-          return (
-            <li key={approval.id}>{approval.username}
-              <button id={approval.id} onClick={this.approveRequest}>✔</button>
-              <button id={approval.id} onClick={this.rejectRequest}>x</button>
-            </li>
-          );
-        },this)}
-      </ul>
+      <div className="sidebar-applet">
+        <div className="sidebar-applet-header">
+          <h4>Friend Requests</h4>
+        </div>
+        <ul>
+          {this.props.approvals.map(function(approval){
+            return (
+              <li key={approval.id}>{approval.username}
+                <button id={approval.id} onClick={this.approveRequest}>✔</button>
+                <button id={approval.id} onClick={this.rejectRequest}>x</button>
+              </li>
+            );
+          },this)}
+        </ul>
+      </div>
     );
   }
 });

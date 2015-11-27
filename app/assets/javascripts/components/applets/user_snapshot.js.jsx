@@ -1,7 +1,7 @@
 window.UserSnapshot = React.createClass({
 
   beerScore: function () {
-    return 9000;
+    return (this.props.user.count * 100 + this.props.user.uniqueCount * 200 + this.props.user.friendCount * 300);
   },
 
   render: function () {

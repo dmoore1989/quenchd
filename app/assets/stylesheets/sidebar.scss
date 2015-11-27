@@ -25,3 +25,54 @@
 .sidebar-applet .check-in-stats li {
   text-align: center;
 }
+
+.approval-list-item{
+  margin: 10px 0;
+}
+
+
+.approval-list-item img {
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px
+}
+
+.approval-list-name{
+  display: block;
+  float: left;
+  width: 135px;
+}
+
+.approval-list-item h5 {
+}
+
+.approval-list-item p {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.approval-list-button {
+  float: right;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.approve-button {
+  padding: 3px;
+  margin: 0 5px;
+  background-color: #080;
+  color: #fff;
+}
+
+.reject-button {
+  padding: 3px;
+  margin: 0 5px;
+  background-color: #800;
+  color: #fff;
+  font-weight: bolder;
+  min-width: 18px;
+  text-align: center;
+}

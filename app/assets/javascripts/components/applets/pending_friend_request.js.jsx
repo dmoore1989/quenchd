@@ -9,9 +9,7 @@ window.PendingFriendRequests = React.createClass({
     FriendRequestApiUtil.rejectRequest(e.currentTarget.id);
   },
 
-  friendRequests: function () {
 
-  },
 
   render: function () {
     return (
@@ -19,12 +17,27 @@ window.PendingFriendRequests = React.createClass({
         <div className="sidebar-applet-header">
           <h4>Friend Requests</h4>
         </div>
-        <ul>
+        <ul className="approval-list">
           {this.props.approvals.map(function(approval){
             return (
-              <li key={approval.id}>{approval.username}
-                <button id={approval.id} onClick={this.approveRequest}>✔</button>
-                <button id={approval.id} onClick={this.rejectRequest}>x</button>
+              <li className= "approval-list-item group" key={approval.requester.id}>
+                <img src={approval.requesterImage} />
+                <div className= "approval-list-name">
+                  <h5>{approval.requester.username}</h5>
+                  <p>{approval.requester.location}</p>
+                </div>
+                <div className= "approval-list-button">
+                  <button
+                    id={approval.requester.id}
+                    onClick={this.approveRequest}
+                    className="approve-button">✔
+                  </button>
+                  <button
+                    id={approval.requester.id}
+                    onClick={this.rejectRequest}
+                    className="reject-button">x
+                  </button>
+                </div>
               </li>
             );
           },this)}

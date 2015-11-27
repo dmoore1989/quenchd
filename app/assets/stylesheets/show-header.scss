@@ -109,7 +109,7 @@
   margin-left: 10px
 }
 .header-button.checked {
-  background-image: url('beer_icon_check');
+  background-image: image-url('beer_icon_check');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -119,13 +119,13 @@
 }
 
 .header-button.add {
-  background-image: url('beer_icon_add');
+  background-image: image-url('beer_icon_add');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .header-button.remove {
-  background-image: url('beer_icon_remove');
+  background-image: image-url('beer_icon_remove');
   background-repeat: no-repeat;
   background-position: center;
 }

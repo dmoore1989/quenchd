@@ -8,6 +8,7 @@ window.CheckInIndex = React.createClass({
   componentDidMount: function () {
     CheckInStore.addChangeHandler(this.updateCheckIns);
     if (this.props.checkInData === QuenchdConstants.FETCH) {
+      CheckInApiAction.clearCheckIns();
       CheckInApiUtil.fetchCheckins(1);
     }
   },
@@ -29,7 +30,7 @@ window.CheckInIndex = React.createClass({
 
 
   render: function () {
-    if (this.state.checkIns) {
+    if (this.state.checkIns.length > 0) {
       return (
         <div className="content">
           {this.state.checkIns.map(function(checkIn, idx){

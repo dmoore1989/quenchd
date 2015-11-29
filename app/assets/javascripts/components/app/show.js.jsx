@@ -67,7 +67,7 @@ window.Show = React.createClass({
   },
 
   render: function () {
-    if (this.state.item){
+    if (this.state.item && Object.keys(this.state.item).length > 0){
       return (
         <div>
           <div className="primary">

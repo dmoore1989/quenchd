@@ -11,6 +11,7 @@ window.SearchDropdown = React.createClass({
               <nav className="item-count">{item}:{this.props.results[item].count}</nav>
               <SearchDropdownItem
                 type={item}
+                clearSearchBar={this.clearSearchBar}
                 samples={this.props.results[item].samples} />
             </div>
           );

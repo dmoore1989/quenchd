@@ -2,12 +2,12 @@ window.UserSearch = React.createClass({
   getInitialState: function () {
     return ({
       query: "",
-      results: UsersStore.all()
+      results: UserStore.all()
     });
   },
 
   componentDidMount: function () {
-    UsersStore.addChangeHandler(this.updateResults);
+    UserStore.addChangeHandler(this.updateResults);
     UserApiUtil.search(this.state.query);
   },
 
@@ -16,7 +16,7 @@ window.UserSearch = React.createClass({
   },
 
   updateResults: function () {
-    this.setState({results: UsersStore.all()});
+    this.setState({results: UserStore.all()});
   },
 
   submitQuery: function (e) {

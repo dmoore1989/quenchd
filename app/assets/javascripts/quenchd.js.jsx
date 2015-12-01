@@ -38,6 +38,7 @@ $(function () {
         path="venues/:venueId"
         component={Show}
         type={QuenchdConstants.VENUE} />
+      <Route path="users/" component={UserSearch} />
     </Route>
   );
 

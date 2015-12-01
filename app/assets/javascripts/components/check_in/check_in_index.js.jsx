@@ -35,6 +35,7 @@ window.CheckInIndex = React.createClass({
                     );
           }, this)}
           <ShowMoreCheckins
+            type = {this.props.type}
             checkInData={this.props.checkInData}
             id={this.props.id}/>
         </div>

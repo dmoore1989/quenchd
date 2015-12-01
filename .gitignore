@@ -14,3 +14,9 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# OS generated files #
+######################
+*/.DS_Store
+.DS_Store
+.DS_Store?

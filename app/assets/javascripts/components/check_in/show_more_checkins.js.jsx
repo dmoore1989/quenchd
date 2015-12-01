@@ -24,7 +24,7 @@ window.ShowMoreCheckins = React.createClass({
   fetchMoreCheckIns: function (pageNumber) {
     switch (this.props.checkInData) {
       case QuenchdConstants.FETCH:
-        CheckInApiUtil.fetchCheckins(pageNumber);
+        CheckInApiUtil.fetchCheckins(pageNumber, this.props.type);
         break;
       case QuenchdConstants.USER:
         UserApiUtil.fetchUser(this.props.id, pageNumber);

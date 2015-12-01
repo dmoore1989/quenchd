@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
     against: [:username, :email],
     using: {
       tsearch: {
-        dictionary: 'english'
+        dictionary: 'english',
         prefix: true
       }
     }

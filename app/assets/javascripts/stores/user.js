@@ -1,11 +1,12 @@
 (function (root) {
-  var _user;
+  var _users = [];
   var CHANGE_EVENT = "CHANGE_EVENT";
 
   root.UserStore = $.extend({}, EventEmitter.prototype, {
-    user: function () {
-      return _user;
+    all: function () {
+      return _users.slice();
     },
+
 
     addChangeHandler: function (callback) {
       UserStore.on(CHANGE_EVENT, callback);
@@ -18,7 +19,7 @@
     dispatchId: AppDispatcher.register(function (payload) {
       switch (payload.actionType){
         case QuenchdConstants.USER_RECEIVED:
-          _user = payload.user;
+          _users = payload.users;
           UserStore.emit(CHANGE_EVENT);
           break;
       }

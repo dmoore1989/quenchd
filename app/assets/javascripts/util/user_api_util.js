@@ -24,5 +24,16 @@ window.UserApiUtil = {
         UserApiAction.receiveUser(data);
       })
     });
+  },
+
+  fetchSearchResult: function(id) {
+    $.ajax({
+      url: "/api/users/search",
+      type: "GET",
+      dataType: "json",
+      success: (function (data) {
+        UserApiAction.receiveResults(data);
+      })
+    });
   }
 };

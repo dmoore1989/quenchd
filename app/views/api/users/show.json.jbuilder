@@ -4,17 +4,17 @@ json.user do
   json.joined @user.created_at.strftime("%m/%d/%Y")
   json.count @user.check_ins.count
   json.uniqueCount @user.check_ins.select(:beer_id).distinct.count(:beer_id)
-  json.friendCount @user.friends.count
+  json.friendCount @user.friend_connections.count
   json.status friendship_status(@user)
 
-  friend_images = @user.friends.limit(16).includes(:user).map do |friend|
-    asset_path(friend.user.image.url)
+  friend_images = @user.friends.limit(16).map do |friend|
+    asset_path(friend.image.url(:thumb))
   end
 
   json.friends friend_images
 
   liked_items = @user.likes.where("likeable_type != 'CheckIn'").includes(:likeable).map do |like|
-    asset_path(like.likeable.image.url)
+    asset_path(like.likeable.image.url(:thumb))
   end
 
   json.likes liked_items

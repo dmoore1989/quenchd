@@ -6,5 +6,5 @@ json.friendCount @user.friends.count
 json.image_url asset_path(@user.image.url(:thumb))
 json.approvals @user.approvals.includes(:requester).map do |approval|
   json.requester approval.requester
-  json.requesterImage asset_path(approval.requester.image.url)
+  json.requesterImage asset_path(approval.requester.image.url(:thumb))
 end

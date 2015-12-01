@@ -19,6 +19,14 @@ Quenchd is a web application inspired by Untappd built using Ruby on Rails and R
 
 ## Key Features
 
+- React JS using AJAX to communicate with RESTful backend API
+- PG Search, utilizing multisearch in a Search Bar React Component.  This snap shot loads a more advanced search by beer.
+- Images using Paperclip stored on AWS S3 servers.
+- Server-side pagination on check in indices.
+- Polymorphic likes model for Check Ins, Brewers, Beers, and Users
+- Friend requests, Friend model, and approval logic that maintains data between the two.
+- Use of React Composition to render different types of show pages.  On click of a show page, the API retrieves the particular User, Beer, or Brewery and flux sends the data to a show store. React then renders a show component that allows different types of data to be displayed in headers and sidebars in addition to the correct check in data.
+
 
 
 ## Design Docs
@@ -78,13 +86,13 @@ checkins so users can share photos of their drinks.
 Phase 6 will be a day of general CSS styling clean up and preparing my seed data.  I will be using BreweryDB api to retrieve a large list of brewers, and beers, the NYS SLA license api to retrieve venues (on premise bars), and will be seeding my own users list.
 
 ### Bonus Features (TBD)
+- [ ] Omniauth with Facebook
 - [ ] Geocoding and logging of Venues
-- [ ] Check In Badges
+- [ ] Flash bar in react on events
 - [ ] Mobile Optimization of Views
 - [ ] Notification (Not a current feature of the Untappd app (mobile push notifications only) but should be)
 - [ ] Display trending
 - [ ] Similar Beers
-- [ ] Multiple Sign In Auth/Cookie
 - [ ] Integration with Foursquare API
 
 [phase-one]: ./docs/phases/phase1.md

@@ -39,7 +39,7 @@ window.SearchBar = React.createClass({
         <input
           type="text"
           className="search-input"
-          placeholder="Find a Beer, Brewery, or Venue"
+          placeholder="Find a Beer, or Brewery"
           onChange={this.submitQuery}
           value={this.state.query} />
         <SearchDropdown

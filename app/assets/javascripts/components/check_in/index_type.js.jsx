@@ -6,15 +6,15 @@ window.IndexType = React.createClass({
 
   selectedItem: function (elType) {
     if (elType === this.props.type) {
-      return "index-nav-selected";
+      return "title-nav-selected";
     } else {
-      return "index-nav";
+      return "title-nav";
     }
   },
 
   render: function () {
     return (
-      <ul className="type group" onClick={this.changeType}>
+      <ul className="check-in-type group" onClick={this.changeType}>
         <li className={this.selectedItem("friends")} type="friends">Friends</li>
         <li className={this.selectedItem("all")} type="all">All</li>
         <li className={this.selectedItem("you")} type="you">You</li>

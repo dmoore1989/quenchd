@@ -1,11 +1,12 @@
 window.CheckInApiUtil = {
-  fetchCheckins: function (pageNumber) {
+  fetchCheckins: function (pageNumber, type) {
     $.ajax({
       url: "/api/check_ins",
       type: "GET",
       dataType:"json",
       data: {
-        page_number: pageNumber
+        page_number: pageNumber,
+        type: type
       },
       success: (function (data) {
         if (pageNumber === 1) {

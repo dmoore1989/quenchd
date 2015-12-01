@@ -1,16 +1,15 @@
 class Api::CheckInsController < ApplicationController
   def index
-    if params[:type] = "all"
+    if params[:type] == "all"
       @check_ins = CheckIn
         .includes({comments: [:commenter]}, :beer, :brewery, :venue, :user, :likes)
         .order(created_at: :desc)
         .page(params[:page_number])
         .per(10)
-    elsif params[:type] = "friends"
-      @check_ins = current_user
-        .friends
-        .includes(:check_ins)
-        .map(&:check_ins)
+    elsif params[:type] == "friends"
+      friend_ids = current_user.friends.map(&:id).push(current_user.id)
+      @check_ins = CheckIn
+        .where("user_id IN (?)", friend_ids)
         .order(created_at: :desc)
         .page(params[:page_number])
         .per(10)

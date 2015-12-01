@@ -8,4 +8,5 @@ class Friend < ActiveRecord::Base
     foreign_key: :user_id
     )
 
+
 end

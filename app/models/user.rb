@@ -20,10 +20,11 @@ class User < ActiveRecord::Base
     foreign_key: :liker_id
     )
   has_many(
-    :friends,
+    :friend_connections,
     class_name: "Friend",
     foreign_key: :friend_id
     )
+  has_many(:friends, through: :friend_connections, source: :user)
 
   has_many(
     :approvals,

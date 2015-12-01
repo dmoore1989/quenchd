@@ -81,6 +81,12 @@
   background-image: image-url('ico_checkin_photo');
 }
 
+.check-in-form .photo-button img {
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
 .rating-range {
   float: left;
   margin: 30px 10px;

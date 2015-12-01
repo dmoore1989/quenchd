@@ -87,6 +87,23 @@ window.CheckInForm = React.createClass({
     }
   },
 
+  handleImage: function () {
+    if (this.state.imageFile) {
+      return (
+        <label className="photo-button">
+          <img src={this.state.imageUrl} />
+          <input type="file" onChange={this.changeFile} />
+        </label>
+      );
+    } else {
+      return (
+        <label className="photo-button">
+          <input type="file" onChange={this.changeFile} />
+        </label>
+      );
+    }
+  },
+
   render: function () {
     return (
       <div className="check-in">
@@ -104,9 +121,8 @@ window.CheckInForm = React.createClass({
             placeholder="What did you think?">
           </textarea>
 
-          <label className="photo-button">
-            <input type="file" onChange={this.changeFile} />
-          </label>
+          {this.handleImage()}
+
 
           <input
             className="rating-range"

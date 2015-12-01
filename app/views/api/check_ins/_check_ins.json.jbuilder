@@ -21,6 +21,7 @@ else
   json.created_at check_in.created_at.strftime("%m/%d/%Y")
 end
 
+
 json.comments do
   json.array! check_in.comments.order(created_at: :asc) do |comment|
     json.partial! 'api/comments/comments', comment: comment

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy, :update]
     resources :users, only: [:show]
     get 'users/sidebar/:id', to: "users#sidebar"
+    get 'users/search', to: "users#search"
     resources :breweries, except: [:index, :new, :edit]
     resources :venues, except: [:index, :new, :edit]
     resources :likes, only: [:create, :destroy]

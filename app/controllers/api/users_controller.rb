@@ -10,6 +10,11 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+  def search
+    @users = User_search_by_username_and_email(params[:query])
+    render :search
+  end
+
   def sidebar
     @user= User.includes(:approvals).find(params[:id])
 

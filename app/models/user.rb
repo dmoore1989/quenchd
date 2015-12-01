@@ -1,4 +1,14 @@
 class User < ActiveRecord::Base
+  include PgSearch
+  pg_search_scope :search_by_username_and_email,
+    against: [:username, :email],
+    using: {
+      tsearch: {
+        dictionary: 'english'
+        prefix: true
+      }
+    }
+
   has_attached_file :image, styles: {title: "133x133#", thumb: "50x50#", small: "35x35#" }, default_url: "missing-user.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 

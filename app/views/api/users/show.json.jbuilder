@@ -8,7 +8,7 @@ json.user do
   json.status friendship_status(@user)
 
   friend_images = @user.friends.limit(16).map do |friend|
-    asset_path(friend.image.url(:thumb))
+    [asset_path(friend.image.url(:thumb)), friend.id]
   end
 
   json.friends friend_images

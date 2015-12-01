@@ -35,6 +35,11 @@
           _likes = payload.likes || [];
           ShowStore.emit(CHANGE_EVENT);
           break;
+        case QuenchdConstants.ITEM_CLEARED:
+          _show = {};
+          _likes = [];
+          ShowStore.emit(CHANGE_EVENT);
+          break;
         case QuenchdConstants.SHOW_LIKED:
           _likes.push(payload.like);
           ShowStore.emit(CHANGE_EVENT);
@@ -47,7 +52,6 @@
           _show.user.status = payload.status;
           ShowStore.emit(CHANGE_EVENT);
           break;
-
       }
     })
   });

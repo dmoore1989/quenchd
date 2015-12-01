@@ -34,6 +34,7 @@ window.Show = React.createClass({
 
   componentWillReceiveProps: function (newProps) {
     CheckInApiAction.clearCheckIns();
+    ShowAction.clearShow()
     this.fetchItem(newProps.route.type, newProps.params);
   },
 

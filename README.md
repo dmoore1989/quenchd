@@ -8,18 +8,16 @@
 
 Quenchd is a web application inspired by Untappd built using Ruby on Rails and React.js.  Quenchd allows users to:
 
-
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
-
 - [x] Create an account
 - [x] Log in / Log out
-- [x] "Check into," rate, and review beers they have drank noting venue.
+- [x] "Check into," rate, and review beers.
 - [x] Add beers to app.
-- [ ] Friend fellow users and comment on their checkins.
-- [ ] View beers they and other users have drank in the past.
-- [ ] View brewery and bar pages that contain check ins.
-- [ ] Like checkins, breweries, beers, and venues.
-- [ ] Integration with Foursquare API
+- [x] Friend fellow users and comment on their checkins.
+- [x] View beers they and other users have drank in the past.
+- [x] View brewery and bar pages that contain check ins.
+- [x] Like checkins, breweries, beers, and venues.
+
+## Key Features
 
 
 
@@ -80,12 +78,14 @@ checkins so users can share photos of their drinks.
 Phase 6 will be a day of general CSS styling clean up and preparing my seed data.  I will be using BreweryDB api to retrieve a large list of brewers, and beers, the NYS SLA license api to retrieve venues (on premise bars), and will be seeding my own users list.
 
 ### Bonus Features (TBD)
+- [ ] Geocoding and logging of Venues
 - [ ] Check In Badges
 - [ ] Mobile Optimization of Views
 - [ ] Notification (Not a current feature of the Untappd app (mobile push notifications only) but should be)
 - [ ] Display trending
 - [ ] Similar Beers
 - [ ] Multiple Sign In Auth/Cookie
+- [ ] Integration with Foursquare API
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

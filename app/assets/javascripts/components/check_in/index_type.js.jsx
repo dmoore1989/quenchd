@@ -6,7 +6,7 @@ window.IndexType = React.createClass({
 
   selectedItem: function (elType) {
     if (elType === this.props.type) {
-      return "title-nav-selected";
+      return "title-nav selected";
     } else {
       return "title-nav";
     }

@@ -81,6 +81,25 @@ button {
   padding: 5px 0px;
   border-bottom: 1px solid lightgrey;
 }
+.page-title h5 {
+  display: block;
+  float:left;
+}
+
+.page-title .check-in-type {
+  float: right;
+  cursor: pointer
+}
+
+.page-title .check-in-type .title-nav {
+  float: left;
+  font-weight: 400;
+  margin-left: 15px
+}
+
+.page-title .check-in-type .title-nav.selected {
+  font-weight: 700;
+}
 
 .link {
   color: #cc6600

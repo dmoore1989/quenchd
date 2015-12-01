@@ -9,7 +9,7 @@ window.CheckInIndex = React.createClass({
     CheckInStore.addChangeHandler(this.updateCheckIns);
     if (this.props.checkInData === QuenchdConstants.FETCH) {
       CheckInApiAction.clearCheckIns();
-      CheckInApiUtil.fetchCheckins(1);
+      CheckInApiUtil.fetchCheckins(1, this.props.type);
     }
   },
 
@@ -21,13 +21,6 @@ window.CheckInIndex = React.createClass({
     this.checkInAmount = CheckInStore.all().count;
     this.setState({checkIns: CheckInStore.all()});
   },
-
-  fetchMoreCheckIns: function () {
-    var start = this.checkInAmount + 1;
-    var stop = this.checkInAmount + 10;
-    CheckInApiUtil.fetchMoreCheckIns(start, stop);
-  },
-
 
   render: function () {
     if (this.state.checkIns.length > 0) {

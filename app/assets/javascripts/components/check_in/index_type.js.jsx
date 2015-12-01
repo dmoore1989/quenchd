@@ -1,4 +1,4 @@
-window.SearchTypeNav = React.createClass({
+window.IndexType = React.createClass({
   changeType: function (e) {
     e.preventDefault();
     this.props.changeType(e.target.type);
@@ -15,11 +15,10 @@ window.SearchTypeNav = React.createClass({
   render: function () {
     return (
       <ul className="type group" onClick={this.changeType}>
-        <li className={this.selectedItem("beers")} type="beers">Beer</li>
-        <li className={this.selectedItem("breweries")} type="breweries">Brewery</li>
-        <li className={this.selectedItem("venues")} type="venues">Venue</li>
+        <li className={this.selectedItem("friends")} type="friends">Friends</li>
+        <li className={this.selectedItem("all")} type="all">All</li>
+        <li className={this.selectedItem("you")} type="you">You</li>
       </ul>
     );
   }
-
 });

@@ -1,17 +1,28 @@
 class Api::CheckInsController < ApplicationController
   def index
-    @check_ins = CheckIn
-      .includes({comments: [:commenter]}, :beer, :brewery, :venue, :user, :likes)
-      .order(created_at: :desc)
-      .page(params[:page_number])
-      .per(10)
+    if params[:type] = "all"
+      @check_ins = CheckIn
+        .includes({comments: [:commenter]}, :beer, :brewery, :venue, :user, :likes)
+        .order(created_at: :desc)
+        .page(params[:page_number])
+        .per(10)
+    elsif params[:type] = "friends"
+      @check_ins = current_user
+        .friends
+        .includes(:check_ins)
+        .map(&:check_ins)
+        .order(created_at: :desc)
+        .page(params[:page_number])
+        .per(10)
+    else
+      @check_ins = current_user
+        .check_ins
+        .order(created_at: :desc)
+        .page(params[:page_number])
+        .per(10)
+    end
     render :index
   end
-
-  def show
-  end
-
-
 
   def create
     @check_in = CheckIn.new(check_in_params)

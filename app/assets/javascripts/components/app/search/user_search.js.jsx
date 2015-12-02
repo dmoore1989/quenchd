@@ -8,7 +8,7 @@ window.UserSearch = React.createClass({
 
   componentDidMount: function () {
     UserStore.addChangeHandler(this.updateResults);
-    UserApiUtil.search(this.state.query);
+    UserApiUtil.fetchSearchResult(this.state.query);
   },
 
   componentWillUnmount: function () {
@@ -21,7 +21,7 @@ window.UserSearch = React.createClass({
 
   submitQuery: function (e) {
     e.preventDefault();
-    UserApiUtil.search(this.state.query);
+    UserApiUtil.fetchSearchResult(this.state.query);
   },
 
   updateQuery: function (e) {
@@ -40,8 +40,7 @@ window.UserSearch = React.createClass({
                 <button onClick={this.submitQuery}>Submit</button>
               </form>
             </div>
-
-            <SearchResults results={this.state.results.items} />
+            <SearchResults type="users" results={this.state.results.users} />
           </div>
         </section>
 

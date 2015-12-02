@@ -11,5 +11,6 @@ window.UserApiAction = {
       actionType: QuenchdConstants.STATUS_CHANGED,
       status: status
     });
-  }
+  },
+
 };

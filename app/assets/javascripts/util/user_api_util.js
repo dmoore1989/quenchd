@@ -26,11 +26,13 @@ window.UserApiUtil = {
     });
   },
 
-  fetchSearchResult: function(id) {
+  fetchSearchResult: function(query) {
+    debugger
     $.ajax({
-      url: "/api/users/search",
+      url: "api/users/search/",
       type: "GET",
       dataType: "json",
+      data: {query: query},
       success: (function (data) {
         UserApiAction.receiveResults(data);
       })

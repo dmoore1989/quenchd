@@ -27,7 +27,6 @@ window.UserApiUtil = {
   },
 
   fetchSearchResult: function(query) {
-    debugger
     $.ajax({
       url: "api/users/search/",
       type: "GET",

@@ -16,7 +16,6 @@ window.UserSearch = React.createClass({
   },
 
   updateResults: function () {
-    debugger
     this.setState({results: UserStore.all()});
   },
 
@@ -41,7 +40,7 @@ window.UserSearch = React.createClass({
                 <button onClick={this.submitQuery}>Submit</button>
               </form>
             </div>
-            <SearchResults type="users" results={this.state.results.users} />
+            <SearchResults type="users" results={this.state.results} />
           </div>
         </section>
 

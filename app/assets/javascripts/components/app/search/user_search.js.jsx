@@ -16,6 +16,7 @@ window.UserSearch = React.createClass({
   },
 
   updateResults: function () {
+    debugger
     this.setState({results: UserStore.all()});
   },
 

@@ -11,7 +11,6 @@ class Api::UsersController < ApplicationController
   end
 
   def search
-    byebug
     @users = User.search_by_username_and_email(params[:query])
     render :search
   end

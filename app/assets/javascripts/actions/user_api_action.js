@@ -13,4 +13,10 @@ window.UserApiAction = {
     });
   },
 
+  receiveResults: function (data) {
+    AppDispatcher.dispatch({
+      actionType: QuenchdConstants.USER_RECEIVED,
+      users: data.users
+    });
+  }
 };
